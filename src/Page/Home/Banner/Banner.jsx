@@ -13,7 +13,7 @@ const Banner = () => {
                             <div className="flex bg-no-repeat flex-col h-full justify-center text-center pt-40 rounded-sm lg:max-w-md xl:max-w-lg lg:text-left" style={{ backgroundImage: 'url(https://i.ibb.co/vz1mC4P/banner-logo.png)', backgroundPosition:'right bottom', display: 'inline', lineHeight: '1',}}>
                                 <img className='w-20 animate-pulse -mb-10 ml-12 sm:-ml-20' src={image} alt="" />
                                 <h1 className='sm:border-l-2 border-black text-[#3b8d5d] font-bold text-xl sm:px-2'>Welcome To OneCare</h1>
-                                <p className="sm:text-5xl text-3xl font-extrabold sm:py-6 py-4">We Are Committed To Your Health</p>
+                                <p className="sm:text-5xl text-3xl font-extrabold sm:py-6 py-4">We Are Committed To Your Health!</p>
                                 <p className='mt-2 sm:text-lg sm:w-full w-80 mx-auto text-base font-medium sm:mb-12'>It is a established fact that a reader will be distracted by the content of a page when looking at this layout.</p>
                                 <div className='sm:flex sm:py-0 py-4 gap-2'>
                                     <Link><button className="self-center sm:px-8 px-4 mr-4 sm:py-3 py-1 font-semibold text-white bg-[#3b8d5d]  rounded-full shadow hover:bg-[#5d98db] transition-colors duration-700 hover:border-[#5996dd] border-gray-400 border sm:mr-4">Meet A Doctor</button></Link>    
