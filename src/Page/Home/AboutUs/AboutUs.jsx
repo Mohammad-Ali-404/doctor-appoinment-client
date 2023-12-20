@@ -17,8 +17,8 @@ const AboutUs = () => {
                         <img className='sm:w-[500px] w-[220px] sm:mx-52 mx-28 sm:-mt-44 -mt-20 sm:h-[450px]' src="https://i.ibb.co/RY64Yfs/surgery-1822458-640.jpg" alt="" />
                     </div>
                     <div className='sm:py-20 py-7 sm:px-2 w-10/12'>
-                        <h1 className=' border-black text-[#3b8d5d] font-serif font-bold sm:text-2xl text-lg '>| About us</h1>
-                        <p className='border-black pt-6 font-bold sm:text-4xl text-2xl '>A Sanctuary for Health: OneCare Leading the Way in Medical Excellence.</p>
+                        <h1 className=' text-[#3b8d5d] font-serif font-bold sm:text-2xl text-lg '>| About us</h1>
+                        <p className=' pt-6 font-bold sm:text-4xl text-2xl '>A Sanctuary for Health: OneCare Leading the Way in Medical Excellence.</p>
                         <p className='sm:w-10/12 py-4 text-base font-sans'>Welcome to our state-of-the-art hospital and online appointment center, where your health is our top priority. Our dedicated team of skilled healthcare professionals is committed to providing personalized and compassionate care. Experience seamless and convenient access to medical expertise through our user-friendly online platform, ensuring you can schedule appointments with ease. Whether in-person or virtual, trust us to deliver quality healthcare tailored to your needs, ensuring your well-being is in capable hands.</p>
                         <div className='sm:flex gap-10 pb-10 flex-row '>
                             <div>
