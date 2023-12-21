@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 const UseServiceHook = () => {
     const [service, setService] = useState([]);
-  const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(true);
     useEffect(() =>{
         fetch('service.json')
         .then(res => res.json())

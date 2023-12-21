@@ -1,0 +1,28 @@
+[
+        {
+          "id": "1",
+          "question": "What services does your online medical platform offer?",
+          "answer": "Our online medical platform offers a range of services, including virtual consultations with licensed healthcare professionals, prescription refills, health advice, and the ability to schedule in-person appointments with affiliated clinics."
+        },
+        {
+          "id": "2",
+          "question": "How do virtual consultations work?",
+          "answer": "Virtual consultations on our platform are conducted through secure video calls. Users can schedule an appointment, connect with a qualified healthcare professional, discuss their symptoms, and receive medical advice or prescriptions if necessary. It provides a convenient and accessible way to receive healthcare from the comfort of your home."
+        },
+        {
+          "id": "3",
+          "question": "Is my personal information secure on your platform?",
+          "answer": "Yes, we take the security and privacy of your personal information seriously. Our platform employs advanced encryption protocols to protect your data. Additionally, we adhere to strict privacy policies and comply with relevant healthcare regulations to ensure the confidentiality of your medical information."
+        },
+        {
+          "id": "4",
+          "question": "Can I use the online service in case of emergencies?",
+          "answer": "Our online medical service is not intended for emergency situations. In case of a medical emergency, please call your local emergency services immediately. Our platform is designed for non-urgent medical issues, follow-up consultations, and general healthcare inquiries."
+        },
+        {
+          "id": "5",
+          "question": "How do I access my prescription after a virtual consultation?",
+          "answer": "If a healthcare professional prescribes medication during your virtual consultation, you can access your prescription through your secure online account. Simply log in, review your prescription details, and choose a preferred pharmacy for pickup. You can also opt for electronic prescription delivery to a pharmacy of your choice."
+        }
+]
+  
