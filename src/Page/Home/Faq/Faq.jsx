@@ -10,7 +10,7 @@ const Faq = () => {
         .then(data => setFaq(data))
     },[])
     return (
-        <div className='py-20 bg-gradient-to-r from-[#c2f8c244] to-[#d7e5f7]'>
+        <div className='py-20'>
             <Container>
                 <div className='text-center'>
                     <h1 className=' border-black text-[#3b8d5d] font-serif font-bold sm:text-2xl text-lg '>| Faq</h1>
