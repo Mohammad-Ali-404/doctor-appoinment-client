@@ -101,7 +101,7 @@ const AppointmentForm = () => {
                         </form>
                     </div>
                     <div className='bg-[#141414] bg-opacity-50 '>
-                        <img className='w-[470px] sm:ml-20 sm:-mt-14' src='https://i.ibb.co/SmPLrF2/hero-img.webp' alt="" />
+                        <img className='w-[475px] sm:ml-20 sm:-mt-16' src='https://i.ibb.co/SmPLrF2/hero-img.webp' alt="" />
                     </div>
                 </div>
         </Container>

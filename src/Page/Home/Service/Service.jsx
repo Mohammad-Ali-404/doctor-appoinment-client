@@ -9,7 +9,6 @@ import { Link } from 'react-router-dom';
 import { GoArrowRight } from "react-icons/go";
 const Service = () => {
     const [service] = UseServiceHook();
-    console.log(service)
     return (
         <div className='bg-no-repeat w-full h-auto' style={{ backgroundImage: 'url(https://i.ibb.co/3dcDjvq/bg.jpg)', backgroundSize:'cover',}}>
             <div className='sm:py-14 py-8'>

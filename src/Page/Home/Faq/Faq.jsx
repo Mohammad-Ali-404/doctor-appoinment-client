@@ -3,7 +3,6 @@ import Container from '../../Shared/Container/Container';
 
 const Faq = () => {
     const [faq, setFaq] = useState([]);
-    console.log(faq)
     useEffect(() =>{
         fetch('faq.json')
         .then(res => res.json())
@@ -36,7 +35,7 @@ const Faq = () => {
                         </section>
                     </div>
                     <div>
-                    <iframe className='sm:w-[600px] w-[435px] sm:h-80 h-60' src="https://www.youtube.com/embed/e89J3eW4a24?si=wVV9AlDAJI0ol1re" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe className='sm:w-[600px] w-[400px] sm:px-0 px-4 sm:h-80 h-60' src="https://www.youtube.com/embed/e89J3eW4a24?si=wVV9AlDAJI0ol1re" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
                     </div>
                 </div>

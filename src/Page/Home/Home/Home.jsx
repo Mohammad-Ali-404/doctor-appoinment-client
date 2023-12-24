@@ -5,6 +5,7 @@ import Service from '../Service/Service';
 import Faq from '../Faq/Faq';
 import WorkingProcess from '../WorkingProcess/WorkingProcess';
 import AppointmentForm from '../AppoinmentForm/AppoinmentForm';
+import Team from '../Team/Team';
 
 const Home = () => {
     return (
@@ -15,6 +16,7 @@ const Home = () => {
             <Faq/>
             <WorkingProcess/>
             <AppointmentForm/>
+            <Team/>
         </div>
     );
 };
