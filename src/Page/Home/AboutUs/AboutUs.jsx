@@ -8,7 +8,7 @@ const AboutUs = () => {
         <div className='py-14'>
             <Container>
                 
-                <div className='container flex flex-col sm:gap-52 gap-5 sm:flex-row md:flex-row xl:flex-row'>
+                <div className='grid sm:grid-cols-2 md:grid-cols-1 xl:grid-cols-2  gap-5 '>
                     <div className='sm:px-0 px-6 pt-5'>
                         <div className='flex'>
                             <img className='sm:w-[500px] w-[250px] sm:h-[450px] ' src="https://i.ibb.co/YLvRc0s/doctors.jpg" alt="" />

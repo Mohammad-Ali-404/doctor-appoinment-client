@@ -6,6 +6,7 @@ import Faq from '../Faq/Faq';
 import WorkingProcess from '../WorkingProcess/WorkingProcess';
 import AppointmentForm from '../AppoinmentForm/AppoinmentForm';
 import Team from '../Team/Team';
+import Testimonial from '../Testimonial/Testimonial';
 
 const Home = () => {
     return (
@@ -17,6 +18,7 @@ const Home = () => {
             <WorkingProcess/>
             <AppointmentForm/>
             <Team/>
+            <Testimonial/>
         </div>
     );
 };

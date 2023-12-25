@@ -1,0 +1,59 @@
+[
+      {
+        "id": 1,
+        "name": "Alice Johnson",
+        "rating": 4.5,
+        "feedback": "I've been seeing improvement in my blood pressure since starting the prescribed medication. The doctor is attentive and explains everything thoroughly.",
+        "image": "https://i.ibb.co/b3Dt5x0/team-1.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Bob Smith",
+        "rating": 5.0,
+        "feedback": "The diabetic management plan provided by the healthcare team is effective. Regular check-ups help in keeping my blood sugar levels in control.",
+        "image": "https://i.ibb.co/b3Dt5x0/team-1.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Catherine Davis",
+        "rating": 4.0,
+        "feedback": "The neurologist has been supportive in finding the right treatment for my migraines. Grateful for the personalized care.",
+        "image": "https://i.ibb.co/b3Dt5x0/team-1.jpg"
+      },
+      {
+        "id": 4,
+        "name": "David Martinez",
+        "rating": 4.8,
+        "feedback": "The physical therapy sessions have been beneficial for managing my arthritis pain. The therapist is knowledgeable and empathetic.",
+        "image": "https://i.ibb.co/b3Dt5x0/team-1.jpg"
+      },
+      {
+        "id": 5,
+        "name": "Eva Wilson",
+        "rating": 4.2,
+        "feedback": "The cardiologist is thorough in monitoring my heart condition. I appreciate the emphasis on lifestyle changes for long-term heart health.",
+        "image": "https://i.ibb.co/b3Dt5x0/team-1.jpg"
+      },
+      {
+        "id": 6,
+        "name": "Frank Miller",
+        "rating": 4,
+        "feedback": "The psychologist has helped me navigate my anxiety through counseling and coping strategies. Grateful for the support.",
+        "image": "https://i.ibb.co/b3Dt5x0/team-1.jpg"
+      },
+      {
+        "id": 7,
+        "name": "Grace Taylor",
+        "rating": 4.7,
+        "feedback": "The obstetrician has been fantastic throughout my pregnancy journey. Responsive to concerns and provides valuable guidance.",
+        "image": "https://i.ibb.co/b3Dt5x0/team-1.jpg"
+      },
+      {
+        "id": 8,
+        "name": "Henry Clark",
+        "rating": 4.9,
+        "feedback": "The oncology team has been compassionate and supportive during my cancer treatment. Grateful for their expertise and care.",
+        "image": "https://i.ibb.co/b3Dt5x0/team-1.jpg"
+      }
+    ]
+  
