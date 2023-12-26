@@ -7,6 +7,7 @@ import WorkingProcess from '../WorkingProcess/WorkingProcess';
 import AppointmentForm from '../AppoinmentForm/AppoinmentForm';
 import Team from '../Team/Team';
 import Testimonial from '../Testimonial/Testimonial';
+import Contact from '../Contact/Contact';
 
 const Home = () => {
     return (
@@ -19,6 +20,7 @@ const Home = () => {
             <AppointmentForm/>
             <Team/>
             <Testimonial/>
+            <Contact/>
         </div>
     );
 };

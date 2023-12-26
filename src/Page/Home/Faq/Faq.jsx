@@ -17,7 +17,7 @@ const Faq = () => {
                 </div>
                 <div className='grid sm:grid-cols-2 items-center grid-cols-1 pt-10'>
     <div className="sm:order-2">
-        <iframe className='sm:w-full md:w-auto w-full sm:px-0 px-4 sm:h-80 h-60' src="https://www.youtube.com/embed/e89J3eW4a24?si=wVV9AlDAJI0ol1re" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe className='sm:w-full md:w-8/12 w-full sm:px-0 px-4 sm:h-80 h-60' src="https://www.youtube.com/embed/e89J3eW4a24?si=wVV9AlDAJI0ol1re" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
     <div className="sm:order-1">
         <section className="dark:bg-gray-800 dark:text-gray-100">
