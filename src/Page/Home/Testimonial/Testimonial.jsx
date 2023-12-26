@@ -14,16 +14,15 @@ const Testimonial = () => {
         <div className='bg-no-repeat w-full h-auto' style={{ backgroundImage: 'url(https://i.ibb.co/4gj7MxS/testimonial-bg.jpg)', backgroundSize:'cover',}}>
             
             <div className=' bg-[#66666654] bg-opacity-60'>
+                
                 <Container>
                     <div className='text-center pt-10'>
                         <h1 className=' border-black text-[#3b8d5d] font-serif font-bold sm:text-2xl text-lg '>| Testimonials</h1>
                         <h1 className=' border-black font-bold  text-2xl sm:text-4xl '>What Our Client Says</h1>
-                        <div className='flex justify-between'>
-                            
-                            
-                        </div>  
+                         
                     </div>
                     <div>
+                
                     <Swiper 
                                 slidesPerView={1}
                                 spaceBetween={10}
@@ -48,9 +47,10 @@ const Testimonial = () => {
                                 className="mySwiper"
                             >
                                 {testimonial.map((review) =>(
+                                    
                                     <SwiperSlide key={review.id} >
                                         <div className="py-10 flex flex-col items-center justify-center mx-auto lg:flex-row lg:flex-wrap lg:justify-evenly lg:px-10">
-                                            <div className="flex flex-col max-w-sm mx-4 my-6 shadow-lg">
+                                            <div className="flex flex-col max-w-lg mx-4 my-6 shadow-lg">
                                                 <div className="px-4 py-12 rounded-t-lg sm:px-8 md:px-12 bg-white">
                                                     <p className="relative px-6 py-1 text-lg italic text-center dark:text-gray-100">
                                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" className="w-8 h-8 dark:text-violet-400">
@@ -77,6 +77,7 @@ const Testimonial = () => {
                         </Swiper>
                     </div>
                 </Container>
+               
             </div>
         </div>
     );
