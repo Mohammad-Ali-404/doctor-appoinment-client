@@ -44,7 +44,7 @@ const Contact = () => {
                                 </div>
                             </div>
                         </div>
-                        <div>
+                        <div className='hidden md:block'>
                             <Lottie className='-mt-8' style={{width:'600px'}} animationData={contact}/>
                         </div>
                     </div>
