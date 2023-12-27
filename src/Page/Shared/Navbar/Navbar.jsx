@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Container from '../Container/Container';
-import logo from '../../../assets/logo/logo.jpg'
+import logo from '../../../assets/logo/logo.png'
 import { AiOutlineMail } from "react-icons/ai";
 import { BsTelephone } from "react-icons/bs";
 import { FcFaq } from "react-icons/fc";
