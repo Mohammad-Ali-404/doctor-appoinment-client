@@ -8,7 +8,7 @@ const SubscribeEmail = () => {
 				<Container>
 				<section className="py-6 card bg-[#d4d6d8] sm:rounded-full rounded-3xl  shadow-gray-400">
 					<div className="container mx-auto flex flex-col justify-center p-4 space-y-8 md:p-5 lg:space-y-0 lg:space-x-12 lg:justify-between lg:flex-row">
-						<div className="flex flex-col justify-center text-center pt- lg:text-left">
+						<div className="flex flex-col justify-center text-center ">
 							<p className="sm:text-3xl text-xl font-semibold">Subscribe for the Exclusive Updates!</p>
 						</div>
 						<div className="flex flex-col items-center  sm:flex-row justify-center flex-shrink-0 lg:justify-end">

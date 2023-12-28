@@ -22,7 +22,7 @@ const Contact = () => {
                                     <h1 className='flex  place-items-center text-lg font-semibold text-gray-700'><FaCheckCircle className='text-[#5d98db] mr-1 text-2xl'/>24 Hours Open Our Hospital.</h1>
                                     <h1 className='flex py-4 place-items-center text-lg font-semibold text-gray-700'><FaCheckCircle className='text-[#5d98db] mr-1 text-2xl'/>Emergency Contact Our Phone Number.</h1>
                                 </div>
-                                <div className='grid sm:grid-cols-2 grid-cols-1 gap-10 py-10'>
+                                <div className='grid xl:grid-cols-2 grid-cols-1 gap-10  py-10'>
                                     <div className="flex p-4 space-x-4 rounded-lg w-80 md:space-x-6 bg-[#bae8ee] hover:bg-green-200 duration-700 dark:text-gray-100">
                                         <div className="flex justify-center align-middle rounded-lg py-4 dark:bg-violet-400">
                                             <IoMdCall className='text-4xl'/>
@@ -44,7 +44,7 @@ const Contact = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='hidden md:block'>
+                        <div className='hidden xl:block'>
                             <Lottie className='-mt-8' style={{width:'600px'}} animationData={contact}/>
                         </div>
                     </div>
