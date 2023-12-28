@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "title":"Qualified Staff of Doctors",
+        "details":"Our team consists of highly qualified and experienced doctors, each with specialized certifications and a commitment to delivering top-notch medical care."
+    },
+    {
+        "id": 2,
+        "title":"Instant Telehealth Consultations",
+        "details":"Connect with healthcare professionals instantly through our telehealth services, providing swift and convenient virtual consultations for your medical needs."
+    },
+    {
+        "id": 3,
+        "title":"Effortless Lab Test Scheduling",
+        "details":"Simplify the process of scheduling lab tests by utilizing our user-friendly platform, ensuring a smooth and hassle-free experience for your diagnostic needs."
+    },
+    {
+        "id": 4,
+        "title":"Personalized Health Dashboard Access",
+        "details":"Gain control over your health information with access to a personalized dashboard, allowing you to manage and monitor your medical records securely and conveniently online."
+    }
+]
