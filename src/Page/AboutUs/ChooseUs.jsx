@@ -9,6 +9,7 @@ const ChooseUs = () => {
     return (
         <div>
             <Container>
+                
             <div className="grid gap-6 my-4 lg:grid-cols-4">
                                             <div className="border-2 border-cyan-900 text-center p-6 space-y-4 rounded-md bg-[#caf0f7]">
                                             <div className='flex justify-center'>
