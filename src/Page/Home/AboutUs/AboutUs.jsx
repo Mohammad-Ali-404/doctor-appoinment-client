@@ -31,7 +31,7 @@ const AboutUs = () => {
                             <h1 className='flex place-items-center text-lg font-semibold text-gray-700'><FaCheckCircle className='text-[#5d98db] mr-1 text-2xl'/>24/7 Medical Emergency</h1>
                             </div>
                         </div>
-                        <Link><button className="self-center sm:px-8 px-4 sm:py-3 py-1 font-semibold text-white hover:bg-[#3b8d5d]  rounded-full shadow bg-[#5d98db] transition-colors duration-700 hover:border-[#5996dd] border-gray-400 border mr-4">Discover More</button></Link>
+                        <Link to='about'><button className="self-center sm:px-8 px-4 sm:py-3 py-1 font-semibold text-white hover:bg-[#3b8d5d]  rounded-full shadow bg-[#5d98db] transition-colors duration-700 hover:border-[#5996dd] border-gray-400 border mr-4">Discover More</button></Link>
                     </div>
                 </div>
             </Container>

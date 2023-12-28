@@ -70,7 +70,7 @@ const Footer = () => {
                                         <Link to="">Pricing Plan</Link>
                                     </li>
                                     <li>
-                                        <Link to="">Sign In</Link>
+                                        <Link to="login">Sign In</Link>
                                     </li>
                                     <li>
                                         <Link to="">Subscribe</Link>

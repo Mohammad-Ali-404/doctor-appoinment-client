@@ -7,10 +7,14 @@ import Team from '../Home/Team/Team';
 import Faq from '../Home/Faq/Faq';
 import WorkingProcess from '../Home/WorkingProcess/WorkingProcess';
 import Contact from '../Home/Contact/Contact';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const About = () => {
     return (
         <div>
+            <HelmetProvider>
+                <Helmet><title>About Us | One Care</title></Helmet>
+            </HelmetProvider>
             <PageTitle heading={'About Us'} subHeading={'About Us'}/>
             <div className='py-10'>
                 <AboutUs/>

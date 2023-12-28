@@ -8,10 +8,14 @@ import AppointmentForm from '../AppoinmentForm/AppoinmentForm';
 import Team from '../Team/Team';
 import Testimonial from '../Testimonial/Testimonial';
 import Contact from '../Contact/Contact';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const Home = () => {
     return (
         <div>
+            <HelmetProvider>
+                <Helmet><title>Home | One Care</title></Helmet>
+            </HelmetProvider>
             <Banner/>
             <AboutUs/>
             <Service/>

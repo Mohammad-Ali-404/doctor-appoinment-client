@@ -9,7 +9,7 @@ const ChooseUs = () => {
     return (
         <div>
             <Container>
-                
+            <h1 className='text-center pb-8  border-black font-bold  text-2xl sm:text-4xl '>Why Choose Us</h1>
             <div className="grid gap-6 my-4 lg:grid-cols-4">
                                             <div className="border-2 border-cyan-900 text-center p-6 space-y-4 rounded-md bg-[#caf0f7]">
                                             <div className='flex justify-center'>
