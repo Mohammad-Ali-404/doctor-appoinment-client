@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import PageTitle from '../Shared/PageTitle/PageTitle';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import Container from '../Shared/Container/Container';
@@ -7,7 +7,21 @@ import { IoIosMail } from "react-icons/io";
 import { TbWorld } from "react-icons/tb";
 import mailAnimation from '../../../public/mail-animation.json'
 import Lottie from 'lottie-react';
+import emailjs from '@emailjs/browser';
+
 const Contact = () => {
+    const form = useRef();
+
+    const sendMail = e =>{
+        e.preventDefault()
+        emailjs.sendForm('service_3vpz6vf', 'template_ahdo24f', form.current, 'lJgtXu48Ko6X-1Djl')
+          .then((result) => {
+              console.log(result.text);
+              e.target.reset();
+          }, (error) => {
+              console.log(error.text); 
+          });
+    }
     return (
         <div>
             <HelmetProvider>
@@ -51,16 +65,16 @@ const Contact = () => {
                     </div>
                     <div className='py-10 flex justify-center sm:flex-row '>
                         <div className='hidden xl:block'>
-                            <Lottie className='-mt-8' style={{width:'500px'}} animationData={mailAnimation}/>
+                            <Lottie className='-mt-8' style={{width:'550'}} animationData={mailAnimation}/>
                         </div>
                         <div className='max-w-screen-2xl sm:pt-16 pt-0'>
-                            <form> 
+                            <form ref={form} onSubmit={sendMail}> 
                                 <div className='sm:flex gap-4'>
                                         <div className="mb-4 w-96 ">
                                             <input
                                                 type="text"
                                                 id="name"
-                                                name="name"
+                                                name="user_name"
                                                 className="mt-1 p-2 w-full border rounded-md"
                                                 placeholder="Full Name"
                                             />
@@ -69,7 +83,7 @@ const Contact = () => {
                                             <input
                                                 type="email"
                                                 id="email"
-                                                name="email"
+                                                name="user_email"
                                                 className="mt-1 p-2 w-full border rounded-md"
                                                 placeholder="Email Address"
                                             />
@@ -80,7 +94,7 @@ const Contact = () => {
                                             <input
                                                 type="text"
                                                 id="phone"
-                                                name="phone"
+                                                name="user_phone"
                                                 className="mt-1 p-2 w-full border rounded-md"
                                                 placeholder="Phone Number"
                                             />
@@ -89,7 +103,7 @@ const Contact = () => {
                                             <input
                                                 type="text"
                                                 id="subject"
-                                                name="subject"
+                                                name="user_subject"
                                                 className="mt-1 p-2 w-full border rounded-md"
                                                 placeholder="subject"
                                             />
