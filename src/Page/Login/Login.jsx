@@ -3,6 +3,7 @@ import React from 'react';
 import PageTitle from '../Shared/PageTitle/PageTitle';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { FcGoogle } from "react-icons/fc";
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     return (
@@ -10,7 +11,7 @@ const Login = () => {
             <HelmetProvider>
                 <Helmet><title>Sign In | One Care</title></Helmet>
             </HelmetProvider>
-            <PageTitle heading='Login' subHeading='Login' />
+            <PageTitle heading='Sign In' subHeading='Sign In' />
             <div className='py-20'>
             <div className="flex mx-auto flex-col sm:max-w-md max-w-sm p-6 rounded-md sm:p-10 bg-gradient-to-t from-[#8fa4c0ce] to-[#2d535154] text-gray-900">
                 <div className="mb-8 text-center">
@@ -35,20 +36,20 @@ const Login = () => {
                         <div className='text-center'>
                             <button type='submit' className="btn btn-wide font-semibold text-base bg-gradient-to-bl from-[#6baa92] to-[#27258555] rounded-md">Sign in</button>
                         </div>
-                        
+                        <div className="flex items-center pt-4 space-x-1">
+                            <div className="flex-1 h-px sm:w-16 "></div>
+                                <p className="px-3 text-sm">Sign In with social accounts</p>
+                            <div className="flex-1 h-px sm:w-16"></div>
+                        </div>
+                        <div className="flex justify-center space-x-4">
+                            <FcGoogle className='text-4xl animate-spin'/>
+                        </div>
+                        <p className="text-sm text-center sm:px-6 dark:text-gray-400">Don't have an account? 
+                            <Link to='/register'  className="hover:underline dark:text-gray-100"> Sign up</Link>
+                        </p>
                     </div>
                 </form>
-                <div className="flex items-center pt-4 space-x-1">
-                    <div className="flex-1 h-px sm:w-16 dark:bg-gray-700"></div>
-                    <p className="px-3 text-sm dark:text-gray-400">Login with social accounts</p>
-                    <div className="flex-1 h-px sm:w-16 dark:bg-gray-700"></div>
-                </div>
-                <div className="flex justify-center space-x-4 py-3">
-                    <FcGoogle className='text-4xl animate-spin'/>
-                </div>
-                <p className="px-6 text-base text-center ">Don't have an account yet?
-                    <a rel="noopener noreferrer" href="#" className="hover:underline dark:text-violet-400">Sign up</a>.
-                </p>
+                
             </div>
             </div>
         </div>
