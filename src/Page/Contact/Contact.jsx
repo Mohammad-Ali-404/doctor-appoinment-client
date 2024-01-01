@@ -65,9 +65,9 @@ const Contact = () => {
                     </div>
                     <div className='py-10 flex justify-center sm:flex-row '>
                         <div className='hidden xl:block'>
-                            <Lottie className='-mt-8' style={{width:'550'}} animationData={mailAnimation}/>
+                            <Lottie className='-mt-20' style={{width:'500'}} animationData={mailAnimation}/>
                         </div>
-                        <div className='max-w-screen-2xl sm:pt-16 pt-0'>
+                        <div className='max-w-screen-2xl sm:pt-28 pt-0'>
                             <form ref={form} onSubmit={sendMail}> 
                                 <div className='sm:flex gap-4'>
                                         <div className="mb-4 w-96 ">
