@@ -8,16 +8,37 @@ import { TbWorld } from "react-icons/tb";
 import mailAnimation from '../../../public/mail-animation.json'
 import Lottie from 'lottie-react';
 import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2';
 
 const Contact = () => {
     const form = useRef();
 
     const sendMail = e =>{
         e.preventDefault()
+        const formData = new FormData(form.current);
+        const name = formData.get('user_name');
+        const email = formData.get('user_email');
+        const phone = formData.get('user_phone');
+        const subject = formData.get('user_subject');
+        const message = formData.get('message');
+        if (!name || !email || !phone || !subject || !message) {
+            // If any field is empty, show an alert to the user
+            Swal.fire({
+                title: 'Please fill out all fields',
+                icon: 'error',
+                confirmButtonText: 'OK'
+            });
+            return;
+        }
         emailjs.sendForm('service_3vpz6vf', 'template_ahdo24f', form.current, 'lJgtXu48Ko6X-1Djl')
           .then((result) => {
               console.log(result.text);
               e.target.reset();
+              Swal.fire({
+                title: 'Your message sent successfully',
+                icon: 'success',
+                confirmButtonText: 'OK',
+              });
           }, (error) => {
               console.log(error.text); 
           });
