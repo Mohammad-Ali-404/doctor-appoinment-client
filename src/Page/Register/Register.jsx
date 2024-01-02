@@ -1,9 +1,18 @@
-import React from 'react';
+/* eslint-disable no-unused-vars */
+import React, { useContext } from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import PageTitle from '../Shared/PageTitle/PageTitle';
 import { Link } from 'react-router-dom';
+import { useForm } from 'react-hook-form';
+import { AuthContext } from '../../Providers/AuthProvider';
 
 const Register = () => {
+    const {register, handleSubmit, reset,  formState: { errors },} = useForm()
+    const {createUser} = useContext(AuthContext)
+    const onSubmit = (data) =>{
+        reset()
+        console.log(data);
+    }
     return (
         <div>
             <HelmetProvider>
@@ -15,25 +24,25 @@ const Register = () => {
                     <div className="mb-8 text-center">
                         <h1 className="my-3 text-4xl font-bold">Sign Up Now</h1>
                     </div>
-                    <form action="" className="space-y-12">
+                    <form onSubmit={handleSubmit(onSubmit)} action="" className="space-y-12">
                         <div className="space-y-4">
                             <div>
                                 <label  className="block mb-2 text-sm">Enter Your Full Name</label>
-                                <input type="name" name="name" id="name" placeholder="David Smith" className="w-full px-3 py-2 border rounded-md " />
+                                <input type="name" {...register("name", { required: true })} name="name" id="name" placeholder="David Smith" className="w-full px-3 py-2 border rounded-md " />
                             </div>
                             <div>
                                 <label  className="block mb-2 text-sm">Upload Your Photo Url</label>
-                                <input type="photo" name="photo" id="photo" placeholder="Photo url" className="w-full px-3 py-2 border rounded-md " />
+                                <input type="photo" name="photo" {...register("photo")} id="photo" placeholder="Photo url" className="w-full px-3 py-2 border rounded-md " />
                             </div>
                             <div>
                                 <label  className="block mb-2 text-sm">Email address</label>
-                                <input type="email" name="email" id="email" placeholder="leroy@jenkins.com" className="w-full px-3 py-2 border rounded-md " />
+                                <input type="email" name="email" id="email" {...register("email", { required: true })} placeholder="leroy@jenkins.com" className="w-full px-3 py-2 border rounded-md " />
                             </div>
                             <div>
                                 <div className="flex justify-between mb-2">
                                     <label className="text-sm">Password</label>
                                 </div>
-                                <input type="password" name="password" id="password" placeholder="*****" className="w-full px-3 py-2 border rounded-md " />
+                                <input type="password" name="password" {...register("password")} id="password" placeholder="*****" className="w-full px-3 py-2 border rounded-md " />
                             </div>
                         </div>
                         <div className="space-y-2 mx-auto">
