@@ -2,17 +2,36 @@
 import React, { useContext } from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import PageTitle from '../Shared/PageTitle/PageTitle';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { AuthContext } from '../../Providers/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Register = () => {
     const {register, handleSubmit, reset,  formState: { errors },} = useForm()
-    const {createUser} = useContext(AuthContext)
+    const {createUser, updateUserProfile} = useContext(AuthContext)
+    const navigate = useNavigate()
     const onSubmit = (data) =>{
-        reset()
         console.log(data);
         createUser(data.email, data.password)
+        .then(result =>{
+            const loggedUser = result.user;
+            console.log(loggedUser);
+            updateUserProfile(data.name, data.photoURL)
+            .then(() =>{
+                console.log('User profile updated');
+                reset()
+                Swal.fire({
+                    position: 'top-center',
+                    icon: 'success',
+                    title: 'User Created Succssfully',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+                navigate('/')
+            })
+            .catch(error => console.log(error))
+        })
     }
     return (
         <div>
@@ -33,7 +52,7 @@ const Register = () => {
                             </div>
                             <div>
                                 <label  className="block mb-2 text-sm">Upload Your Photo Url</label>
-                                <input type="photo" name="photo" {...register("photo")} id="photo" placeholder="Photo url" className="w-full px-3 py-2 border rounded-md " />
+                                <input type="photo" name="photo" {...register("photoURL")} id="photo" placeholder="Photo url" className="w-full px-3 py-2 border rounded-md " />
                             </div>
                             <div>
                                 <label  className="block mb-2 text-sm">Email address</label>

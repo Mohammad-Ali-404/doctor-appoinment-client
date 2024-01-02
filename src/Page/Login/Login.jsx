@@ -4,12 +4,15 @@ import React, { useContext } from 'react';
 import PageTitle from '../Shared/PageTitle/PageTitle';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { FcGoogle } from "react-icons/fc";
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
 import Swal from 'sweetalert2';
 
 const Login = () => {
     const {signIn} = useContext(AuthContext)
+    const navigate = useNavigate()
+    const location = useLocation()
+    const from = location.state?.from?.pathname || "/";
     const handleLogin = event =>{
         event.preventDefault()
         const form = event.target;
@@ -27,6 +30,8 @@ const Login = () => {
             timer: 1500
         })
             form.reset()
+            navigate(from, {replace:true})
+
         })
     }
     return (
