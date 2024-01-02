@@ -7,12 +7,21 @@ import { BsTelephone } from "react-icons/bs";
 import { FcFaq } from "react-icons/fc";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { AuthContext } from '../../../Providers/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Navbar = () => {
     const {user, logOut} = useContext(AuthContext)
     const handleLogOut = () =>{
         logOut()
-        .then(() =>{})
+        .then(() =>{
+            Swal.fire({
+                position: 'top-center',
+                icon: 'success',
+                title: 'Logout Successful',
+                showConfirmButton: false,
+                timer: 1500
+            })
+        })
         .catch(error => console.log(error))
     }
     const navbar = 
@@ -61,7 +70,7 @@ const Navbar = () => {
                             
                             {
                                 user ? <>
-                                 <Link to='login'><button className="self-center px-8 py-3 font-semibold text-white bg-[#3b8d5d]  rounded-full shadow hover:bg-[#5d98db] transition-colors duration-700 hover:border-[#5996dd] border-gray-400 border mr-4">SIGN Out</button></Link>
+                                 <button onClick={handleLogOut} className="self-center px-8 py-3 font-semibold text-white bg-[#3b8d5d]  rounded-full shadow hover:bg-[#5d98db] transition-colors duration-700 hover:border-[#5996dd] border-gray-400 border mr-4">SIGN Out</button>
                                 </> : <>
                                 <Link to='login'><button className="self-center px-8 py-3 font-semibold text-white bg-[#3b8d5d]  rounded-full shadow hover:bg-[#5d98db] transition-colors duration-700 hover:border-[#5996dd] border-gray-400 border mr-4">SIGN IN</button></Link>
                                 </>

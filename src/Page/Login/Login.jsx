@@ -1,11 +1,34 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react';
+import React, { useContext } from 'react';
 import PageTitle from '../Shared/PageTitle/PageTitle';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { FcGoogle } from "react-icons/fc";
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Providers/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Login = () => {
+    const {signIn} = useContext(AuthContext)
+    const handleLogin = event =>{
+        event.preventDefault()
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(email, password);
+        signIn(email, password)
+        .then(result => {
+            const loggedUser = result.user;
+            Swal.fire({
+            position: 'top-center',
+            icon: 'success',
+            title: 'Login Succssfully done ',
+            showConfirmButton: false,
+            timer: 1500
+        })
+            form.reset()
+        })
+    }
     return (
         <div>
             <HelmetProvider>
@@ -18,7 +41,7 @@ const Login = () => {
                     <h1 className="my-3 text-4xl font-bold">Sign in</h1>
                     <p className="text-base ">Sign in to access your account</p>
                 </div>
-                <form action="" className="space-y-12">
+                <form  onSubmit={handleLogin} action="" className="space-y-12">
                     <div className="space-y-4">
                         <div>
                             <label  className="block mb-2 text-sm">Email address</label>
