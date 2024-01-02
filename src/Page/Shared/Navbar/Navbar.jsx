@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Container from '../Container/Container';
 import logo from '../../../assets/logo/logo.png'
@@ -6,8 +6,15 @@ import { AiOutlineMail } from "react-icons/ai";
 import { BsTelephone } from "react-icons/bs";
 import { FcFaq } from "react-icons/fc";
 import { FaMapMarkerAlt } from "react-icons/fa";
+import { AuthContext } from '../../../Providers/AuthProvider';
 
 const Navbar = () => {
+    const {user, logOut} = useContext(AuthContext)
+    const handleLogOut = () =>{
+        logOut()
+        .then(() =>{})
+        .catch(error => console.log(error))
+    }
     const navbar = 
         <>
             <Link to='/'><li><a>Home</a></li></Link>
@@ -51,7 +58,14 @@ const Navbar = () => {
                     </div>
                     <div className="navbar-end">
                         <div className="items-center flex-shrink-0  lg:flex md:colmun">
-                            <Link to='login'><button className="self-center px-8 py-3 font-semibold text-white bg-[#3b8d5d]  rounded-full shadow hover:bg-[#5d98db] transition-colors duration-700 hover:border-[#5996dd] border-gray-400 border mr-4">SIGN IN</button></Link>              
+                            
+                            {
+                                user ? <>
+                                 <Link to='login'><button className="self-center px-8 py-3 font-semibold text-white bg-[#3b8d5d]  rounded-full shadow hover:bg-[#5d98db] transition-colors duration-700 hover:border-[#5996dd] border-gray-400 border mr-4">SIGN Out</button></Link>
+                                </> : <>
+                                <Link to='login'><button className="self-center px-8 py-3 font-semibold text-white bg-[#3b8d5d]  rounded-full shadow hover:bg-[#5d98db] transition-colors duration-700 hover:border-[#5996dd] border-gray-400 border mr-4">SIGN IN</button></Link>
+                                </>
+                            }           
                         </div>
                     </div>
                 </div>

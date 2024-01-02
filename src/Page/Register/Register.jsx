@@ -12,6 +12,7 @@ const Register = () => {
     const onSubmit = (data) =>{
         reset()
         console.log(data);
+        createUser(data.email, data.password)
     }
     return (
         <div>
