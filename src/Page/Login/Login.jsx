@@ -9,7 +9,7 @@ import { AuthContext } from '../../Providers/AuthProvider';
 import Swal from 'sweetalert2';
 
 const Login = () => {
-    const {signIn} = useContext(AuthContext)
+    const {signIn, handleGoogleLogin} = useContext(AuthContext)
     const navigate = useNavigate()
     const location = useLocation()
     const from = location.state?.from?.pathname || "/";
@@ -25,7 +25,7 @@ const Login = () => {
             Swal.fire({
             position: 'top-center',
             icon: 'success',
-            title: 'Login Succssfully done ',
+            title: 'Login Succssfully done',
             showConfirmButton: false,
             timer: 1500
         })
@@ -34,6 +34,22 @@ const Login = () => {
 
         })
     }
+    const GoogleLogin = () => {
+        handleGoogleLogin()
+          .then(() => {
+            // Google login successful
+            Swal.fire({
+              position: 'top-center',
+              icon: 'success',
+              title: 'Login Succssfully done',
+              showConfirmButton: false,
+              timer: 1500
+            });
+          })
+          .catch((error) => {
+            console.error("Google login error:", error.message);
+          });
+      };
     return (
         <div>
             <HelmetProvider>
@@ -70,7 +86,7 @@ const Login = () => {
                             <div className="flex-1 h-px sm:w-16"></div>
                         </div>
                         <div className="flex justify-center space-x-4">
-                            <FcGoogle className='text-4xl animate-spin'/>
+                            <FcGoogle onClick={GoogleLogin} className='text-4xl cursor-pointer animate-spin'/>
                         </div>
                         <p className="text-sm text-center sm:px-6 dark:text-gray-400">Don't have an account? 
                             <Link to='/register'  className="hover:underline dark:text-gray-100"> Sign up</Link>
