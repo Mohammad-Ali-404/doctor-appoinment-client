@@ -223,7 +223,97 @@
         "facebook": "facebook.com/drsarahjohnson",
         "instagram": "@drsarahjohnson",
         "twitter": "@drsarahjohnson"
-      }
-    ]
+      },
+      {
+        "id": 16,
+        "name": "Dr. Sarah Miller",
+        "specialist": "Dermatology",
+        "degree": "MD, MBBS, AAD",
+        "educationalBackground": "Dermatology School",
+        "experienceAndSkills": "10+ years of experience in dermatology",
+        "phone": "345-678-9012",
+        "registrationNumber": "D78901",
+        "email": "sarah.miller@example.com",
+        "image": "https://i.ibb.co/b3Dt5x0/team-4.jpg",
+        "facebook": "facebook.com/drsarahmiller",
+        "instagram": "@dr.sarahmiller",
+        "twitter": "@dr_sarahmiller"
+    },
+    {
+        "id": 17,
+        "name": "Dr. Michael Johnson",
+        "specialist": "Neurology",
+        "degree": "MD, MBBS, FANA, FRCP",
+        "educationalBackground": "Neurology Institute",
+        "experienceAndSkills": "14+ years of experience in neurology",
+        "phone": "456-789-0123",
+        "registrationNumber": "D89012",
+        "email": "michael.johnson@example.com",
+        "image": "https://i.ibb.co/b3Dt5x0/team-5.jpg",
+        "facebook": "facebook.com/drmichaeljohnson",
+        "instagram": "@drmichaeljohnson",
+        "twitter": "@drmichaeljohnson"
+    },
+    {
+      "id": 18,
+      "name": "Dr. Emily Johnson",
+      "specialist": "Cardiology",
+      "degree": "MD, MBBS, FACC, FESC",
+      "educationalBackground": "Cardiology Institute",
+      "experienceAndSkills": "15+ years of experience in cardiology",
+      "phone": "123-456-7890",
+      "registrationNumber": "D56789",
+      "email": "emily.johnson@example.com",
+      "image": "https://i.ibb.co/b3Dt5x0/team-2.jpg",
+      "facebook": "facebook.com/dremilyjohnson",
+      "instagram": "@dremilyjohnson",
+      "twitter": "@dremilyjohnson"
+    },
+    {
+      "id": 19,
+      "name": "Dr. Robert Davis",
+      "specialist": "Orthopedics",
+      "degree": "MD, MBBS, FRCS, FAOAO",
+      "educationalBackground": "Orthopedic Surgery School",
+      "experienceAndSkills": "12+ years of experience in orthopedics",
+      "phone": "234-567-8901",
+      "registrationNumber": "D67890",
+      "email": "robert.davis@example.com",
+      "image": "https://i.ibb.co/b3Dt5x0/team-3.jpg",
+      "facebook": "facebook.com/drrobertdavis",
+      "instagram": "@drrobertdavis",
+      "twitter": "@drrobertdavis"
+    },
+    {
+      "id": 20,
+      "name": "Dr. Amanda Carter",
+      "specialist": "Gastroenterology",
+      "degree": "MD, MBBS, FACG, FASGE",
+      "educationalBackground": "Gastroenterology School",
+      "experienceAndSkills": "13+ years of experience in gastroenterology",
+      "phone": "567-890-1234",
+      "registrationNumber": "D90123",
+      "email": "amanda.carter@example.com",
+      "image": "https://i.ibb.co/b3Dt5x0/team-6.jpg",
+      "facebook": "facebook.com/dramandacarter",
+      "instagram": "@dramandacarter",
+      "twitter": "@dramandacarter"
+    },
+    {
+      "id": 21,
+      "name": "Dr. Christopher White",
+      "specialist": "Ophthalmology",
+      "degree": "MD, MBBS, FRCOphth",
+      "educationalBackground": "Ophthalmology Institute",
+      "experienceAndSkills": "9+ years of experience in ophthalmology",
+      "phone": "678-901-2345",
+      "registrationNumber": "D01234",
+      "email": "christopher.white@example.com",
+      "image": "https://i.ibb.co/b3Dt5x0/team-7.jpg",
+      "facebook": "facebook.com/drchristopherwhite",
+      "instagram": "@drchristopherwhite",
+      "twitter": "@drchristopherwhite"
+    }
+]
 
   

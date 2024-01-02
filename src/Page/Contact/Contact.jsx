@@ -9,6 +9,7 @@ import mailAnimation from '../../../public/mail-animation.json'
 import Lottie from 'lottie-react';
 import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2';
+// import Map from '../../components/Map/Map';
 
 const Contact = () => {
     const form = useRef();
@@ -142,6 +143,10 @@ const Contact = () => {
                                 <button className='bg-gradient-to-t from-[#6eb5df] to-[#29acb6aa] btn btn-md text-base' type="submit">Submit Now</button>
                             </form>
                         </div>
+                    </div>
+                    <div>
+                        {/* TODO */}
+                        {/* <Map></Map> */}
                     </div>
                 </Container>
             </div>
