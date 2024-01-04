@@ -9,7 +9,6 @@ import { Rating } from '@smastrom/react-rating';
 import '@smastrom/react-rating/style.css'
 const Testimonial = () => {
     const [testimonial] = UseTestimonialHook()
-    console.log(testimonial)
     return (
         <div className='bg-no-repeat w-full h-auto' style={{ backgroundImage: 'url(https://i.ibb.co/4gj7MxS/testimonial-bg.jpg)', backgroundSize:'cover',}}>
             

@@ -68,7 +68,7 @@ const AppointmentForm = () => {
                         <div className='sm:flex gap-5 '>
                             <div className="mb-4 w-full">
                                 <label htmlFor="department" className=" text-sm font-medium">
-                                    Select Department
+                                    Select Time
                                 </label>
                                 <select
                                     id="time"

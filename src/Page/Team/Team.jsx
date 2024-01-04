@@ -2,11 +2,9 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import PageTitle from '../Shared/PageTitle/PageTitle';
 import UseTeamMemberHook from '../../Hooks/UseTeamMemberHook';
-import { FaGraduationCap } from 'react-icons/fa6';
-import { CiCirclePlus } from 'react-icons/ci';
-import { Link } from 'react-router-dom';
 import Container from '../Shared/Container/Container';
 import ReactPaginate from 'react-paginate';
+import SingleTeam from './SingleTeam';
 
 const Team = () => {
     const [teamMember] = UseTeamMemberHook();
@@ -28,31 +26,10 @@ const Team = () => {
                 <div className='grid sm:grid-cols-4 py-10 grid-cols-1 gap-10'>
                     {
                         paginatedTeamMembers.map((member) => (
-                            <div key={member.id}>
-                                <div className="flex flex-col justify-center h-full shadow-xl bg-white dark:text-gray-100">
-                                        <img src={member.image} alt="" className="sm:w-80 w-full py-5 mx-auto" />
-                                        <div className='flex justify-between sm:px-4 px-6 py-6'>
-                                            <div className="space-y-4">
-                                                <div className="my-2 space-y-1 ">
-                                                    <h2 className="text-lg font-semibold sm:text-xl">{member.name}</h2>
-                                                    <p className="text-xs sm:text-base">{member.specialist}</p>
-                                                    <div className='flex items-center gap-2'>
-                                                        <FaGraduationCap className='text-2xl'/>
-                                                        <p>{member.degree}</p>
-                                                    </div>
-                                                </div>
-                                                {/* <div className="flex text-2xl justify-center pt-2 space-x-4 align-center">
-                                                    <Link><FaFacebook className='hover:text-[#6280d1] duration-500'/></Link>
-                                                    <Link><FaInstagram className='hover:text-[#6280d1] duration-500'/></Link>
-                                                    <Link><FaTwitter className='hover:text-[#6280d1] duration-500'/></Link>
-                                                </div> */}
-                                            </div>
-                                            <div className='mt-8'>
-                                                <Link><CiCirclePlus className='text-5xl'/></Link>
-                                            </div>
-                                        </div>
-                                </div>
-                            </div>
+                            // <div key={member.id}>
+                               
+                            // </div>
+                            <SingleTeam key={member._id} member={member}></SingleTeam>
                         ))
                     }
                 </div>

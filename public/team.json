@@ -1,6 +1,5 @@
  [
       {
-        "id": 1,
         "name": "Dr. John Smith",
         "specialist": "Cardiology",
         "degree": "MD,MBBS, FCPS, FRCS",
@@ -12,10 +11,10 @@
         "image": "https://i.ibb.co/b3Dt5x0/team-1.jpg",
         "facebook": "facebook.com/drsarahjohnson",
         "instagram": "@drsarahjohnson",
-        "twitter": "@drsarahjohnson"
+        "twitter": "@drsarahjohnson",
+        "selfDescription":"I'm a dedicated cardiologist with a mission to provide comprehensive and personalized cardiac care. My commitment to staying abreast of the latest advancements in cardiology ensures that my patients receive the best possible treatment for their heart health."
       },
       {
-        "id": 2,
         "name": "Dr. Sarah Johnson",
         "specialist": "Pediatrics",
         "degree": "MBBS, FCPS, FRCS",
@@ -27,10 +26,10 @@
         "image": "https://i.ibb.co/b3Dt5x0/team-1.jpg",
         "facebook": "facebook.com/drsarahjohnson",
         "instagram": "@drsarahjohnson",
-        "twitter": "@drsarahjohnson"
+        "twitter": "@drsarahjohnson",
+        "selfDescription":"I'm passionate about pediatric medicine, focusing on creating a warm and friendly environment for my young patients. My approach emphasizes not just treating illnesses but fostering overall well-being for children under my care."
       },
       {
-        "id": 3,
         "name": "Dr. Michael Davis",
         "specialist": "Orthopedics",
         "degree": "MS, MBBS, FCPS",
@@ -42,10 +41,10 @@
         "image": "https://i.ibb.co/b3Dt5x0/team-1.jpg",
         "facebook": "facebook.com/drsarahjohnson",
         "instagram": "@drsarahjohnson",
-        "twitter": "@drsarahjohnson"
+        "twitter": "@drsarahjohnson",
+        "selfDescription":"I'm driven by a commitment to restoring mobility and improving the quality of life for my patients. My holistic approach to orthopedic care encompasses both surgical interventions and non-invasive treatments."
       },
       {
-        "id": 4,
         "name": "Dr. Emily White",
         "specialist": "Dermatology",
         "degree": "MD,MBBS, FCPS, FRCS",
@@ -57,10 +56,10 @@
         "image": "https://i.ibb.co/b3Dt5x0/team-1.jpg",
         "facebook": "facebook.com/drsarahjohnson",
         "instagram": "@drsarahjohnson",
-        "twitter": "@drsarahjohnson"
+        "twitter": "@drsarahjohnson",
+        "selfDescription":"I believe in the importance of healthy skin and its impact on overall confidence. I strive to offer the latest dermatological treatments with a focus on enhancing my patients' skin health and appearance."
       },
       {
-        "id": 5,
         "name": "Dr. Christopher Lee",
         "specialist": "Neurology",
         "degree": "MD,MBBS, FCPS, FRCS",
@@ -72,10 +71,10 @@
         "image": "https://i.ibb.co/b3Dt5x0/team-1.jpg",
         "facebook": "facebook.com/drsarahjohnson",
         "instagram": "@drsarahjohnson",
-        "twitter": "@drsarahjohnson"
+        "twitter": "@drsarahjohnson",
+        "selfDescription":"I'm dedicated to unraveling the complexities of neurological conditions. My patient-centric approach and commitment to finding innovative solutions make me a trusted figure in the field of neurology."
       },
       {
-        "id": 6,
         "name": "Dr. Jessica Brown",
         "specialist": "Gynecology",
         "degree": "MD, MBBS, FCPS, FRCS",
@@ -87,10 +86,10 @@
         "image": "https://i.ibb.co/b3Dt5x0/team-1.jpg",
         "facebook": "facebook.com/drsarahjohnson",
         "instagram": "@drsarahjohnson",
-        "twitter": "@drsarahjohnson"
+        "twitter": "@drsarahjohnson",
+        "selfDescription":"I'm devoted to empowering women through personalized and compassionate care. My practice emphasizes preventive measures and comprehensive healthcare for women at every stage of life."
       },
       {
-        "id": 7,
         "name": "Dr. David Miller",
         "specialist": "Ophthalmology",
         "degree": "MD, MBBS, FCPS, FRCS",
@@ -102,10 +101,10 @@
         "image": "https://i.ibb.co/b3Dt5x0/team-1.jpg",
         "facebook": "facebook.com/drsarahjohnson",
         "instagram": "@drsarahjohnson",
-        "twitter": "@drsarahjohnson"
+        "twitter": "@drsarahjohnson",
+        "selfDescription":"I'm passionate about preserving and improving the vision of my patients. My expertise in eye care, coupled with a patient-friendly approach, ensures a positive experience for those seeking ophthalmological services."
       },
       {
-        "id": 8,
         "name": "Dr. Olivia Wilson",
         "specialist": "Psychiatry",
         "degree": "MD,MBBS, FCPS, FRCS",
@@ -117,10 +116,10 @@
         "image": "https://i.ibb.co/b3Dt5x0/team-1.jpg",
         "facebook": "facebook.com/drsarahjohnson",
         "instagram": "@drsarahjohnson",
-        "twitter": "@drsarahjohnson"
+        "twitter": "@drsarahjohnson",
+        "selfDescription":"I approach mental health with empathy and understanding. I believe in the importance of addressing the unique needs of each individual and creating a supportive environment for mental well-being."
       },
       {
-        "id": 9,
         "name": "Dr. Daniel Taylor",
         "specialist": "Urology",
         "degree": "MS, MBBS, FCPS",
@@ -132,10 +131,10 @@
         "image": "https://i.ibb.co/b3Dt5x0/team-1.jpg",
         "facebook": "facebook.com/drsarahjohnson",
         "instagram": "@drsarahjohnson",
-        "twitter": "@drsarahjohnson"
+        "twitter": "@drsarahjohnson",
+        "selfDescription":" I'm dedicated to providing personalized and effective solutions for urological issues. My patient-centered approach ensures that individuals feel comfortable discussing and addressing their urological concerns."
       },
       {
-        "id": 10,
         "name": "Dr. Grace Anderson",
         "specialist": "Rheumatology",
         "degree": "MD,MBBS, FCPS, FRCS",
@@ -147,10 +146,10 @@
         "image": "https://i.ibb.co/b3Dt5x0/team-1.jpg",
         "facebook": "facebook.com/drsarahjohnson",
         "instagram": "@drsarahjohnson",
-        "twitter": "@drsarahjohnson"
+        "twitter": "@drsarahjohnson",
+        "selfDescription":"I'm committed to improving the lives of patients with autoimmune and musculoskeletal disorders. My comprehensive and empathetic approach to rheumatological care sets me apart."
       },
       {
-        "id": 11,
         "name": "Dr. Brian Turner",
         "specialist": "Gastroenterology",
         "degree": "MD,MBBS, FCPS, FRCS",
@@ -162,10 +161,10 @@
         "image": "https://i.ibb.co/b3Dt5x0/team-1.jpg",
         "facebook": "facebook.com/drsarahjohnson",
         "instagram": "@drsarahjohnson",
-        "twitter": "@drsarahjohnson"
+        "twitter": "@drsarahjohnson",
+        "selfDescription":"I'm focused on promoting digestive health and addressing gastrointestinal disorders. My commitment to patient education empowers individuals to make informed decisions about their digestive well-being."
       },
       {
-        "id": 12,
         "name": "Dr. Lisa Garcia",
         "specialist": "Oncology",
         "degree": "MD,MBBS, FCPS, FRCS",
@@ -177,10 +176,10 @@
         "image": "https://i.ibb.co/b3Dt5x0/team-1.jpg",
         "facebook": "facebook.com/drsarahjohnson",
         "instagram": "@drsarahjohnson",
-        "twitter": "@drsarahjohnson"
+        "twitter": "@drsarahjohnson",
+        "selfDescription":"I'm passionate about helping individuals manage and overcome allergic and immunologic conditions. My focus on patient education enables individuals to take control of their allergic health."
       },
       {
-        "id": 13,
         "name": "Dr. Kevin Martin",
         "specialist": "Allergy and Immunology",
         "degree": "MS, MBBS, FCPS",
@@ -192,10 +191,10 @@
         "image": "https://i.ibb.co/b3Dt5x0/team-1.jpg",
         "facebook": "facebook.com/drsarahjohnson",
         "instagram": "@drsarahjohnson",
-        "twitter": "@drsarahjohnson"
+        "twitter": "@drsarahjohnson",
+        "selfDescription":"I thrive in high-pressure situations, providing swift and effective medical care in emergencies. My dedication to saving lives and ensuring patient comfort in critical moments is unwavering."
       },
       {
-        "id": 14,
         "name": "Dr. Megan Clark",
         "specialist": "Emergency Medicine",
         "degree": "MD, MBBS, FCPS, FRCS",
@@ -207,10 +206,10 @@
         "image": "https://i.ibb.co/b3Dt5x0/team-1.jpg",
         "facebook": "facebook.com/drsarahjohnson",
         "instagram": "@drsarahjohnson",
-        "twitter": "@drsarahjohnson"
+        "twitter": "@drsarahjohnson",
+        "selfDescription":"Our doctor, Dr. Megan Clark, thrives in high-pressure situations, providing swift and effective medical care in emergencies. Dr. Clark's dedication to saving lives and ensuring patient comfort in critical moments is unwavering."
       },
       {
-        "id": 15,
         "name": "Dr. Nicholas Wright",
         "specialist": "Pulmonology",
         "degree": "MD,MBBS, FCPS, FRCS",
@@ -222,10 +221,10 @@
         "image": "https://i.ibb.co/b3Dt5x0/team-1.jpg",
         "facebook": "facebook.com/drsarahjohnson",
         "instagram": "@drsarahjohnson",
-        "twitter": "@drsarahjohnson"
+        "twitter": "@drsarahjohnson",
+        "selfDescription":"Our doctor, Dr. Nicholas Wright, specializes in pulmonology and is dedicated to providing comprehensive care for respiratory conditions. Dr. Wright's 11+ years of experience in pulmonology reflect his commitment to improving the respiratory health of his patients."
       },
       {
-        "id": 16,
         "name": "Dr. Sarah Miller",
         "specialist": "Dermatology",
         "degree": "MD, MBBS, AAD",
@@ -237,10 +236,10 @@
         "image": "https://i.ibb.co/b3Dt5x0/team-4.jpg",
         "facebook": "facebook.com/drsarahmiller",
         "instagram": "@dr.sarahmiller",
-        "twitter": "@dr_sarahmiller"
+        "twitter": "@dr_sarahmiller",
+        "selfDescription":"Our doctor, Dr. Sarah Miller, is an experienced dermatologist with a focus on enhancing skin health. Dr. Miller's 10+ years of expertise in dermatology ensure that her patients receive the latest and most effective treatments for their skin concerns."
     },
     {
-        "id": 17,
         "name": "Dr. Michael Johnson",
         "specialist": "Neurology",
         "degree": "MD, MBBS, FANA, FRCP",
@@ -252,10 +251,10 @@
         "image": "https://i.ibb.co/b3Dt5x0/team-5.jpg",
         "facebook": "facebook.com/drmichaeljohnson",
         "instagram": "@drmichaeljohnson",
-        "twitter": "@drmichaeljohnson"
+        "twitter": "@drmichaeljohnson",
+        "selfDescription":"Our doctor, Dr. Michael Johnson, is a seasoned neurologist with over 14 years of experience. Dr. Johnson's commitment to understanding and treating neurological conditions has made him a trusted professional in the field of neurology."
     },
     {
-      "id": 18,
       "name": "Dr. Emily Johnson",
       "specialist": "Cardiology",
       "degree": "MD, MBBS, FACC, FESC",
@@ -267,10 +266,10 @@
       "image": "https://i.ibb.co/b3Dt5x0/team-2.jpg",
       "facebook": "facebook.com/dremilyjohnson",
       "instagram": "@dremilyjohnson",
-      "twitter": "@dremilyjohnson"
+      "twitter": "@dremilyjohnson",
+      "selfDescription":"Our doctor, Dr. Emily Johnson, is a highly experienced cardiologist with 15+ years of expertise. Dr. Johnson's dedication to the field of cardiology is evident in her commitment to providing top-notch cardiac care and staying updated with the latest advancements."
     },
     {
-      "id": 19,
       "name": "Dr. Robert Davis",
       "specialist": "Orthopedics",
       "degree": "MD, MBBS, FRCS, FAOAO",
@@ -282,10 +281,10 @@
       "image": "https://i.ibb.co/b3Dt5x0/team-3.jpg",
       "facebook": "facebook.com/drrobertdavis",
       "instagram": "@drrobertdavis",
-      "twitter": "@drrobertdavis"
+      "twitter": "@drrobertdavis",
+      "selfDescription":"Our doctor, Dr. Robert Davis, is a skilled orthopedic specialist with 12+ years of experience. Dr. Davis focuses on restoring mobility and improving the quality of life for his patients through both surgical and non-invasive interventions."
     },
     {
-      "id": 20,
       "name": "Dr. Amanda Carter",
       "specialist": "Gastroenterology",
       "degree": "MD, MBBS, FACG, FASGE",
@@ -297,10 +296,10 @@
       "image": "https://i.ibb.co/b3Dt5x0/team-6.jpg",
       "facebook": "facebook.com/dramandacarter",
       "instagram": "@dramandacarter",
-      "twitter": "@dramandacarter"
+      "twitter": "@dramandacarter",
+      "selfDescription":" Our doctor, Dr. Amanda Carter, is an accomplished gastroenterologist with 13+ years of experience. Dr. Carter is dedicated to promoting digestive health and offers personalized care to individuals with gastrointestinal disorders."
     },
     {
-      "id": 21,
       "name": "Dr. Christopher White",
       "specialist": "Ophthalmology",
       "degree": "MD, MBBS, FRCOphth",
@@ -312,7 +311,8 @@
       "image": "https://i.ibb.co/b3Dt5x0/team-7.jpg",
       "facebook": "facebook.com/drchristopherwhite",
       "instagram": "@drchristopherwhite",
-      "twitter": "@drchristopherwhite"
+      "twitter": "@drchristopherwhite",
+      "selfDescription":"Our doctor, Dr. Christopher White, is a seasoned ophthalmologist with 9+ years of experience. Dr. White's passion for preserving and improving vision, coupled with a patient-friendly approach, ensures a positive experience for those seeking eye care."
     }
 ]
 

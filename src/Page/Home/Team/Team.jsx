@@ -8,7 +8,6 @@ import { FaGraduationCap } from "react-icons/fa";
 
 const Team = () => {
     const [teamMember] = UseTeamMemberHook();
-    console.log(teamMember)
     return (
         <div className='mt-16 bg-gradient-to-r from-[#b9bdbc44] to-[#d0f8f344]'>
             <div className='sm:py-14 py-8 '>
@@ -33,14 +32,9 @@ const Team = () => {
                                                         <p>{member.degree}</p>
                                                     </div>
                                                 </div>
-                                                {/* <div className="flex text-2xl justify-center pt-2 space-x-4 align-center">
-                                                    <Link><FaFacebook className='hover:text-[#6280d1] duration-500'/></Link>
-                                                    <Link><FaInstagram className='hover:text-[#6280d1] duration-500'/></Link>
-                                                    <Link><FaTwitter className='hover:text-[#6280d1] duration-500'/></Link>
-                                                </div> */}
                                             </div>
                                             <div className='mt-8'>
-                                                <Link><CiCirclePlus className='text-5xl'/></Link>
+                                                <Link to={`/teamdetails/${member._id}`}><CiCirclePlus className='text-5xl'/></Link>
                                             </div>
                                         </div>
                                     </div>
