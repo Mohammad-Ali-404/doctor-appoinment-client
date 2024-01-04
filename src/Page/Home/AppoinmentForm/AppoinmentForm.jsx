@@ -1,4 +1,3 @@
-// src/components/AppointmentForm.js
 import React from 'react';
 import Container from '../../Shared/Container/Container';
 

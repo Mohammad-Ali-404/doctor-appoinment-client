@@ -6,10 +6,12 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { AuthContext } from '../../Providers/AuthProvider';
 import Swal from 'sweetalert2';
+import useAxiosSecure from '../../Hooks/UserAxiosSecure';
 
 const Register = () => {
     const {register, handleSubmit, reset,  formState: { errors },} = useForm()
     const {createUser, updateUserProfile} = useContext(AuthContext)
+    const [axiosSecure] = useAxiosSecure()
     const navigate = useNavigate()
     const onSubmit = (data) =>{
         console.log(data);
@@ -18,16 +20,30 @@ const Register = () => {
             const loggedUser = result.user;
             console.log(loggedUser);
             updateUserProfile(data.name, data.photoURL)
+            // TODO
+            .then(() =>{
+                const savedUser = {name: data.name, email: data.email}
+                axiosSecure.post('http://localhost:5000/users', {
+                headers:{
+                    'content-type' : 'application/json'
+                },
+                body : JSON.stringify(savedUser)
+            })
+            .then(data => data.json())
+            })
             .then(() =>{
                 console.log('User profile updated');
                 reset()
-                Swal.fire({
-                    position: 'top-center',
-                    icon: 'success',
-                    title: 'User Created Succssfully',
-                    showConfirmButton: false,
-                    timer: 1500
-                })
+                if(data.insertedId){
+                    reset();
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        title: 'User created successfully.',
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                }
                 navigate('/')
             })
             .catch(error => console.log(error))

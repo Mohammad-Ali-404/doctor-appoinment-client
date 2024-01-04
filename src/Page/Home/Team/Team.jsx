@@ -19,7 +19,7 @@ const Team = () => {
                     <div className='grid sm:grid-cols-4 py-10 grid-cols-1 gap-10'>
                         {
                             teamMember.slice(0, 4).map((member) =>(
-                                <div key={member.id}>
+                                <div key={member._id}>
                                     <div className="flex flex-col justify-center h-full shadow-xl bg-white dark:text-gray-100">
                                         <img src={member.image} alt="" className="sm:w-80 w-full py-5 mx-auto" />
                                         <div className='flex justify-between sm:px-4 px-6 py-6'>

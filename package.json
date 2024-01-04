@@ -13,6 +13,7 @@
     "@emailjs/browser": "^3.11.0",
     "@react-google-maps/api": "^2.19.2",
     "@smastrom/react-rating": "^1.4.0",
+    "axios": "^1.6.4",
     "firebase": "^10.7.1",
     "localforage": "^1.10.0",
     "lottie-react": "^2.4.0",

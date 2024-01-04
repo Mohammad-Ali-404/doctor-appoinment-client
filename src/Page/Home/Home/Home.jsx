@@ -4,11 +4,11 @@ import AboutUs from '../AboutUs/AboutUs';
 import Service from '../Service/Service';
 import Faq from '../Faq/Faq';
 import WorkingProcess from '../WorkingProcess/WorkingProcess';
-import AppointmentForm from '../AppoinmentForm/AppoinmentForm';
 import Team from '../Team/Team';
 import Testimonial from '../Testimonial/Testimonial';
 import Contact from '../Contact/Contact';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+import AppointmentForm from '../AppoinmentForm/AppoinmentForm';
 
 const Home = () => {
     return (

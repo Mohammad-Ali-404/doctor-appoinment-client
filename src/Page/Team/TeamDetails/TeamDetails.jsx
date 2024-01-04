@@ -1,5 +1,6 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react';
+import React, { useRef } from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { Link, useLoaderData } from 'react-router-dom';
 import PageTitle from '../../Shared/PageTitle/PageTitle';
@@ -7,10 +8,45 @@ import Container from '../../Shared/Container/Container';
 import { FaFacebookSquare, FaTwitter } from 'react-icons/fa';
 import { RiInstagramFill } from 'react-icons/ri';
 import { MdEmail } from 'react-icons/md';
+import useAxiosSecure from '../../../Hooks/UserAxiosSecure';
+import Swal from 'sweetalert2';
 
 const TeamDetails = () => {
+    const [axiosSecure] = useAxiosSecure()
     const teamdetails = useLoaderData();
-    const {name, selfDescription, specialist, degree, educationalBackground, experienceAndSkills, phone, registrationNumber, image, email, facebook, instagram, twitter} = teamdetails;
+    const form = useRef()
+    const {_id ,name, selfDescription, specialist, degree, educationalBackground, experienceAndSkills, phone, registrationNumber, image, email, facebook, instagram, twitter} = teamdetails;
+    const handleAppoinment = async (event) =>{
+        event.preventDefault()
+
+        const formData = new FormData(form.current);
+        const patientName = formData.get('patient_name');
+        const patientEmail = formData.get('patient_email');
+        const AppointmentTime = formData.get('appoinment_time');
+        const AppointmentDate = formData.get('appoinment_date');
+        console.log("Team Member ID:", _id);
+
+        const response = await axiosSecure.post('http://localhost:5000/appoinment', {
+            image,
+            name,
+            _id,
+            patientName,
+            patientEmail,
+            AppointmentTime,
+            AppointmentDate,
+          });
+          if (response.status === 200) {
+            console.log('Message sent successfully');
+            event.target.reset();
+            Swal.fire({
+              title: 'Booking successfully',
+              icon: 'success',
+              confirmButtonText: 'OK',
+            });
+          } else {
+            console.error('Failed to send message');
+          }
+    }
     return (
         <div>
              <HelmetProvider>
@@ -49,44 +85,37 @@ const TeamDetails = () => {
                                 <h1 className='py-2 text-xl font-semibold'>More About {name}</h1>
                                 <p>{experienceAndSkills} ...</p>
                             </div>
+                            
                         </div>
                     </div>
-                    <div className='sm:px-0 px-5'>
+                    
+                    {_id && (
+                      <div className='sm:px-0 px-5'>
                         <div>
                             <div className="flex flex-col p-6 rounded-md sm:p-10 bg-gradient-to-t  from-[#8fa4c0ce] to-[#2d535154] text-gray-900">
                                 <div className="mb-8 text-center">
                                     <h1 className="my-3 text-2xl font-bold">Make An Appointment</h1>
                                 </div>
-                                <form action="" className="space-y-8">
+                                <form action="" className="space-y-8" onSubmit={handleAppoinment} ref={form}>
                                     <div className="space-y-4">
                                         <div>
-                                            <input type="email" name="name" id="email" placeholder="Enter Your Full Name" className="w-full px-3 py-2 border rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100" />
+                                            <input type="text" name="patient_name" id="patient_name" placeholder="Enter Your Full Name" className="w-full px-3 py-2 border rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100" />
                                         </div>
                                         <div>
-                                            <input type="email" name="email" id="email" placeholder="Enter Your Email" className="w-full px-3 py-2 border rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100" />
+                                            <input type="email" name="patient_email" id="patient_email" placeholder="Enter Your Email" className="w-full px-3 py-2 border rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100" />
                                         </div>
                                         <div>
                                             <div className="mb-4 w-full">
-                                                <select
-                                                    id="time"
-                                                    name="time"
-                                                    className="mt-1 text-gray-900 p-2 w-full border rounded-md"
-                                                >
-                                                    <option>Select Time</option>
-                                                    <option>10:00 - 11:00 AM</option>
-                                                    <option>11:10 - 11:59 AM</option>
-                                                    <option>2:00 - 3:00 PM</option>
-                                                    {/* Add more departments as needed */}
-                                                </select>
+                                            <input type="time" name="appoinment_time" className="mt-1 text-gray-900 p-2 w-full border rounded-md"  id="" />
                                             </div>
                                             <div className="mb-4 w-full"> 
-                                                <input type="date"  className="mt-1 text-gray-900 p-2 w-full border rounded-md" name="" id="" />
+                                                <input type="date"  className="mt-1 text-gray-900 p-2 w-full border rounded-md" name="appoinment_date" id="" />
                                             </div>
                                         </div>
                                     </div>
                                     <div className="space-y-2">
                                         <div>
-                                            <button type="button"className="btn btn-wide font-semibold text-base bg-gradient-to-bl from-[#6baa92] to-[#27258555] rounded-md">Appoinment</button>
+                                            <button type="submit"className="btn btn-wide font-semibold text-base bg-gradient-to-bl from-[#6baa92] to-[#27258555] rounded-md">Appoinment</button>
                                         </div>
                                     </div>
                                 </form>
@@ -115,7 +144,8 @@ const TeamDetails = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>  
+                    )}
                 </div>
             </Container>
         </div>
