@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { GoArrowRight } from "react-icons/go";
 
 const SingleServices = ({service}) => {
-    const {id, title, image , details} = service;
+    const {_id, title, image , details} = service;
     const maxDetailsLength = 110; 
     return (
         <div>
@@ -17,7 +17,7 @@ const SingleServices = ({service}) => {
                     {details.length > maxDetailsLength ? `${details.slice(0, maxDetailsLength)}...` : details}    
                 </p>
                 <div className='pt-4'>
-                    <Link><button className='flex items-center px-3 py-1 text-sm font-semibold bg-red-100 rounded-md'>See More <GoArrowRight className='text-xl ml-1 mt-1'/></button></Link>
+                    <Link to={`/servicedetails/${_id}`}><button className='flex items-center px-3 py-1 text-sm font-semibold bg-red-100 rounded-md'>See More <GoArrowRight className='text-xl ml-1 mt-1'/></button></Link>
                 </div>
             </div>
         </div>

@@ -28,7 +28,7 @@ const Services = () => {
                             {
                                 paginatedTeamMembers.map((service) => (
                                 
-                                    <SingleServices key={service.id} service={service}/>
+                                    <SingleServices key={service._id} service={service}/>
                                 ))
                             }
                         </div>

@@ -1,6 +1,5 @@
 [
     {
-      "id": 1,
       "title": "Cardiology Server",
       "image":"https://i.ibb.co/tHpby6B/service-1.webp",
       "details": "The Cardiology Server is a state-of-the-art platform dedicated to advancing cardiovascular health. With cutting-edge technology, it offers advanced diagnostics for a wide range of heart conditions. Real-time monitoring of essential cardiac parameters ensures timely intervention when needed. The server ensures secure data transmission, safeguarding patient records and confidentiality. A collaborative platform brings together cardiology experts from around the world, fostering knowledge exchange and improving patient outcomes. Additionally, telemedicine features enable remote consultations, making cardiac care accessible to patients globally.",
@@ -20,7 +19,6 @@
       ]
     },
     {
-      "id": 2,
       "title": "Neurology Hub",
       "image":"https://i.ibb.co/tHpby6B/service-1.webp",
       "details": "Welcome to the Neurology Hub, a cutting-edge server designed for the study and treatment of neurological disorders. This dedicated platform boasts high-resolution brain imaging capabilities, providing invaluable insights into brain health. Integrated EEG and other neurophysiological data enhance diagnostic accuracy. AI-powered analysis facilitates early detection of neurological disorders. The server also houses a centralized database for neurological research data, fostering collaboration and breakthroughs. Patients benefit from interactive education resources that empower them with knowledge about their conditions.",
@@ -40,7 +38,6 @@
       ]
     },
     {
-      "id": 3,
       "title": "Orthopedic Network",
       "image":"https://i.ibb.co/tHpby6B/service-1.webp",
       "details": "Join the Orthopedic Network, your go-to platform for connecting with orthopedic specialists and resources. The server offers digital imaging for precise orthopedic diagnosis, ensuring accurate treatment plans. Remote consultations bring orthopedic evaluations to the comfort of your location. Collaboration tools aid in orthopedic surgery planning, enhancing the precision of procedures. Online rehabilitation programs cater to orthopedic patients' needs, promoting recovery. Engage with a supportive community forum designed for sharing experiences and knowledge.",
@@ -60,7 +57,6 @@
       ]
     },
     {
-      "id": 4,
       "title": "Pulmonary Care Cloud",
       "image":"https://i.ibb.co/tHpby6B/service-1.webp",
       "details": "Experience excellence in respiratory health with the Pulmonary Care Cloud. This server focuses on providing top-notch pulmonary care through innovative features. Conduct high-quality lung function testing using virtual spirometry. Benefit from 24/7 monitoring, especially crucial for individuals with chronic respiratory conditions. Engage in tele-rehabilitation programs designed to enhance pulmonary health. Data-driven insights contribute to personalized treatment plans, ensuring targeted and effective interventions. The server seamlessly integrates with wearable devices, enabling continuous tracking and comprehensive care.",
@@ -80,7 +76,6 @@
       ]
     },
     {
-      "id": 5,
       "title": "Maternal Health Hub",
       "image":"https://i.ibb.co/tHpby6B/service-1.webp",
       "details": "Step into the Maternal Health Hub, a comprehensive platform supporting the journey of expectant mothers and their infants. Prenatal telehealth visits provide convenient access to healthcare professionals. Remote monitoring of maternal vital signs ensures the well-being of both mother and baby. Access educational resources tailored for new parents, covering topics from prenatal care to postpartum support. Seamless integration with fertility tracking apps aids in family planning. The server ensures secure storage of maternal and infant health records, prioritizing the privacy and security of sensitive information.",
@@ -100,7 +95,6 @@
       ]
     },
     {
-      "id": 6,
       "title": "Endocrinology Exchange",
       "image":"https://i.ibb.co/tHpby6B/service-1.webp",
       "details": "The Endocrinology Exchange is your go-to platform for all things related to endocrinology and hormonal health. Benefit from state-of-the-art hormone level tracking and analysis tools, providing a comprehensive view of your endocrine system. Engage in teleconsultations specifically designed for managing conditions like diabetes. The server serves as a centralized platform for endocrine research studies, fostering collaboration and advancing knowledge. Patient support groups cater to individuals dealing with various endocrine disorders, promoting a sense of community and understanding. Seamless integration with wearable devices ensures continuous monitoring of hormonal data.",
@@ -120,7 +114,6 @@
       ]
     },
     {
-      "id": 7,
       "title": "Dermatology Portal",
       "image":"https://i.ibb.co/tHpby6B/service-1.webp",
       "details": "Welcome to the Dermatology Portal, your gateway to expert consultations and resources for optimal skin health. Virtual skin examinations, powered by high-resolution imaging, provide accurate assessments. AI-powered mole analysis enhances early detection of potential skin issues, including skin cancer. Secure photo storage ensures the systematic tracking of skin conditions over time. Access online prescription services for dermatological treatments, ensuring timely and personalized care. Explore interactive skincare routines and tips to maintain healthy and vibrant skin.",
@@ -140,7 +133,6 @@
       ]
     },
     {
-      "id": 8,
       "title": "Additional Medical Server",
       "image":"https://i.ibb.co/tHpby6B/service-1.webp",
       "details": "This is an additional medical server entry to showcase the diversity of services. The server specializes in a unique aspect of healthcare, providing specialized care and resources. With a focus on [specific area], it aims to revolutionize how [specific medical condition] is diagnosed and treated. Patients can benefit from [unique feature 1], [unique feature 2], and [unique feature 3]. The server is committed to advancing medical research in [specific area] and offers a collaborative platform for healthcare professionals.",
