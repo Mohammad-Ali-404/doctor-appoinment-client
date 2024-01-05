@@ -50,7 +50,7 @@ const TeamDetails = () => {
     return (
         <div>
              <HelmetProvider>
-                <Helmet><title>Sign In | One Care</title></Helmet>
+                <Helmet><title>Team Details | One Care</title></Helmet>
             </HelmetProvider>
             <PageTitle heading='Team Details' subHeading='Team Details' />
             <Container>

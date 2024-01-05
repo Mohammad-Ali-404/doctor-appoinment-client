@@ -1,0 +1,48 @@
+ [
+      {
+        "name": "Basic Plan",
+        "monthly_price": "$199/ month",
+        "services_included": [
+          "Online consultation with a general practitioner (limited minutes)",
+          "Access to basic health information and resources",
+          "Appointment scheduling for non-emergency cases",
+          "Prescription renewal services"
+        ],
+        "features": [
+          "Email notifications for appointments",
+          "Limited access to health education materials",
+          "Basic customer support"
+        ]
+      },
+      {
+        "name": "Standard Plan",
+        "monthly_price": "$399/ month",
+        "services_included": [
+          "Extended online consultation with specialists",
+          "24/7 access to a nurse hotline",
+          "Annual health check-up reminders and scheduling",
+          "Prescription delivery services"
+        ],
+        "features": [
+          "SMS notifications for appointments",
+          "Access to a broader range of health education materials",
+          "Priority customer support"
+        ]
+      },
+      {
+        "name": "Premium Plan",
+        "monthly_price": "$599/ month",
+        "services_included": [
+          "Unlimited access to online consultations with specialists",
+          "Virtual second opinions for critical cases",
+          "Home healthcare services (limited)",
+          "Priority scheduling for diagnostic tests"
+        ],
+        "features": [
+          "Personalized health dashboard",
+          "Full access to premium health education materials",
+          "Dedicated 24/7 concierge support"
+        ]
+      
+  }
+ ]

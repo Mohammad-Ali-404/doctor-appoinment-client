@@ -9,6 +9,7 @@ import Team from "../Page/Team/Team";
 import TeamDetails from "../Page/Team/TeamDetails/TeamDetails";
 import Services from "../Page/Services/Services";
 import ServiceDetails from "../Page/Services/ServicesDetails.jsx/ServiceDetails";
+import Pricing from "../Page/Pricing/Pricing";
 
 const router = createBrowserRouter ([
     {
@@ -52,6 +53,10 @@ const router = createBrowserRouter ([
                 path:"/servicedetails/:id",
                 element:<ServiceDetails/>,
                 loader: ({params}) => fetch(`http://localhost:5000/service/${params.id}`)
+            },
+            {
+                path:"pricing",
+                element:<Pricing/>
             }
         ]
     }
