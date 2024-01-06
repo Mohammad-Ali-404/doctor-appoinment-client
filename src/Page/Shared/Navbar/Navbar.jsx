@@ -7,23 +7,11 @@ import { BsTelephone } from "react-icons/bs";
 import { FcFaq } from "react-icons/fc";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { AuthContext } from '../../../Providers/AuthProvider';
-import Swal from 'sweetalert2';
+import ProfileDropdown from '../../../components/ProfileDropdown/ProfileDropdown';
 
 const Navbar = () => {
-    const {user, logOut} = useContext(AuthContext)
-    const handleLogOut = () =>{
-        logOut()
-        .then(() =>{
-            Swal.fire({
-                position: 'top-center',
-                icon: 'success',
-                title: 'Logout Successful',
-                showConfirmButton: false,
-                timer: 1500
-            })
-        })
-        .catch(error => console.log(error))
-    }
+    const {user} = useContext(AuthContext)
+    
     const navbar = 
         <>
             <Link to='/'><li><a>Home</a></li></Link>
@@ -73,15 +61,9 @@ const Navbar = () => {
                             
                             {
                                 user ? <>
-                                <div className="w-12 h-12 rounded-full overflow-hidden">
-                                    <img
-                                        referrerPolicy="no-referrer"
-                                        src={user?.photoURL}
-                                        alt="Profile"
-                                        className="w-full h-full object-cover"
-                                    />
-                                </div>
-                                 <button onClick={handleLogOut} className="self-center px-8 py-3 font-semibold text-white bg-[#3b8d5d]  rounded-full shadow hover:bg-[#5d98db] transition-colors duration-700 hover:border-[#5996dd] border-gray-400 border mr-4">SIGN Out</button>
+                                <div className='z-10 inset-0'>
+                                        <ProfileDropdown/>
+                                    </div>
                                 </> : <>
                                     <Link to='login'><button className="self-center px-8 py-3 font-semibold text-white bg-[#3b8d5d]  rounded-full shadow hover:bg-[#5d98db] transition-colors duration-700 hover:border-[#5996dd] border-gray-400 border mr-4">SIGN IN</button></Link>
                                 </>
