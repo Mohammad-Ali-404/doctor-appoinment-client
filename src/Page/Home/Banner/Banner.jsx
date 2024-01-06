@@ -16,7 +16,7 @@ const Banner = () => {
                                 <p className="sm:text-5xl text-3xl font-extrabold sm:py-6 py-4">We Are Committed To Your Health!</p>
                                 <p className='mt-2 sm:text-lg sm:w-full w-80 mx-auto text-base font-medium sm:mb-12'>It is a established fact that a reader will be distracted by the content of a page when looking at this layout.</p>
                                 <div className='sm:flex sm:py-0 py-4 gap-2'>
-                                    <Link><button className="self-center sm:px-8 px-4 mr-4 sm:py-3 py-1 font-semibold text-white bg-[#3b8d5d]  rounded-full shadow hover:bg-[#5d98db] transition-colors duration-700 hover:border-[#5996dd] border-gray-400 border sm:mr-4">Meet A Doctor</button></Link>    
+                                    <Link to="/team"><button className="self-center sm:px-8 px-4 mr-4 sm:py-3 py-1 font-semibold text-white bg-[#3b8d5d]  rounded-full shadow hover:bg-[#5d98db] transition-colors duration-700 hover:border-[#5996dd] border-gray-400 border sm:mr-4">Meet A Doctor</button></Link>    
                                     <Link><button className="self-center sm:px-8 px-4 sm:py-3 py-1 font-semibold text-white hover:bg-[#3b8d5d]  rounded-full shadow bg-[#5d98db] transition-colors duration-700 hover:border-[#5996dd] border-gray-400 border mr-4">Appoinment</button></Link>    
                                 </div>
                                 <div className='flex sm:mx-0 mx-auto gap-10 sm:py-10 py-6'>

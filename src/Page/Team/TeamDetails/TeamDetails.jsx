@@ -14,8 +14,9 @@ import Swal from 'sweetalert2';
 const TeamDetails = () => {
     const [axiosSecure] = useAxiosSecure()
     const teamdetails = useLoaderData();
-    const form = useRef()
     const {_id ,name, selfDescription, specialist, degree, educationalBackground, experienceAndSkills, phone, registrationNumber, image, email, facebook, instagram, twitter} = teamdetails;
+    const form = useRef()
+
     const handleAppoinment = async (event) =>{
         event.preventDefault()
 
