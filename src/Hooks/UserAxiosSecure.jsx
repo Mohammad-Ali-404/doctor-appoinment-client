@@ -3,34 +3,41 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 const axiosSecure = axios.create({
-  baseURL: 'http://localhost:5000', // Replace with your base URL https://rokomari-clone-server-beta.vercel.app
+  baseURL: 'http://localhost:5000', // Replace with your base URL 
 });
 
 const useAxiosSecure = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const setupInterceptors = async () => {
-      try {
-        axiosSecure.interceptors.request.use((config) => {
-          return config;
-        });
+    const setupInterceptors = () => {
+      const requestInterceptor = axiosSecure.interceptors.request.use((config) => {
+        return config;
+      });
 
-        axiosSecure.interceptors.response.use(
-          (response) => response,
-          async (error) => {
-            if (error.response && (error.response.status === 401 || error.response.status === 403)) {
-              navigate('/'); // Redirect to the home page
-            }
-            return Promise.reject(error);
+      const responseInterceptor = axiosSecure.interceptors.response.use(
+        (response) => response,
+        async (error) => {
+          if (error.response && (error.response.status === 401 || error.response.status === 403)) {
+            navigate('/'); // Redirect to the home page
           }
-        );
-      } catch (err) {
-        console.error('Error setting up axios interceptors:', err);
-      }
+          return Promise.reject(error);
+        }
+      );
+
+      // Cleanup function
+      return () => {
+        axiosSecure.interceptors.request.eject(requestInterceptor);
+        axiosSecure.interceptors.response.eject(responseInterceptor);
+      };
     };
 
-    setupInterceptors();
+    const cleanupInterceptors = setupInterceptors();
+
+    // Cleanup when the component unmounts
+    return () => {
+      cleanupInterceptors();
+    };
   }, [navigate]);
 
   return [axiosSecure];

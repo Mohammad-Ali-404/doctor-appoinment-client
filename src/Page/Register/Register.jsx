@@ -13,39 +13,35 @@ const Register = () => {
     const {createUser, updateUserProfile} = useContext(AuthContext)
     const [axiosSecure] = useAxiosSecure()
     const navigate = useNavigate()
-    const onSubmit = data => {
+    const onSubmit = (data) => {
         createUser(data.email, data.password)
-            .then(result => {
-                const loggedUser = result.user;
-                updateUserProfile(data.name, data.photoURL)
-                    .then(() => {
-                        const savedUser = {name: data.name, email: data.email}
-                        axiosSecure.post('http://localhost:5000/users', {
-                            
-                            headers: {
-                                'content-type' : 'application/json'
-                            },
-                            body: JSON.stringify(savedUser)
-                        })
-                        .then(res => res.json())
-                        .then(data => {
-                            if(data.insertedId){
-                                reset();
-                                Swal.fire({
-                                    position: 'top-end',
-                                    icon: 'success',
-                                    title: 'User created successfully.',
-                                    showConfirmButton: false,
-                                    timer: 1500
-                                });
-                            }
-                        })
-                        
-
-                    })
-                    .catch(error => console.log(error))
-            })
-    };
+          .then((result) => {
+            const loggedUser = result.user;
+            updateUserProfile(data.name, data.photoURL)
+              .then(() => {
+                const savedUser = { name: data.name, email: data.email, photo: data.photoURL };
+                axiosSecure.post('/users', savedUser)
+                  .then((response) => {
+                    // Handle the response here
+                    if (response.data.insertedId) {
+                      reset();
+                      Swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        title: 'User created successfully.',
+                        showConfirmButton: false,
+                        timer: 1500,
+                      });
+                    }
+                  })
+                  .catch((error) => {
+                    // Handle errors here
+                    console.error('Error creating user:', error);
+                  });
+              })
+              .catch((error) => console.log(error));
+          });
+      };
     return (
         <div>
             <HelmetProvider>

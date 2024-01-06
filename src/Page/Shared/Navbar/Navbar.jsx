@@ -69,7 +69,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div className="navbar-end">
-                        <div className="items-center gap-4 flex-shrink-0  lg:flex md:colmun">
+                        <div className="flex items-center gap-4 flex-shrink-0  ">
                             
                             {
                                 user ? <>
@@ -83,7 +83,7 @@ const Navbar = () => {
                                 </div>
                                  <button onClick={handleLogOut} className="self-center px-8 py-3 font-semibold text-white bg-[#3b8d5d]  rounded-full shadow hover:bg-[#5d98db] transition-colors duration-700 hover:border-[#5996dd] border-gray-400 border mr-4">SIGN Out</button>
                                 </> : <>
-                                <Link to='login'><button className="self-center px-8 py-3 font-semibold text-white bg-[#3b8d5d]  rounded-full shadow hover:bg-[#5d98db] transition-colors duration-700 hover:border-[#5996dd] border-gray-400 border mr-4">SIGN IN</button></Link>
+                                    <Link to='login'><button className="self-center px-8 py-3 font-semibold text-white bg-[#3b8d5d]  rounded-full shadow hover:bg-[#5d98db] transition-colors duration-700 hover:border-[#5996dd] border-gray-400 border mr-4">SIGN IN</button></Link>
                                 </>
                             }           
                         </div>
