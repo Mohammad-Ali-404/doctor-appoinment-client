@@ -25,7 +25,15 @@ const TeamDetails = () => {
         const AppointmentTime = formData.get('appoinment_time');
         const AppointmentDate = formData.get('appoinment_date');
         console.log("Team Member ID:", _id);
-
+        if (!name || !patientName || !patientEmail || !AppointmentTime || !AppointmentDate) {
+            // If any field is empty, show an alert to the user
+            Swal.fire({
+                title: 'Please fill out all fields',
+                icon: 'error',
+                confirmButtonText: 'OK'
+            });
+            return;
+        }
         const response = await axiosSecure.post('http://localhost:5000/appoinment', {
             image,
             name,
