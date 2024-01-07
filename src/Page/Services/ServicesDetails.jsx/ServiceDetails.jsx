@@ -107,7 +107,6 @@ const ServiceDetails = () => {
                                     <div className='space-y-5'>
                                         <ul className="list-disc pl-6 space-y-2">
                                             {serviceDetails.main_points.map((point, index) => (
-                                                
                                                 <li key={index} className="mb-2 flex gap-2 items-center"> <FaCircleCheck className='text-xl text-blue-500'/>{point}</li>
                                             ))}
                                         </ul>
