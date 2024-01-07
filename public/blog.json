@@ -1,124 +1,147 @@
 [
-      {
-        "title": "Understanding Annual Check-ups",
-        "image": "annual_checkup.jpg",
-        "additional_description": "Learn why annual check-ups are crucial for maintaining your health.",
-        "details": "In this blog post, we delve into the importance of annual check-ups, discussing the various tests and examinations involved. Don't neglect your health – read on to find out why regular check-ups are key to early detection and prevention.",
-        "images_2": ["checkup_room.jpg", "medical_tests.jpg"],
-        "post_date": "2024-01-10",
-        "testimonial": "I never realized how important annual check-ups were until I read this blog. It motivated me to schedule my appointment, and I'm grateful for the valuable information provided!",
-        "capabilities_details": ["Early detection tests", "Preventive care recommendations"]
-      },
-      {
-        "title": "The Role of Nutrition in Healthcare",
-        "image": "nutrition_healthcare.jpg",
-        "additional_description": "Explore the impact of nutrition on overall health and its connection to medical conditions.",
-        "details": "Discover the significance of maintaining a healthy diet in preventing and managing various health conditions. This blog post emphasizes the role of nutrition in supporting the body's immune system and overall well-being.",
-        "images_2": ["healthy_food.jpg", "nutritionist_consultation.jpg"],
-        "post_date": "2024-01-15",
-        "testimonial": "As someone who struggled with dietary choices, this blog enlightened me on the importance of nutrition in healthcare. It's an eye-opener for anyone looking to improve their lifestyle!",
-        "capabilities_details": ["Nutrition and immune system", "Dietary tips for health"]
-      },
-      {
-        "title": "Mental Health Awareness: Seeking Help",
-        "image": "mental_health_awareness.jpg",
-        "additional_description": "Break the stigma surrounding mental health and learn about the available resources for support.",
-        "details": "Addressing the importance of mental health, this blog post provides insights into recognizing signs of mental health issues, seeking help, and understanding the role of mental healthcare professionals. Break the stigma and prioritize your mental well-being.",
-        "images_2": ["therapy_session.jpg", "support_groups.jpg"],
-        "post_date": "2024-01-20",
-        "testimonial": "This blog empowered me to prioritize my mental health. It's a must-read for anyone navigating the challenges of mental well-being. Seek help – you're not alone!",
-        "capabilities_details": ["Recognizing signs of mental health issues", "Support resources"]
-      },
-      {
-        "title": "Preventive Measures Against Seasonal Illnesses",
-        "image": "preventive_measures.jpg",
-        "additional_description": "Discover practical tips to protect yourself from common seasonal illnesses.",
-        "details": "Explore this blog post to learn about effective preventive measures against common seasonal illnesses. From hygiene practices to vaccinations, equip yourself with the knowledge to stay healthy throughout the year.",
-        "images_2": ["hand_washing.jpg", "flu_vaccine.jpg"],
-        "post_date": "2024-01-25",
-        "testimonial": "With flu season around the corner, this blog was a timely reminder of the simple yet powerful preventive measures we can take. I've already started implementing some of the tips!",
-        "capabilities_details": ["Hygiene practices", "Vaccination recommendations"]
-      },
-      {
-        "title": "Women's Health: Empowering Choices",
-        "image": "womens_health.jpg",
-        "additional_description": "Explore key aspects of women's health and empower yourself with informed choices.",
-        "details": "This blog post focuses on various aspects of women's health, including reproductive health, screenings, and lifestyle choices. Empower yourself with knowledge and make informed decisions about your well-being.",
-        "images_2": ["womens_clinic.jpg", "healthy_lifestyle.jpg"],
-        "post_date": "2024-02-01",
-        "testimonial": "An informative read on women's health that encouraged me to take control of my well-being. It covers essential topics that every woman should be aware of!",
-        "capabilities_details": ["Reproductive health", "Screening guidelines"]
-      },
-      {
-        "title": "Managing Chronic Conditions: A Comprehensive Guide",
-        "image": "chronic_conditions.jpg",
-        "additional_description": "Gain insights into effective strategies for managing chronic health conditions.",
-        "details": "This comprehensive guide provides valuable insights into managing chronic health conditions, including lifestyle adjustments, medication adherence, and communication with healthcare providers. Take control of your health journey.",
-        "images_2": ["medication_management.jpg", "health_journal.jpg"],
-        "post_date": "2024-02-05",
-        "testimonial": "As someone living with a chronic condition, this blog was a game-changer. It provided practical strategies for managing my health effectively. Highly recommended!",
-        "capabilities_details": ["Lifestyle adjustments", "Medication adherence"]
-      },
-      {
-        "title": "Children's Health: Nurturing a Healthy Future",
-        "image": "childrens_health.jpg",
-        "additional_description": "Discover essential tips for promoting children's health and well-being.",
-        "details": "Parents, caregivers, and educators will find this blog invaluable. It covers crucial aspects of children's health, from nutrition and vaccinations to fostering a supportive environment for optimal growth and development.",
-        "images_2": ["pediatrician_visit.jpg", "healthy_snacks.jpg"],
-        "post_date": "2024-02-10",
-        "testimonial": "A must-read for parents! This blog provides practical tips for promoting children's health. I implemented some of the advice, and I've seen positive changes in my child's well-being.",
-        "capabilities_details": ["Nutrition for children", "Vaccination schedules"]
-      },
-      {
-        "title": "Fitness for All: Tailoring Exercise to Your Needs",
-        "image": "fitness_for_all.jpg",
-        "additional_description": "Explore how to customize your fitness routine to suit your individual needs and health goals.",
-        "details": "This blog caters to individuals of all fitness levels. Whether you're a beginner or an experienced fitness enthusiast, discover how to tailor your exercise routine to achieve optimal health benefits while considering your unique needs and goals.",
-        "images_2": ["personal_trainer.jpg", "fitness_group.jpg"],
-        "post_date": "2024-02-15",
-        "testimonial": "Finally, a fitness guide that considers individual needs! This blog helped me design a workout routine that suits my lifestyle and health goals. It's a game-changer!",
-        "capabilities_details": ["Customized fitness plans", "Health-conscious workouts"]
-      },
-      {
-        "title": "Senior Health: Aging Gracefully and Happily",
-        "image": "senior_health.jpg",
-        "additional_description": "Discover tips for maintaining physical and mental well-being as you age.",
-        "details": "This blog addresses the unique health challenges faced by seniors. From staying active to nurturing mental health, learn how to age gracefully and happily with practical tips and insights.",
-        "images_2": ["senior_exercise.jpg", "memory_games.jpg"],
-        "post_date": "2024-02-20",
-        "testimonial": "As someone entering the senior phase of life, this blog resonated with me. It's filled with practical advice on maintaining health and happiness in the golden years. Highly recommended!",
-        "capabilities_details": ["Senior fitness tips", "Mental well-being in aging"]
-      },
-      {
-        "title": "Healthy Sleep Habits: A Guide to Quality Rest",
-        "image": "healthy_sleep.jpg",
-        "additional_description": "Explore the importance of quality sleep and tips for establishing healthy sleep habits.",
-        "details": "This blog focuses on the significance of quality sleep for overall health and well-being. Learn about the impact of sleep on physical and mental health, along with practical tips for establishing healthy sleep habits.",
-        "images_2": ["sleep_environment.jpg", "bedtime_routine.jpg"],
-        "post_date": "2024-02-25",
-        "testimonial": "A much-needed guide for better sleep! This blog helped me understand the importance of quality rest and provided actionable tips for improving my sleep habits.",
-        "capabilities_details": ["Understanding sleep cycles", "Creating a sleep-friendly environment"]
-      },
-      {
-        "title": "Balanced Diets: Nourishing Your Body Right",
-        "image": "balanced_diets.jpg",
-        "additional_description": "Discover the principles of a balanced diet and how it contributes to overall health.",
-        "details": "This blog explores the importance of maintaining a balanced diet for optimal health. Gain insights into the key components of a balanced diet and learn how it contributes to overall well-being and disease prevention.",
-        "images_2": ["balanced_meals.jpg", "nutrient-rich_foods.jpg"],
-        "post_date": "2024-03-01",
-        "testimonial": "A comprehensive guide to healthy eating! I appreciated the practical advice on creating balanced meals and making informed food choices. Highly recommended for anyone looking to improve their diet.",
-        "capabilities_details": ["Nutrient-rich food choices", "Meal planning tips"]
-      },
-      {
-        "title": "Mindful Living: Incorporating Wellness into Everyday Life",
-        "image": "mindful_living.jpg",
-        "additional_description": "Explore the principles of mindful living and its positive impact on overall wellness.",
-        "details": "This blog introduces the concept of mindful living and how it can positively impact physical and mental well-being. Learn practical tips for incorporating mindfulness into your daily life for a healthier and more fulfilling existence.",
-        "images_2": ["mindfulness_practices.jpg", "mindful_eating.jpg"],
-        "post_date": "2024-03-05",
-        "testimonial": "A transformative read on incorporating mindfulness into daily life! The practical tips provided in this blog have enhanced my overall well-being. It's a must-read for those seeking a more mindful and balanced lifestyle.",
-        "capabilities_details": ["Mindfulness exercises", "Incorporating mindfulness into daily routines"]
-      }
-]
+    {
+      "title": "Understanding Annual Check-ups",
+      "image": "https://i.ibb.co/GtzxH8x/blog-1.jpg",
+      "category": "popular",
+      "additional_description": "Learn why annual check-ups are crucial for maintaining your health.",
+      "details": "In this blog post, we delve into the importance of annual check-ups, discussing the various tests and examinations involved. Don't neglect your health – read on to find out why regular check-ups are key to early detection and prevention.",
+      "images_2": ["checkup_room.jpg", "medical_tests.jpg"],
+      "post_date": "2024-01-10",
+      "testimonial": "I never realized how important annual check-ups were until I read this blog. It motivated me to schedule my appointment, and I'm grateful for the valuable information provided!",
+      "capabilities_details": ["Early detection tests", "Preventive care recommendations"],
+      "posted_by": "Admin"
+    },
+    {
+      "title": "The Role of Nutrition in Healthcare",
+      "image": "https://i.ibb.co/GtzxH8x/blog-1.jpg",
+      "category": "Nutrition",
+      "additional_description": "Explore the impact of nutrition on overall health and its connection to medical conditions.",
+      "details": "Discover the significance of maintaining a healthy diet in preventing and managing various health conditions. This blog post emphasizes the role of nutrition in supporting the body's immune system and overall well-being.",
+      "images_2": ["healthy_food.jpg", "nutritionist_consultation.jpg"],
+      "post_date": "2024-01-15",
+      "testimonial": "As someone who struggled with dietary choices, this blog enlightened me on the importance of nutrition in healthcare. It's an eye-opener for anyone looking to improve their lifestyle!",
+      "capabilities_details": ["Nutrition and immune system", "Dietary tips for health"],
+      "posted_by": "Admin"
+    },
+    {
+      "title": "Mental Health Awareness: Seeking Help",
+      "image": "https://i.ibb.co/GtzxH8x/blog-1.jpg",
+      "category": "Mental Health",
+      "additional_description": "Break the stigma surrounding mental health and learn about the available resources for support.",
+      "details": "Addressing the importance of mental health, this blog post provides insights into recognizing signs of mental health issues, seeking help, and understanding the role of mental healthcare professionals. Break the stigma and prioritize your mental well-being.",
+      "images_2": ["therapy_session.jpg", "support_groups.jpg"],
+      "post_date": "2024-01-20",
+      "testimonial": "This blog empowered me to prioritize my mental health. It's a must-read for anyone navigating the challenges of mental well-being. Seek help – you're not alone!",
+      "capabilities_details": ["Recognizing signs of mental health issues", "Support resources"],
+      "posted_by": "Admin"
+    },
+    {
+      "title": "Preventive Measures Against Seasonal Illnesses",
+      "image": "https://i.ibb.co/GtzxH8x/blog-1.jpg",
+      "category": "Preventive Care",
+      "additional_description": "Discover practical tips to protect yourself from common seasonal illnesses.",
+      "details": "Explore this blog post to learn about effective preventive measures against common seasonal illnesses. From hygiene practices to vaccinations, equip yourself with the knowledge to stay healthy throughout the year.",
+      "images_2": ["hand_washing.jpg", "flu_vaccine.jpg"],
+      "post_date": "2024-01-25",
+      "testimonial": "With flu season around the corner, this blog was a timely reminder of the simple yet powerful preventive measures we can take. I've already started implementing some of the tips!",
+      "capabilities_details": ["Hygiene practices", "Vaccination recommendations"],
+      "posted_by": "Admin"
+    },
+    {
+      "title": "Women's Health: Empowering Choices",
+      "image": "https://i.ibb.co/GtzxH8x/blog-1.jpg",
+      "category": "Women's Health",
+      "additional_description": "Explore key aspects of women's health and empower yourself with informed choices.",
+      "details": "This blog post focuses on various aspects of women's health, including reproductive health, screenings, and lifestyle choices. Empower yourself with knowledge and make informed decisions about your well-being.",
+      "images_2": ["womens_clinic.jpg", "healthy_lifestyle.jpg"],
+      "post_date": "2024-02-01",
+      "testimonial": "An informative read on women's health that encouraged me to take control of my well-being. It covers essential topics that every woman should be aware of!",
+      "capabilities_details": ["Reproductive health", "Screening guidelines"],
+      "posted_by": "Admin"
+    },
+    {
+      "title": "Managing Chronic Conditions: A Comprehensive Guide",
+      "image": "https://i.ibb.co/GtzxH8x/blog-1.jpg",
+      "category": "Chronic Conditions",
+      "additional_description": "Gain insights into effective strategies for managing chronic health conditions.",
+      "details": "This comprehensive guide provides valuable insights into managing chronic health conditions, including lifestyle adjustments, medication adherence, and communication with healthcare providers. Take control of your health journey.",
+      "images_2": ["medication_management.jpg", "health_journal.jpg"],
+      "post_date": "2024-02-05",
+      "testimonial": "As someone living with a chronic condition, this blog was a game-changer. It provided practical strategies for managing my health effectively. Highly recommended!",
+      "capabilities_details": ["Lifestyle adjustments", "Medication adherence"],
+      "posted_by": "Admin"
+    },
+    {
+      "title": "Children's Health: Nurturing a Healthy Future",
+      "image": "https://i.ibb.co/GtzxH8x/blog-1.jpg",
+      "category": "popular",
+      "additional_description": "Discover essential tips for promoting children's health and well-being.",
+      "details": "Parents, caregivers, and educators will find this blog invaluable. It covers crucial aspects of children's health, from nutrition and vaccinations to fostering a supportive environment for optimal growth and development.",
+      "images_2": ["pediatrician_visit.jpg", "healthy_snacks.jpg"],
+      "post_date": "2024-02-10",
+      "testimonial": "A must-read for parents! This blog provides practical tips for promoting children's health. I implemented some of the advice, and I've seen positive changes in my child's well-being.",
+      "capabilities_details": ["Nutrition for children", "Vaccination schedules"],
+      "posted_by": "Admin"
+    },
+    {
+      "title": "Fitness for All: Tailoring Exercise to Your Needs",
+      "image": "https://i.ibb.co/GtzxH8x/blog-1.jpg",
+      "category": "popular",
+      "additional_description": "Explore how to customize your fitness routine to suit your individual needs and health goals.",
+      "details": "This blog caters to individuals of all fitness levels. Whether you're a beginner or an experienced fitness enthusiast, discover how to tailor your exercise routine to achieve optimal health benefits while considering your unique needs and goals.",
+      "images_2": ["personal_trainer.jpg", "fitness_group.jpg"],
+      "post_date": "2024-02-15",
+      "testimonial": "Finally, a fitness guide that considers individual needs! This blog helped me design a workout routine that suits my lifestyle and health goals. It's a game-changer!",
+      "capabilities_details": ["Customized fitness plans", "Health-conscious workouts"],
+      "posted_by": "Admin"
+    },
+    {
+      "title": "Senior Health: Aging Gracefully and Happily",
+      "image": "https://i.ibb.co/GtzxH8x/blog-1.jpg",
+      "category": "Senior Health",
+      "additional_description": "Discover tips for maintaining physical and mental well-being as you age.",
+      "details": "This blog addresses the unique health challenges faced by seniors. From staying active to nurturing mental health, learn how to age gracefully and happily with practical tips and insights.",
+      "images_2": ["senior_exercise.jpg", "memory_games.jpg"],
+      "post_date": "2024-02-20",
+      "testimonial": "As someone entering the senior phase of life, this blog resonated with me. It's filled with practical advice on maintaining health and happiness in the golden years. Highly recommended!",
+      "capabilities_details": ["Senior fitness tips", "Mental well-being in aging"],
+      "posted_by": "Admin"
+    },
+    {
+      "title": "Healthy Sleep Habits: A Guide to Quality Rest",
+      "image": "https://i.ibb.co/GtzxH8x/blog-1.jpg",
+      "category": "Sleep Health",
+      "additional_description": "Explore the importance of quality sleep and tips for establishing healthy sleep habits.",
+      "details": "This blog focuses on the significance of quality sleep for overall health and well-being. Learn about the impact of sleep on physical and mental health, along with practical tips for establishing healthy sleep habits.",
+      "images_2": ["sleep_environment.jpg", "bedtime_routine.jpg"],
+      "post_date": "2024-02-25",
+      "testimonial": "A much-needed guide for better sleep! This blog helped me understand the importance of quality rest and provided actionable tips for improving my sleep habits.",
+      "capabilities_details": ["Understanding sleep cycles", "Creating a sleep-friendly environment"],
+      "posted_by": "Admin"
+    },
+    {
+      "title": "Balanced Diets: Nourishing Your Body Right",
+      "image": "https://i.ibb.co/GtzxH8x/blog-1.jpg",
+      "category": "popular",
+      "additional_description": "Discover the principles of a balanced diet and how it contributes to overall health.",
+      "details": "This blog explores the importance of maintaining a balanced diet for optimal health. Gain insights into the key components of a balanced diet and learn how it contributes to overall well-being and disease prevention.",
+      "images_2": ["balanced_meals.jpg", "nutrient-rich_foods.jpg"],
+      "post_date": "2024-03-01",
+      "testimonial": "A comprehensive guide to healthy eating! I appreciated the practical advice on creating balanced meals and making informed food choices. Highly recommended for anyone looking to improve their diet.",
+      "capabilities_details": ["Nutrient-rich food choices", "Meal planning tips"],
+      "posted_by": "Admin"
+    },
+    {
+      "title": "Mindful Living: Incorporating Wellness into Everyday Life",
+      "image": "https://i.ibb.co/GtzxH8x/blog-1.jpg",
+      "category": "popular",
+      "additional_description": "Explore the principles of mindful living and its positive impact on overall wellness.",
+      "details": "This blog introduces the concept of mindful living and how it can positively impact physical and mental well-being. Learn practical tips for incorporating mindfulness into your daily life for a healthier and more fulfilling existence.",
+      "images_2": ["mindfulness_practices.jpg", "mindful_eating.jpg"],
+      "post_date": "2024-03-05",
+      "testimonial": "A transformative read on incorporating mindfulness into daily life! The practical tips provided in this blog have enhanced my overall well-being. It's a must-read for those seeking a more mindful and balanced lifestyle.",
+      "capabilities_details": ["Mindfulness exercises", "Incorporating mindfulness into daily routines"],
+      "posted_by": "Admin"
+    }
+  ]
 
-  
