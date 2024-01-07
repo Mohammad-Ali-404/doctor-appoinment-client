@@ -10,6 +10,8 @@ import TeamDetails from "../Page/Team/TeamDetails/TeamDetails";
 import Services from "../Page/Services/Services";
 import ServiceDetails from "../Page/Services/ServicesDetails.jsx/ServiceDetails";
 import Pricing from "../Page/Pricing/Pricing";
+import Blog from "../Page/Blog/Blog";
+import BlogDetails from "../Page/Blog/BlogDetails/BlogDetails";
 
 const router = createBrowserRouter ([
     {
@@ -57,6 +59,14 @@ const router = createBrowserRouter ([
             {
                 path:"pricing",
                 element:<Pricing/>
+            },
+            {
+                path:"blog",
+                element:<Blog/>
+            },
+            {
+                path:'/blogdetails:/id',
+                element:<BlogDetails/>
             }
         ]
     }
