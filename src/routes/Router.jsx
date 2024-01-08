@@ -13,6 +13,7 @@ import Pricing from "../Page/Pricing/Pricing";
 import Blog from "../Page/Blog/Blog";
 import BlogDetails from "../Page/Blog/BlogDetails/BlogDetails";
 import PrivateRoute from "./PrivateRoute";
+import Dashboard from "../Layout/Dasboard";
 
 const router = createBrowserRouter ([
     {
@@ -71,6 +72,16 @@ const router = createBrowserRouter ([
                 loader: ({params}) => fetch(`http://localhost:5000/blogs/${params.id}`)
             }
         ]
+    },
+    {
+        path:'dashboard',
+        element:<PrivateRoute><Dashboard/></PrivateRoute>,
+        children:[
+            {
+                
+            }
+        ]
     }
+
 ])
 export default router;

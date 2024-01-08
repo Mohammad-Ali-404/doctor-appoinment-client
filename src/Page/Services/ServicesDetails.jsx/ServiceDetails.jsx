@@ -27,7 +27,6 @@ const ServiceDetails = () => {
         fetchData();
       }, [axiosSecure]);
     
-// Todo
     return (
         <div className=''>
             <Helmet><title>Service Details | One Care</title></Helmet>
