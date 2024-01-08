@@ -7,9 +7,11 @@ import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
 import Swal from 'sweetalert2';
+import useAxiosSecure from '../../Hooks/UserAxiosSecure';
 
 const Login = () => {
     const {signIn, handleGoogleLogin} = useContext(AuthContext)
+    const [axiosSecure] = useAxiosSecure()
     const navigate = useNavigate()
     const location = useLocation()
     const from = location.state?.from?.pathname || "/";
@@ -36,19 +38,30 @@ const Login = () => {
     }
     const GoogleLogin = () => {
         handleGoogleLogin()
-          .then(() => {
-            // Google login successful
-            Swal.fire({
-              position: 'top-center',
-              icon: 'success',
-              title: 'Login Succssfully done',
-              showConfirmButton: false,
-              timer: 1500
-            });
-          })
-          .catch((error) => {
-            console.error("Google login error:", error.message);
-          });
+         .then(result =>{
+            const loggedUser = result.user;
+            console.log(loggedUser)
+            const savedUser = { name: loggedUser.displayName, email: loggedUser.email, photo: loggedUser.photoURL }
+                axiosSecure.post('/users', savedUser)
+                  .then((response) => {
+                    // Handle the response here
+                    if (response.data.insertedId) {
+                      Swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        title: 'User Login successfully.',
+                        showConfirmButton: false,
+                        timer: 1500,
+                      });
+                      navigate(from, {replace:true})
+                    }
+                  })
+                  .catch((error) => {
+                    // Handle errors here
+                    console.error('Error creating user:', error);
+                  })
+              .catch((error) => console.log(error));
+         })
       };
     return (
         <div>

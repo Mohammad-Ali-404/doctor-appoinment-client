@@ -12,6 +12,7 @@ import ServiceDetails from "../Page/Services/ServicesDetails.jsx/ServiceDetails"
 import Pricing from "../Page/Pricing/Pricing";
 import Blog from "../Page/Blog/Blog";
 import BlogDetails from "../Page/Blog/BlogDetails/BlogDetails";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter ([
     {
@@ -44,7 +45,7 @@ const router = createBrowserRouter ([
             },
             {
                 path:"/teamdetails/:id",
-                element:<TeamDetails/>,
+                element: <PrivateRoute><TeamDetails/></PrivateRoute>,
                 loader: ({params}) =>fetch(`http://localhost:5000/team/${params.id}`)
             },
             {
