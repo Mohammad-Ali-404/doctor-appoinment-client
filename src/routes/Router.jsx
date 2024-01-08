@@ -14,6 +14,7 @@ import Blog from "../Page/Blog/Blog";
 import BlogDetails from "../Page/Blog/BlogDetails/BlogDetails";
 import PrivateRoute from "./PrivateRoute";
 import Dashboard from "../Layout/Dasboard";
+import Alluser from "../Page/Dashboard/AdminDashboard/AllUsers/Alluser";
 
 const router = createBrowserRouter ([
     {
@@ -78,7 +79,8 @@ const router = createBrowserRouter ([
         element:<PrivateRoute><Dashboard/></PrivateRoute>,
         children:[
             {
-                
+                path:'allusers',
+                element:<Alluser/>
             }
         ]
     }

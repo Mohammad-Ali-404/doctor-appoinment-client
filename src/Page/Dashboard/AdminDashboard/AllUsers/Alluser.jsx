@@ -1,0 +1,144 @@
+import React from 'react';
+import { useQuery } from '@tanstack/react-query';
+import Swal from 'sweetalert2';
+import useAxiosSecure from '../../../../Hooks/UserAxiosSecure';
+import { GoTrash } from 'react-icons/go';
+import { Helmet } from 'react-helmet-async';
+import { FaRegEdit, FaUsers } from 'react-icons/fa';
+
+const UserList = () => {
+  const [axiosSecure] = useAxiosSecure() 
+  const { data: users, isLoading, isError, refetch } = useQuery({ queryKey: 'users', queryFn: async () => {
+      const res = await fetch(`${import.meta.env.VITE_VITE_SERVER_BASE_URL}/users`);
+      return res.json();
+    },
+  });
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (isError) {
+    return <div>Error loading users</div>;
+  }
+  const handleDeleteVolunteer = (userData) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        axiosSecure
+          .delete(`${import.meta.env.VITE_VITE_SERVER_BASE_URL}/users/${userData._id}`)
+          .then((res) => {
+            if (res?.data?.acknowledged) {
+              refetch();
+              Swal.fire("Deleted!", "user has been deleted.", "success");
+            }
+          })
+          .catch((error) => {
+            console.error("error:", error);
+          });
+      }
+    });
+  };
+  return (
+    <div>
+        <Helmet><title>All Users | One Care</title></Helmet>
+        <ul>
+                <div>
+                    <div className='pt-10'>
+                        {/* <DashboardTitle title='Manage Volunteer' subTitle="Added Create daily new causes"/> */}
+                    </div>
+                    <div className='bg-white p-8 rounded-xl mt-10'>
+                        <div className="bg-white shadow-md p-4 md:p-8 mx-2 md:mx-10 rounded-2xl">
+                            <div className="overflow-x-auto">
+                                <table className="divide-y divide-gray-200">
+                                    <thead className="bg-gray-50 text-slate-800">
+                                        <tr className=''>
+                                        <th className="py-3 pl-2 md:py-5 text-left text-base md:text-lg pe-2">
+                                            Image
+                                        </th>
+                                        <th className="py-3 md:py-5 text-left text-base md:text-lg">
+                                            Title
+                                        </th>
+                                        <th className="py-3 md:py-5 pe-6 text-left text-base md:text-lg">
+                                            Role
+                                        </th>
+                                        <th className="py-3 md:py-5 pe-6 text-left text-base md:text-lg">
+                                            Update
+                                        </th>
+                                        <th className="py-3 pr-2 md:py-5 text-left text-base md:text-lg">
+                                            Delete
+                                        </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody className="bg-white divide-y divide-gray-200">
+                                        {users.map((allUsers) => (
+                                            <tr key={allUsers._id}>
+                                            <td className="py-2 md:py-4">
+                                                <img
+                                                src={allUsers.photo}
+                                                alt="user"
+                                                className="w-12 h-12 md:w-14 md:h-14 rounded-xl mr-3 md:mr-4"
+                                                />
+                                            </td>
+                                            <td className="py-2 xl:text-lg md:text-sm text-xs md:py-4 w-40 md:w-full">
+                                                {allUsers.name}
+                                            </td>
+                                            <td className="">
+                                                <div className="bg-gray-100 py-2 rounded-md">
+                                                    {
+                                                        allUsers.role === 'admin' ? 'admin' 
+                                                        :
+                                                        <FaUsers className="sm:text-xl text-base mx-auto cursor-pointer text-cyan-600"/>
+                                                    }
+                                                </div>
+                                            </td>
+                                            <td className="pl-5">
+                                                <div className="bg-gray-100 w-2/3 py-2 rounded-md">
+                                                <FaRegEdit
+                                                    // onClick={() => {
+                                                    // setIsUpdatVolunteerModalOpen(true);
+                                                    // setVolunteerId(volunteerData?._id);
+                                                    // setSingleVolunteerData(volunteerData);
+                                                    // console.log("manage volunteer", volunteerData?._id);
+                                                    // }}
+                                                    className="sm:text-xl text-base mx-auto cursor-pointer text-blue-600"
+                                                />
+                                                </div>
+                                            </td>
+                                            <td className="">
+                                                <div className="bg-gray-100 w-2/3 py-2 rounded-md">
+                                                <GoTrash
+                                                    onClick={() => {
+                                                    handleDeleteVolunteer(allUsers);
+                                                    }}
+                                                    className="sm:text-xl text-base mx-auto cursor-pointer text-red-500"
+                                                />
+                                                </div>
+                                            </td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                            {/* {isUpdateVolunteerModalOpen && (
+                            <UpdateVolunteerProfile
+                            key={volunteerId._id}
+                            singleVolunteerData={singleVolunteerData}
+                            setIsUpdatVolunteerModalOpen={setIsUpdatVolunteerModalOpen}
+                            />
+                        )} */}
+                    </div>
+                </div>
+         </ul>
+    </div>
+  );
+};
+
+export default UserList;

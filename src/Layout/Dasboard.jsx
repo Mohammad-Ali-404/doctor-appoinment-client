@@ -54,25 +54,25 @@ const Dashboard = () => {
                                 </Link>
                             </li>
                             <li className="rounded-sm dark:bg-gray-800 dark:text-gray-50">
-                                <Link to="" href="#" className="flex items-center p-2 space-x-3 rounded-md">
+                                <Link to="/dashboard/allusers" href="#" className="flex items-center p-2 space-x-3 rounded-md">
                                     <AiOutlineUser/>
                                     <span className='sm:py-3 py-3 p px-3'>All User</span>
                                 </Link>
                             </li>
                             <li className="rounded-sm dark:bg-gray-800 dark:text-gray-50">
-                                <Link to="" href="#" className="flex items-center p-2 space-x-3 rounded-md">
+                                <Link to="/dashboard/" href="#" className="flex items-center p-2 space-x-3 rounded-md">
                                     <AiOutlineUser/>
                                     <span className='sm:py-3 py-3 p px-3'>Appointment</span>
                                 </Link>
                             </li>
                             <li className="rounded-sm dark:bg-gray-800 dark:text-gray-50">
-                                <Link to="" href="#" className="flex items-center p-2 space-x-3 rounded-md">
+                                <Link to="/dashboard/" href="#" className="flex items-center p-2 space-x-3 rounded-md">
                                     <FaUsers/>
                                     <span className='sm:py-3 py-3 p px-3'>Team</span>
                                 </Link>
                             </li>
                             <li className="rounded-sm dark:bg-gray-800 dark:text-gray-50">
-                                <Link to="" href="#" className="flex items-center p-2 space-x-3 rounded-md">
+                                <Link to="/dashboard/" href="#" className="flex items-center p-2 space-x-3 rounded-md">
                                     <AiOutlineMoneyCollect/>
                                     <span className='sm:py-3 py-3 p px-3'>Transaction History</span>
                                 </Link>
