@@ -20,6 +20,25 @@ const UserList = () => {
   if (isError) {
     return <div>Error loading users</div>;
   }
+  const handleMakeAdmin = allUsers =>{
+    fetch(`${import.meta.env.VITE_VITE_SERVER_BASE_URL}/users/admin/${allUsers._id}`,{
+        method:"PATCH"
+    })
+        .then(res => res.json())
+        .then(data =>{
+            console.log(data);
+            if (data.modifiedCount) {
+                refetch()
+                Swal.fire({
+                    position: 'top-center',
+                    icon: 'success',
+                    title: `${allUsers.name} is an Admin Now!`,
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            }
+        })
+  }
   const handleDeleteVolunteer = (userData) => {
     Swal.fire({
       title: "Are you sure?",
@@ -68,9 +87,6 @@ const UserList = () => {
                                         <th className="py-3 md:py-5 pe-6 text-left text-base md:text-lg">
                                             Role
                                         </th>
-                                        <th className="py-3 md:py-5 pe-6 text-left text-base md:text-lg">
-                                            Update
-                                        </th>
                                         <th className="py-3 pr-2 md:py-5 text-left text-base md:text-lg">
                                             Delete
                                         </th>
@@ -89,27 +105,16 @@ const UserList = () => {
                                             <td className="py-2 xl:text-lg md:text-sm text-xs md:py-4 w-40 md:w-full">
                                                 {allUsers.name}
                                             </td>
-                                            <td className="">
-                                                <div className="bg-gray-100 py-2 rounded-md">
-                                                    {
-                                                        allUsers.role === 'admin' ? 'admin' 
-                                                        :
-                                                        <FaUsers className="sm:text-xl text-base mx-auto cursor-pointer text-cyan-600"/>
-                                                    }
-                                                </div>
-                                            </td>
-                                            <td className="pl-5">
-                                                <div className="bg-gray-100 w-2/3 py-2 rounded-md">
-                                                <FaRegEdit
-                                                    // onClick={() => {
-                                                    // setIsUpdatVolunteerModalOpen(true);
-                                                    // setVolunteerId(volunteerData?._id);
-                                                    // setSingleVolunteerData(volunteerData);
-                                                    // console.log("manage volunteer", volunteerData?._id);
-                                                    // }}
-                                                    className="sm:text-xl text-base mx-auto cursor-pointer text-blue-600"
-                                                />
-                                                </div>
+                                            <td className=" px-4">
+                                            <div className="bg-gray-100 py-2 rounded-md">
+                                                {
+                                                    allUsers.role === 'admin' ? (
+                                                        <span className='text-base p-3 font-semibold'>Admin</span>
+                                                    ) : (
+                                                        <FaUsers onClick={() => handleMakeAdmin(allUsers)} className="sm:text-xl text-base mx-auto cursor-pointer text-cyan-600" />
+                                                    )
+                                                }
+                                            </div>
                                             </td>
                                             <td className="">
                                                 <div className="bg-gray-100 w-2/3 py-2 rounded-md">
