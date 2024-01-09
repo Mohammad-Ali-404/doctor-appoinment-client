@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import Swal from 'sweetalert2';
 import useAxiosSecure from '../../../../Hooks/UserAxiosSecure';
 import { GoTrash } from 'react-icons/go';
 import { Helmet } from 'react-helmet-async';
-import { FaRegEdit, FaUsers } from 'react-icons/fa';
+import { FaUsers } from 'react-icons/fa';
+import ReactPaginate from 'react-paginate';
 
 const UserList = () => {
   const [axiosSecure] = useAxiosSecure() 
+  const itemsPerPage = 10;
+  const [currentPage, setCurrentPage] = useState(0);
+
   const { data: users, isLoading, isError, refetch } = useQuery({ queryKey: 'users', queryFn: async () => {
       const res = await fetch(`${import.meta.env.VITE_VITE_SERVER_BASE_URL}/users`);
       return res.json();
@@ -39,7 +43,12 @@ const UserList = () => {
             }
         })
   }
-  const handleDeleteVolunteer = (userData) => {
+  const handlePageClick = ({ selected }) => {
+      setCurrentPage(selected);
+  };
+  const offset = currentPage * itemsPerPage;
+  const paginatedUsers = users.slice(offset, offset + itemsPerPage);
+  const handleDeleteUser = (userData) => {
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -93,7 +102,7 @@ const UserList = () => {
                                         </tr>
                                     </thead>
                                     <tbody className="bg-white divide-y divide-gray-200">
-                                        {users.map((allUsers) => (
+                                        {paginatedUsers.map((allUsers) => (
                                             <tr key={allUsers._id}>
                                             <td className="py-2 md:py-4">
                                                 <img
@@ -120,7 +129,7 @@ const UserList = () => {
                                                 <div className="bg-gray-100 w-2/3 py-2 rounded-md">
                                                 <GoTrash
                                                     onClick={() => {
-                                                    handleDeleteVolunteer(allUsers);
+                                                    handleDeleteUser(allUsers);
                                                     }}
                                                     className="sm:text-xl text-base mx-auto cursor-pointer text-red-500"
                                                 />
@@ -131,14 +140,25 @@ const UserList = () => {
                                     </tbody>
                                 </table>
                             </div>
+                            <div className='my-4'>
+                                <ReactPaginate
+                                    previousLabel={'Previous'}
+                                    nextLabel={'Next'}
+                                    breakLabel={'...'}
+                                    breakClassName={'text-gray-600'}
+                                    pageCount={Math.ceil(users.length / itemsPerPage)}
+                                    marginPagesDisplayed={2}
+                                    pageRangeDisplayed={5}
+                                    onPageChange={handlePageClick}
+                                    containerClassName={'flex justify-center gap-2'}
+                                    subContainerClassName={'flex items-center space-x-4'}
+                                    activeClassName={'bg-blue-500 text-white font-semibold border border-blue-500 py-2 -mt-2 rounded-full'}
+                                    pageLinkClassName={'text-slate-800 hover:bg-blue-100 border border-blue-500 px-4 py-2 rounded-full'}
+                                    previousLinkClassName={'text-slate-800 hover:bg-blue-100 border border-blue-500 px-4 py-2 rounded-full'}
+                                    nextLinkClassName={'text-blue-500 hover:bg-blue-100 border border-blue-500 px-4 py-2 rounded-full'}
+                                />
+                            </div>
                         </div>
-                            {/* {isUpdateVolunteerModalOpen && (
-                            <UpdateVolunteerProfile
-                            key={volunteerId._id}
-                            singleVolunteerData={singleVolunteerData}
-                            setIsUpdatVolunteerModalOpen={setIsUpdatVolunteerModalOpen}
-                            />
-                        )} */}
                     </div>
                 </div>
          </ul>
