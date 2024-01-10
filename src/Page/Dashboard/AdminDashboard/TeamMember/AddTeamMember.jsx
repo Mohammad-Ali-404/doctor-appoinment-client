@@ -4,9 +4,9 @@ import useAxiosSecure from '../../../../Hooks/UserAxiosSecure';
 import Swal from 'sweetalert2';
 
 const image_hosting_token= import.meta.env.VITE_Image_Upload_Token;
-const AddDoctor = () => {
+const AddTeamMember = () => {
     const [axiosSecure] = useAxiosSecure()
-    const {register, handleSubmit, reset,  formState: { errors },} = useForm()
+    const {register, handleSubmit, reset} = useForm()
     const image_hosting_url = `https://api.imgbb.com/1/upload?key=${image_hosting_token}`
     const onSubmit = (data) =>{
         const formData = new FormData()
@@ -40,7 +40,7 @@ const AddDoctor = () => {
     }
     return (
         <div className='py-10'>
-            <h1></h1>
+            <h1 className='text-xl font-semibold text-center py-5'>Added New Team Member</h1>
             <form onSubmit={handleSubmit(onSubmit)}> 
                 <div className="max-w-6xl mx-auto p-6 bg-white rounded-md shadow-md">
                             <div className="mb-4 w-full ">
@@ -128,4 +128,4 @@ const AddDoctor = () => {
     );
 };
 
-export default AddDoctor;
+export default AddTeamMember;

@@ -1,12 +1,10 @@
 import React from 'react';
 import { AiOutlineHome, AiOutlineMoneyCollect, AiOutlineUser } from 'react-icons/ai';
 import { HiOutlineMenuAlt3, HiOutlineShare } from "react-icons/hi";
-import { BsSignpostSplit} from "react-icons/bs";
-import { RiImageEditFill, RiUserForbidLine } from "react-icons/ri";
+import { RiImageEditFill } from "react-icons/ri";
 import { GiNewspaper } from "react-icons/gi";
 import { VscDiffAdded } from "react-icons/vsc";
-import { MdOutlineVolunteerActivism, MdBookmarkAdd} from "react-icons/md";
-import { FaUsers } from "react-icons/fa";
+import { FaUserEdit, FaUsers } from "react-icons/fa";
 import { Link, Outlet } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../Providers/AuthProvider';
@@ -67,13 +65,13 @@ const Dashboard = () => {
                                 </Link>
                             </li>
                             <li className="rounded-sm dark:bg-gray-800 dark:text-gray-50">
-                                <Link to="/dashboard/" href="#" className="flex items-center p-2 space-x-3 rounded-md">
-                                    <FaUsers/>
-                                    <span className='sm:py-3 py-3 p px-3'>Team</span>
+                                <Link to="/dashboard/manageteammember" href="#" className="flex items-center p-2 space-x-3 rounded-md">
+                                    <FaUserEdit/>
+                                    <span className='sm:py-3 py-3 p px-3'>Manage Team</span>
                                 </Link>
                             </li>
                             <li className="rounded-sm dark:bg-gray-800 dark:text-gray-50">
-                                <Link to="/dashboard/addDoctor" href="#" className="flex items-center p-2 space-x-3 rounded-md">
+                                <Link to="/dashboard/addteammember" href="#" className="flex items-center p-2 space-x-3 rounded-md">
                                     <FaUsers/>
                                     <span className='sm:py-3 py-3 p px-3'>Add an Team Member</span>
                                 </Link>

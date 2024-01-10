@@ -76,10 +76,10 @@ const UserList = () => {
         <Helmet><title>All Users | One Care</title></Helmet>
         <ul>
                 <div>
-                    <div className='pt-10'>
-                        {/* <DashboardTitle title='Manage Volunteer' subTitle="Added Create daily new causes"/> */}
+                    <div className=''>
+                        <h1 className='text-xl font-semibold text-center py-5'>Added New Team Member</h1>
                     </div>
-                    <div className='bg-white p-8 rounded-xl mt-10'>
+                    <div className='bg-white p-8 rounded-xl'>
                         <div className="bg-white shadow-md p-4 md:p-8 mx-2 md:mx-10 rounded-2xl">
                             <div className="overflow-x-auto">
                                 <table className="divide-y divide-gray-200">
