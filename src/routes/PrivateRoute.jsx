@@ -6,12 +6,12 @@ export default function PrivateRoute({children}) {
     const location = useLocation()
     if (loading) {
       return <div className="flex justify-center items-center h-screen bg-slate-200">
-        Loading....
+        Loading...
       </div>
     }
 
     if(user){
         return children;
     }
-  return <Navigate to="/login" state={{from:location}} replace></Navigate>
+  return <Navigate to="/" state={{from:location}} replace></Navigate>
 }

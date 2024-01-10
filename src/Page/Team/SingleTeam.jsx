@@ -7,7 +7,7 @@ const SingleTeam = ({member}) => {
     return (
         <div>
              <div className="flex flex-col justify-center h-full shadow-xl bg-white dark:text-gray-100">
-                <img src={image} alt="" className="sm:w-80 w-full py-5 mx-auto" />                        
+                <img src={image} alt="" className="sm:w-full h-4/6 p-4 mx-auto" />                        
                     <div className='flex justify-between sm:px-4 px-6 py-6'>
                         <div className="space-y-4">
                             <div className="my-2 space-y-1 ">

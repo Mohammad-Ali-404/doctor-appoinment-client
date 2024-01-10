@@ -10,7 +10,6 @@ import Swal from 'sweetalert2';
 
 const ProfileDropdown = () => {
     const { user, logOut } = useContext(AuthContext);
-           
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const dropdownRef = useRef(null);
     const timeoutRef = useRef(null);
@@ -43,6 +42,7 @@ const ProfileDropdown = () => {
                 showConfirmButton: false,
                 timer: 1500
             })
+            
         })
         .catch(error => console.log(error))
     }

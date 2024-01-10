@@ -66,7 +66,7 @@ const TeamDetails = () => {
                 <div className='py-10 sm:flex flex-row'>
                     <div className='sm:w-[75%] w-auto'>
                         <div className='sm:flex flex-row sm:mx-0 mx-auto gap-10 '>
-                            <img src={image} alt="" className='sm:pb-0 pb-5 sm:w-96 w-auto' />
+                            <img src={image} alt="" className='sm:pb-0 pb-5 w-4/12 h-3/4' />
                             <div className='border sm:w-5/12 w-auto space-y-3 border-gray-100 p-8'>
                                 <p className='text-lg font-mono'>{specialist} Specialist</p>
                                 <h1 className='text-2xl font-semibold'>{name}</h1>
