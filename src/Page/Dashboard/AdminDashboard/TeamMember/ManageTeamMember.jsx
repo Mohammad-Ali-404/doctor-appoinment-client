@@ -7,12 +7,15 @@ import Swal from 'sweetalert2';
 // import UpdateVolunteerProfile from './UpdateVolunteerProfile/UpdateVolunteerModal';
 import useAxiosSecure from '../../../../Hooks/UserAxiosSecure';
 import UpdateMemberProfile from './UpdateMemberProfile/UpdateMemberProfile';
+import ReactPaginate from 'react-paginate';
 
 const ManageTeamMember = () => {
     const [isUpdateMemberModalOpen, setIsUpdateMemberModalOpen] = useState(false);
     const [memberId, setMemberId] = useState("")
     const [singleTeamMemberData, setSingleTeamMemberData] = useState([])
     const [axiosSecure] = useAxiosSecure()
+    const itemsPerPage = 7;
+    const [currentPage, setCurrentPage] = useState(0);
     const { data: allTeamMemberData = [], refetch } = useQuery({
         queryKey: ["allTeamMemberData"],
         queryFn: async () => {
@@ -46,10 +49,15 @@ const ManageTeamMember = () => {
           }
         });
       };
+      const handlePageClick = ({ selected }) => {
+        setCurrentPage(selected);
+    };
+    const offset = currentPage * itemsPerPage;
+    const paginatedMember = allTeamMemberData.slice(offset, offset + itemsPerPage);
     return (
         <div>
              <div>
-             <h1 className='text-xl font-semibold text-center py-5'>Added New Team Member</h1>
+             <h1 className='text-xl font-semibold text-center py-5'>Manage All Team Member</h1>
 
             <div className='bg-white p-8 rounded-xl mt-10'>
             <div className="bg-white shadow-md p-4 md:p-8 mx-2 md:mx-10 rounded-2xl">
@@ -75,7 +83,7 @@ const ManageTeamMember = () => {
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
-                {allTeamMemberData.map((teamData) => (
+                {paginatedMember.map((teamData) => (
                   <>
                     <tr key={teamData._id}>
                       <td className="py-2 md:py-4">
@@ -119,12 +127,30 @@ const ManageTeamMember = () => {
               </tbody>
             </table>
           </div>
+          <div className='my-4'>
+                                <ReactPaginate
+                                    previousLabel={'Previous'}
+                                    nextLabel={'Next'}
+                                    breakLabel={'...'}
+                                    breakClassName={'text-gray-600'}
+                                    pageCount={Math.ceil(allTeamMemberData.length / itemsPerPage)}
+                                    marginPagesDisplayed={2}
+                                    pageRangeDisplayed={5}
+                                    onPageChange={handlePageClick}
+                                    containerClassName={'flex justify-center gap-2'}
+                                    subContainerClassName={'flex items-center space-x-4'}
+                                    activeClassName={'bg-blue-500 text-white font-semibold border border-blue-500 py-2 -mt-2 rounded-full'}
+                                    pageLinkClassName={'text-slate-800 hover:bg-blue-100 border border-blue-500 px-4 py-2 rounded-full'}
+                                    previousLinkClassName={'text-slate-800 hover:bg-blue-100 border border-blue-500 px-4 py-2 rounded-full'}
+                                    nextLinkClassName={'text-blue-500 hover:bg-blue-100 border border-blue-500 px-4 py-2 rounded-full'}
+                                />
+                            </div>
         </div>
                 {isUpdateMemberModalOpen && (
                 <UpdateMemberProfile
                 key={memberId._id}
-                singleVolunteerData={singleTeamMemberData}
-                setIsUpdatVolunteerModalOpen={setIsUpdateMemberModalOpen}
+                singleTeamMemberData={singleTeamMemberData}
+                setIsUpdateMemberModalOpen={setIsUpdateMemberModalOpen}
                 />
             )}
         </div>
