@@ -15,6 +15,8 @@ import BlogDetails from "../Page/Blog/BlogDetails/BlogDetails";
 import PrivateRoute from "./PrivateRoute";
 import Dashboard from "../Layout/Dasboard";
 import Alluser from "../Page/Dashboard/AdminDashboard/AllUsers/Alluser";
+import AddDoctor from "../Page/Dashboard/AdminDashboard/Doctor/AddDoctor";
+import AdminRoute from "./AdminRoute";
 
 const router = createBrowserRouter ([
     {
@@ -81,6 +83,10 @@ const router = createBrowserRouter ([
             {
                 path:'allusers',
                 element:<Alluser/>
+            },
+            {
+                path:'addDoctor',
+                element:<AdminRoute><AddDoctor/></AdminRoute> 
             }
         ]
     }

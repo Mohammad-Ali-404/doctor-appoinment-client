@@ -15,8 +15,7 @@ import Swal from 'sweetalert2';
 import UseAdmin from '../Hooks/UseAdmin';
 
 const Dashboard = () => {
-	const {logOut} = useContext(AuthContext)
-    // const isAdmin = true;
+	const { logOut } = useContext(AuthContext)
     const [isAdmin] = UseAdmin()
 	const handleLogout = () => {
         logOut()
@@ -74,11 +73,18 @@ const Dashboard = () => {
                                 </Link>
                             </li>
                             <li className="rounded-sm dark:bg-gray-800 dark:text-gray-50">
+                                <Link to="/dashboard/addDoctor" href="#" className="flex items-center p-2 space-x-3 rounded-md">
+                                    <FaUsers/>
+                                    <span className='sm:py-3 py-3 p px-3'>Add an Team Member</span>
+                                </Link>
+                            </li>
+                            <li className="rounded-sm dark:bg-gray-800 dark:text-gray-50">
                                 <Link to="/dashboard/" href="#" className="flex items-center p-2 space-x-3 rounded-md">
                                     <AiOutlineMoneyCollect/>
                                     <span className='sm:py-3 py-3 p px-3'>Transaction History</span>
                                 </Link>
                             </li>
+                            
                             <li className="rounded-sm">
                                 <Link to='admin-social-media' href="#" className="flex items-center p-2 space-x-3 rounded-md">
                                     <HiOutlineShare/>
