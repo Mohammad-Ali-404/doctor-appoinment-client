@@ -13,8 +13,8 @@ const UserList = () => {
   const [currentPage, setCurrentPage] = useState(0);
 
   const { data: users, isLoading, isError, refetch } = useQuery({ queryKey: 'users', queryFn: async () => {
-      const res = await fetch(`${import.meta.env.VITE_VITE_SERVER_BASE_URL}/users`);
-      return res.json();
+      const res = await axiosSecure.get('/users');
+      return res.data;
     },
   });
   if (isLoading) {
@@ -25,9 +25,7 @@ const UserList = () => {
     return <div>Error loading users</div>;
   }
   const handleMakeAdmin = allUsers =>{
-    fetch(`${import.meta.env.VITE_VITE_SERVER_BASE_URL}/users/admin/${allUsers._id}`,{
-        method:"PATCH"
-    })
+    axiosSecure.patch(`/users/admin/${allUsers._id}`)
         .then(res => res.json())
         .then(data =>{
             console.log(data);
@@ -60,7 +58,7 @@ const UserList = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         axiosSecure
-          .delete(`${import.meta.env.VITE_VITE_SERVER_BASE_URL}/users/${userData._id}`)
+          .delete(`/users/${userData._id}`)
           .then((res) => {
             if (res?.data?.acknowledged) {
               refetch();

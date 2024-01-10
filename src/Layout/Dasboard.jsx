@@ -12,10 +12,12 @@ import { useContext } from 'react';
 import { AuthContext } from '../Providers/AuthProvider';
 import DashboardNavbar from '../Page/Dashboard/Dashboardshared/DashboardNavbar';
 import Swal from 'sweetalert2';
+import UseAdmin from '../Hooks/UseAdmin';
 
 const Dashboard = () => {
 	const {logOut} = useContext(AuthContext)
-    const isAdmin = true;
+    // const isAdmin = true;
+    const [isAdmin] = UseAdmin()
 	const handleLogout = () => {
         logOut()
         .then(() =>{
