@@ -15,7 +15,7 @@ const UpdateMemberProfile = ({singleTeamMemberData, setIsUpdateMemberModalOpen})
       };
       const { register, handleSubmit, reset, formState: { errors }, } = useForm();
       const img_hosting_url = `https://api.imgbb.com/1/upload?key=${img_hosting_token}`
-    const onSubmit = async (data) =>{
+      const onSubmit = async (data) =>{
       const formData = new FormData()
       formData.append('image', data.image[0])
       fetch(img_hosting_url, {
@@ -37,7 +37,7 @@ const UpdateMemberProfile = ({singleTeamMemberData, setIsUpdateMemberModalOpen})
           .finally(() => {
             Swal.fire({
               title: 'Success!',
-              text: 'Volunteer Profile Update Successfully',
+              text: 'Doctor Profile Update Successfully',
               icon: 'success',
               confirmButtonText: 'Cool',
             });
@@ -49,21 +49,21 @@ const UpdateMemberProfile = ({singleTeamMemberData, setIsUpdateMemberModalOpen})
         <div>
              <div>
             <div>
-                <div className="fixed top-0 left-0 flex w-full h-full justify-center items-center bg-black/20 bg-opacity-50 z-40 px-2 py-6 overflow-y-visible">
+                <div className="fixed top-0 left-0 flex sm:w-full sm:h-full  justify-center items-center bg-black/20 bg-opacity-50 z-40 px-2 py-6 overflow-y-visible">
                     <div className="bg-white p-3 2xl:p-6 rounded-md">
                     <h2 className="text-lg 2xl:text-xl font-semibold mb-1 2xl:mb-2">
                         Update Volunteer profile
                     </h2>
 
                     <form onSubmit={handleSubmit(onSubmit)}>
-                        <div className="max-w-4xl mx-auto p-6 rounded-md">
-                            <div className="mb-4 w-full ">
+                        <div className="sm:max-w-4xl max-h-screen mx-auto sm:p-6 rounded-md">
+                                <div className="mb-4 w-full ">
                                     <label htmlFor="name" className="text-sm font-medium">
                                     Upload Doctor Image
                                     </label>
                                     <input type="file" {...register('image')} className="mt-1 p-2 w-full border rounded-md" placeholder="John Doe"/>
                                 </div>
-                            <div className='sm:flex gap-5'>
+                            <div className='flex gap-5'>
                                 <div className="mb-4 w-full ">
                                     <label htmlFor="name" className="text-sm font-medium">
                                         Full Name
@@ -81,7 +81,7 @@ const UpdateMemberProfile = ({singleTeamMemberData, setIsUpdateMemberModalOpen})
                                 <label className="text-gray-600 text-sm font-medium">Self Description:</label>
                                 <textarea defaultValue={singleTeamMemberData?.selfDescription || ""} {...register('selfDescription')} className="w-full p-2 border rounded-md"  />
                             </div>
-                            <div className='sm:flex gap-5'>
+                            <div className='flex gap-5'>
                                 <div className="mb-4 w-full ">
                                     <label htmlFor="name" className="text-sm font-medium">
                                     Specialist
@@ -103,11 +103,11 @@ const UpdateMemberProfile = ({singleTeamMemberData, setIsUpdateMemberModalOpen})
                             </div>
                             <div className="mb-4">
                                 <label htmlFor="" className=" text-sm font-medium">
-                                    Educational Background
+                                    Experience & Skill
                                 </label>
                                 <textarea defaultValue={singleTeamMemberData?.experienceAndSkills || ""} {...register('experienceAndSkills')} className="w-full p-2 border rounded-md"  />
                             </div>
-                            <div className='sm:flex gap-5'>
+                            <div className='flex gap-5'>
                                 <div className="mb-4 w-full ">
                                     <label htmlFor="name" className="text-sm font-medium">
                                         Phone
@@ -121,7 +121,7 @@ const UpdateMemberProfile = ({singleTeamMemberData, setIsUpdateMemberModalOpen})
                                     </div>
                                 </div>
                             </div>
-                            <div className='sm:flex gap-5'>
+                            <div className='flex gap-5'>
                                 <div className="mb-4 w-1/3">
                                     <label className="text-gray-600 text-sm font-medium">Facebook:</label>
                                     <input defaultValue={singleTeamMemberData?.facebook || ""} type="text" {...register('facebook')} className="w-full p-2 border rounded-md"  />

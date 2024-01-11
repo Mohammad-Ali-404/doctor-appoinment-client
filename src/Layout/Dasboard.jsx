@@ -11,6 +11,7 @@ import { AuthContext } from '../Providers/AuthProvider';
 import DashboardNavbar from '../Page/Dashboard/Dashboardshared/DashboardNavbar';
 import Swal from 'sweetalert2';
 import UseAdmin from '../Hooks/UseAdmin';
+import { BsCartPlusFill } from "react-icons/bs";
 
 const Dashboard = () => {
 	const { logOut } = useContext(AuthContext)
@@ -90,7 +91,7 @@ const Dashboard = () => {
                                 </Link>
                             </li>
                             <li className="rounded-sm">
-                                <Link onClick={handleLogout} href="#" className="flex items-center p-2 space-x-3 rounded-md">
+                                <Link onClick={handleLogout} to='/' href="#" className="flex items-center p-2 space-x-3 rounded-md">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-5 h-5 fill-current dark:text-gray-400">
                                         <path d="M440,424V88H352V13.005L88,58.522V424H16v32h86.9L352,490.358V120h56V456h88V424ZM320,453.642,120,426.056V85.478L320,51Z"></path>
                                         <rect width="32" height="64" x="256" y="232"></rect>
@@ -102,25 +103,13 @@ const Dashboard = () => {
                     </> : <>
                         <div>
                             <li className="rounded-sm">
-                                <Link to='admin-manage-causes' href="#" className="flex items-center p-2 space-x-3 rounded-md">
-                                    <RiImageEditFill/>
-                                    <span className='sm:py-3 py-3 p px-3'>Manage Causes</span>
+                                <Link to='/subscribecart' href="#" className="flex items-center p-2 space-x-3 rounded-md">
+                                    <BsCartPlusFill/>
+                                    <span className='sm:py-3 py-3 p px-3'>Subscribe Cart</span>
                                 </Link>
                             </li>
                             <li className="rounded-sm">
-                                <Link to='admin-addes-news' href="#" className="flex items-center p-2 space-x-3 rounded-md">
-                                    <VscDiffAdded/>
-                                    <span className='sm:py-3 py-3 p px-3'>Added News</span>
-                                </Link>
-                            </li>
-                            <li className="rounded-sm">
-                                <Link to='admin-manage-news' href="#" className="flex items-center p-2 space-x-3 rounded-md">
-                                    <GiNewspaper/>
-                                    <span className='sm:py-3 py-3 p px-3'>Manage News</span>
-                                </Link>
-                            </li>
-                            <li className="rounded-sm">
-                                <Link onClick={handleLogout} href="#" className="flex items-center p-2 space-x-3 rounded-md">
+                                <Link onClick={handleLogout} to='/' href="#" className="flex items-center p-2 space-x-3 rounded-md">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-5 h-5 fill-current dark:text-gray-400">
                                         <path d="M440,424V88H352V13.005L88,58.522V424H16v32h86.9L352,490.358V120h56V456h88V424ZM320,453.642,120,426.056V85.478L320,51Z"></path>
                                         <rect width="32" height="64" x="256" y="232"></rect>

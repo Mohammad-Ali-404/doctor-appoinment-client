@@ -18,6 +18,7 @@ import Alluser from "../Page/Dashboard/AdminDashboard/AllUsers/Alluser";
 import AdminRoute from "./AdminRoute";
 import AddTeamMember from "../Page/Dashboard/AdminDashboard/TeamMember/AddTeamMember";
 import ManageTeamMember from "../Page/Dashboard/AdminDashboard/TeamMember/ManageTeamMember";
+import Payment from "../Page/Dashboard/UserDashboard/Payment/Payment";
 
 const router = createBrowserRouter ([
     {
@@ -82,8 +83,14 @@ const router = createBrowserRouter ([
         element:<PrivateRoute><Dashboard/></PrivateRoute>,
         children:[
             {
+                path:'payment',
+                element:<Payment/>
+            },
+
+            // admin routes
+            {
                 path:'allusers',
-                element:<Alluser/>
+                element:<AdminRoute><Alluser/></AdminRoute>
             },
             {
                 path:'addteammember',

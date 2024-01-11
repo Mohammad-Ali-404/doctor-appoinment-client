@@ -1,26 +1,69 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Container from '../Shared/Container/Container';
 import useAxiosSecure from '../../Hooks/UserAxiosSecure';
 import { Helmet } from 'react-helmet-async';
 import PageTitle from '../Shared/PageTitle/PageTitle';
-import { BsPatchCheck } from "react-icons/bs";
+import { BsPatchCheck } from 'react-icons/bs';
+import { Link, useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
+import { AuthContext } from '../../Providers/AuthProvider';
 
 const Pricing = () => {
-    const [pricing, setPricing] = useState([])
-    const [axiosSecure] = useAxiosSecure()
+    const { user } = useContext(AuthContext);
+    const [pricing, setPricing] = useState([]);
+    const [addedCards, setAddedCards] = useState([]);
+    const [axiosSecure] = useAxiosSecure();
+    const navigate = useNavigate();
+
     useEffect(() => {
         const fetchData = async () => {
-          try {
-            // Replace the URL with your actual API endpoint
-            const response = await axiosSecure.get('http://localhost:5000/pricing');
-            setPricing(response.data); // Assuming your API returns an array of pricing data
-          } catch (error) {
-            console.error('Error fetching pricing data:', error);
-          }
+            try {
+                const response = await axiosSecure.get('http://localhost:5000/pricing');
+                setPricing(response.data);
+            } catch (error) {
+                console.error('Error fetching pricing data:', error);
+            }
         };
         fetchData();
-      }, [axiosSecure]);
-    
+    }, [axiosSecure]);
+
+    const handleSubscribe = async (monthly_price, name) => {
+        if (user) {
+            const cartItem = { price: monthly_price, name };
+            try {
+                const response = await axiosSecure.post('/subscribecart', cartItem);
+                if (response.data.insertedId) {
+                    setAddedCards([...addedCards, cartItem]);
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Plan added. Now proceed with your payment',
+                        icon: 'success',
+                        confirmButtonText: 'Cool',
+                    });
+                }
+            } catch (error) {
+                console.error('Error subscribing to the plan:', error);
+            }
+        } else {
+            Swal.fire({
+                title: 'Please Login to subscribe to our plan',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Login Now',
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    navigate('/login');
+                }
+            });
+        }
+    };
+    const isCardAdded = (cartItem) => addedCards.some(
+        (addedCard) =>
+            addedCard.price === cartItem.price && addedCard.name === cartItem.name
+    );
     return (
         <div>
             <Helmet><title>Pricing | One Care</title></Helmet>
@@ -70,7 +113,19 @@ const Pricing = () => {
                                             </div>
                                         </ul>
 
-                                        <button className="px-4 py-2 mt-4 font-semibold uppercase border rounded-lg md:mt-12 sm:py-3 sm:px-8 dark:border-violet-400">Subscribe Now</button>
+                                        <Link><button onClick={() => handleSubscribe(plan.monthly_price, plan.name)}
+                                        disabled={isCardAdded({
+                                            price: plan.monthly_price,
+                                            name: plan.name,
+                                        })}className={`px-4 py-2 mt-4 font-semibold uppercase border rounded-lg md:mt-12 sm:py-3 sm:px-8 ${
+                                            isCardAdded({
+                                                price: plan.monthly_price,
+                                                name: plan.name,
+                                            })
+                                                ? 'bg-gray-400 text-gray-700 cursor-not-allowed'
+                                                : 'bg-gradient-to-t text-white from-[#8ae7e5] to-[#295d57]'
+                                        }`}
+                                    >Subscribe Now</button></Link>
                                     </div>
                                 </div>
                             ))

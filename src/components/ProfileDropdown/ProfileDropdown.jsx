@@ -88,12 +88,12 @@ const ProfileDropdown = () => {
                 <AiOutlineHome /> Dashboard
               </li>
             </Link>
-            <li
-              onClick={handleLogOut}
-              className="px-10 py-2 w-full mt-auto  dark:hover:bg-red-500 hover:bg-gray-100  cursor-pointer flex items-center gap-2"
-            >
-              <AiOutlineLogout />
-              Logout
+            <li>
+             <Link onClick={handleLogOut} to='/'
+                  className="px-10 py-2 w-full mt-auto  dark:hover:bg-red-500 hover:bg-gray-100  cursor-pointer flex items-center gap-2">
+                  <AiOutlineLogout />
+                  Logout
+             </Link>
             </li>
           </ul>
         </div>
