@@ -103,7 +103,7 @@ const Dashboard = () => {
                     </> : <>
                         <div>
                             <li className="rounded-sm">
-                                <Link to='/subscribecart' href="#" className="flex items-center p-2 space-x-3 rounded-md">
+                                <Link to='/dashboard/subscribecart' href="#" className="flex items-center p-2 space-x-3 rounded-md">
                                     <BsCartPlusFill/>
                                     <span className='sm:py-3 py-3 p px-3'>Subscribe Cart</span>
                                 </Link>

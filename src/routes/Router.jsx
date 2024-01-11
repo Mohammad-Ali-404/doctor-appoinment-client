@@ -19,6 +19,7 @@ import AdminRoute from "./AdminRoute";
 import AddTeamMember from "../Page/Dashboard/AdminDashboard/TeamMember/AddTeamMember";
 import ManageTeamMember from "../Page/Dashboard/AdminDashboard/TeamMember/ManageTeamMember";
 import Payment from "../Page/Dashboard/UserDashboard/Payment/Payment";
+import SubscribeCart from "../Page/Dashboard/UserDashboard/SubscribeCart/SubscribeCart";
 
 const router = createBrowserRouter ([
     {
@@ -86,7 +87,10 @@ const router = createBrowserRouter ([
                 path:'payment',
                 element:<Payment/>
             },
-
+            {
+                path:"subscribecart",
+                element:<SubscribeCart/>
+            },
             // admin routes
             {
                 path:'allusers',

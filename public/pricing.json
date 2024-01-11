@@ -1,7 +1,7 @@
  [
       {
         "name": "Basic Plan",
-        "monthly_price": "$199/ month",
+        "monthly_price": 199,
         "services_included": [
           "Online consultation with a general practitioner (limited minutes)",
           "Access to basic health information and resources",
@@ -16,7 +16,7 @@
       },
       {
         "name": "Standard Plan",
-        "monthly_price": "$399/ month",
+        "monthly_price": 399,
         "services_included": [
           "Extended online consultation with specialists",
           "24/7 access to a nurse hotline",
@@ -31,7 +31,7 @@
       },
       {
         "name": "Premium Plan",
-        "monthly_price": "$599/ month",
+        "monthly_price": 599,
         "services_included": [
           "Unlimited access to online consultations with specialists",
           "Virtual second opinions for critical cases",

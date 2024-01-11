@@ -1,10 +1,11 @@
+/* eslint-disable no-unused-vars */
 import React, { useContext, useEffect, useState } from 'react';
 import Container from '../Shared/Container/Container';
 import useAxiosSecure from '../../Hooks/UserAxiosSecure';
 import { Helmet } from 'react-helmet-async';
 import PageTitle from '../Shared/PageTitle/PageTitle';
 import { BsPatchCheck } from 'react-icons/bs';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../Providers/AuthProvider';
 
@@ -12,8 +13,10 @@ const Pricing = () => {
     const { user } = useContext(AuthContext);
     const [pricing, setPricing] = useState([]);
     const [addedCards, setAddedCards] = useState([]);
+    const [loading, setLoading] = useState(true);
     const [axiosSecure] = useAxiosSecure();
     const navigate = useNavigate();
+    const location = useLocation()
 
     useEffect(() => {
         const fetchData = async () => {
@@ -23,13 +26,16 @@ const Pricing = () => {
             } catch (error) {
                 console.error('Error fetching pricing data:', error);
             }
+            finally {
+                setLoading(false);
+            }
         };
         fetchData();
     }, [axiosSecure]);
 
     const handleSubscribe = async (monthly_price, name) => {
-        if (user) {
-            const cartItem = { price: monthly_price, name };
+        if (user && user.email) {
+            const cartItem = { price: monthly_price, name, email: user.email};
             try {
                 const response = await axiosSecure.post('/subscribecart', cartItem);
                 if (response.data.insertedId) {
@@ -55,7 +61,7 @@ const Pricing = () => {
                 confirmButtonText: 'Login Now',
             }).then((result) => {
                 if (result.isConfirmed) {
-                    navigate('/login');
+                    navigate('/login', { state: { from: location } })
                 }
             });
         }
@@ -85,7 +91,7 @@ const Pricing = () => {
                                 <div key={plan._id}>
                                     <div className="relative z-0 flex flex-col items-center p-6 border rounded-md">
                                         <span className="absolute top-0 px-6 pt-1 pb-2 font-medium rounded-b-lg dark:bg-violet-400 dark:text-gray-900">{plan.name}</span>
-                                        <p className="my-6 text-4xl font-bold dark:text-violet-400">{plan.monthly_price}</p>
+                                        <p className="my-6 text-4xl font-bold dark:text-violet-400">${plan.monthly_price}/month</p>
                                         <ul className="flex-1 space-y-2">
                                             <div className="px-4 py-4">
                                                 <div className="font-bold text-xl mb-2">Services Included</div>
@@ -112,20 +118,20 @@ const Pricing = () => {
                                                 </ul>
                                             </div>
                                         </ul>
-
                                         <Link><button onClick={() => handleSubscribe(plan.monthly_price, plan.name)}
-                                        disabled={isCardAdded({
-                                            price: plan.monthly_price,
-                                            name: plan.name,
-                                        })}className={`px-4 py-2 mt-4 font-semibold uppercase border rounded-lg md:mt-12 sm:py-3 sm:px-8 ${
-                                            isCardAdded({
+                                            disabled={isCardAdded({
                                                 price: plan.monthly_price,
                                                 name: plan.name,
-                                            })
-                                                ? 'bg-gray-400 text-gray-700 cursor-not-allowed'
-                                                : 'bg-gradient-to-t text-white from-[#8ae7e5] to-[#295d57]'
-                                        }`}
-                                    >Subscribe Now</button></Link>
+                                            })}className={`px-4 py-2 mt-4 font-semibold uppercase border rounded-lg md:mt-12 sm:py-3 sm:px-8 ${
+                                                isCardAdded({
+                                                    price: plan.monthly_price,
+                                                    name: plan.name,
+                                                })
+                                                    ? 'bg-gray-400 text-gray-700 cursor-not-allowed'
+                                                    : 'bg-gradient-to-t text-white from-[#8ae7e5] to-[#295d57]'
+                                            }`}
+                                            >Subscribe Now</button>
+                                        </Link>
                                     </div>
                                 </div>
                             ))

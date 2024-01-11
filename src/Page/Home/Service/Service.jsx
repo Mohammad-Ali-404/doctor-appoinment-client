@@ -44,7 +44,7 @@ const Service = () => {
                             >
                                 <div >
                                     {service.map((services) => (
-                                            <SwiperSlide key={services.id}>
+                                            <SwiperSlide key={services._id}>
                                                 <div className="flex flex-col sm:max-w-lg max-w-md bg-[#fafcfc] dark:text-gray-100">
                                                     <img src={services.image} className="flex-shrink-0 object-cover h-64 sm:h-96 rounded-sm dark:bg-gray-500 aspect-square" alt={services.title} />
                                                     <div className='p-6'>
