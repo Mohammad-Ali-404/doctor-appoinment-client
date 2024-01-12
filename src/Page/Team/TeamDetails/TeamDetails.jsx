@@ -35,7 +35,7 @@ const TeamDetails = () => {
             });
             return;
         }
-        const response = await axiosSecure.post('http://localhost:5000/appoinment', {
+        const response = await axiosSecure.post('/appoinment', {
             image,
             name,
             _id,

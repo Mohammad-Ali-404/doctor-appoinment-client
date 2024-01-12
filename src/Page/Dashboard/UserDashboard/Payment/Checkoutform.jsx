@@ -1,8 +1,11 @@
+/* eslint-disable no-unused-vars */
 import React, { useContext, useEffect, useState } from 'react';
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import useAxiosSecure from '../../../../Hooks/UserAxiosSecure';
 import { AuthContext } from '../../../../Providers/AuthProvider';
 import UseSubcribeCart from '../../../../Hooks/UseSubcribeCart';
+import Swal from 'sweetalert2';
+import { useNavigate } from 'react-router-dom';
 
 const Checkoutform = () => {
   const {user} = useContext(AuthContext)
@@ -13,6 +16,7 @@ const Checkoutform = () => {
   const [processing, setProcessing] = useState(false)
   const [transactionId, setTransactionId] = useState('')
   const [cart, refetch] = UseSubcribeCart();
+  const navigate = useNavigate();
 
   const totalPrice = cart.reduce((total, item) => total + item.price, 0)
 
@@ -74,14 +78,30 @@ const Checkoutform = () => {
             // Handle successful payment
         }
         setProcessing(false)
-        if (paymentIntent.status === 'succeeded') {
+        if (paymentIntent && paymentIntent.status === 'succeeded') {
           setTransactionId(paymentIntent.id)
-          // const payment ={
-          //     transactionId: paymentIntent.id,
-          //     name: user?.displayName || 'anonymous',
-          //     email: user?.email || 'anonymous',
-          // }
-          // console.log(payment);
+          const payment ={
+              transactionId: paymentIntent.id,
+              name: user?.displayName || 'anonymous',
+              email: user?.email || 'anonymous',
+              cartIds: cart.map(item => item._id),
+              price: cart.map(item => item.price),
+              planName: cart.map(item => item.name),
+          }
+          const res = await axiosSecure.post('/payments', payment);
+                console.log('payment saved', res.data);
+                refetch();
+                if (res.data?.paymentResult?.insertedId) {
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: "Payment Successfull",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                    navigate('/dashboard/paymentHistory')
+                }
+
         }
         
   };

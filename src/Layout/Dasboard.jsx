@@ -3,7 +3,8 @@ import { AiOutlineHome, AiOutlineMoneyCollect, AiOutlineUser } from 'react-icons
 import { HiOutlineMenuAlt3, HiOutlineShare } from "react-icons/hi";
 import { RiImageEditFill } from "react-icons/ri";
 import { GiNewspaper } from "react-icons/gi";
-import { VscDiffAdded } from "react-icons/vsc";
+import { FaMoneyBillWave } from "react-icons/fa";
+import { MdOutlineMedicalServices } from "react-icons/md";
 import { FaUserEdit, FaUsers } from "react-icons/fa";
 import { Link, Outlet } from 'react-router-dom';
 import { useContext } from 'react';
@@ -77,12 +78,6 @@ const Dashboard = () => {
                                     <span className='sm:py-3 py-3 p px-3'>Add an Team Member</span>
                                 </Link>
                             </li>
-                            <li className="rounded-sm dark:bg-gray-800 dark:text-gray-50">
-                                <Link to="/dashboard/" href="#" className="flex items-center p-2 space-x-3 rounded-md">
-                                    <AiOutlineMoneyCollect/>
-                                    <span className='sm:py-3 py-3 p px-3'>Transaction History</span>
-                                </Link>
-                            </li>
                             
                             <li className="rounded-sm">
                                 <Link to='admin-social-media' href="#" className="flex items-center p-2 space-x-3 rounded-md">
@@ -106,6 +101,12 @@ const Dashboard = () => {
                                 <Link to='/dashboard/subscribecart' href="#" className="flex items-center p-2 space-x-3 rounded-md">
                                     <BsCartPlusFill/>
                                     <span className='sm:py-3 py-3 p px-3'>Subscribe Cart</span>
+                                </Link>
+                            </li>
+                            <li className="rounded-sm dark:bg-gray-800 dark:text-gray-50">
+                                <Link to="/dashboard/paymentHistory" href="#" className="flex items-center p-2 space-x-3 rounded-md">
+                                    <FaMoneyBillWave/>
+                                    <span className='sm:py-3 py-3 p px-3'>payment History</span>
                                 </Link>
                             </li>
                             <li className="rounded-sm">

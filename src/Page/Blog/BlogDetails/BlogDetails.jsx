@@ -53,14 +53,6 @@ const BlogDetails = () => {
                                             <p className='sm:w-8/12'>{blogDetails.testimonial}</p>
                                         </div>
                                     </div>
-
-                                    <div>
-                                        <div className="grid grid-cols-3 gap-4 py-10">
-                                            {blogDetails.images_2.map((image, index) => (
-                                                <img key={index} src={image} alt={`Cardiology Image ${index + 1}`} className="rounded-lg" />
-                                            ))}
-                                        </div>
-                                    </div>
                                 </div>
                         </div>
                         <div className='sm:w-3/12 w-full py-4'>

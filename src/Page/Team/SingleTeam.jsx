@@ -4,6 +4,7 @@ import { CiCirclePlus } from 'react-icons/ci';
 import { Link } from 'react-router-dom';
 const SingleTeam = ({member}) => {
     const {_id, image, name, specialist, degree} = member;
+    console.log(_id);
     return (
         <div>
              <div className="flex flex-col justify-center h-full shadow-xl bg-white dark:text-gray-100">

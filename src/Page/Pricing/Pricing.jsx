@@ -46,6 +46,7 @@ const Pricing = () => {
                         icon: 'success',
                         confirmButtonText: 'Cool',
                     });
+                    navigate('/dashboard/subscribecart')
                 }
             } catch (error) {
                 console.error('Error subscribing to the plan:', error);

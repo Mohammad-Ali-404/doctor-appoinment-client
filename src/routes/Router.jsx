@@ -20,6 +20,7 @@ import AddTeamMember from "../Page/Dashboard/AdminDashboard/TeamMember/AddTeamMe
 import ManageTeamMember from "../Page/Dashboard/AdminDashboard/TeamMember/ManageTeamMember";
 import Payment from "../Page/Dashboard/UserDashboard/Payment/Payment";
 import SubscribeCart from "../Page/Dashboard/UserDashboard/SubscribeCart/SubscribeCart";
+import PaymentHistory from "../Page/Dashboard/UserDashboard/Payment/PaymentHistory";
 
 const router = createBrowserRouter ([
     {
@@ -91,6 +92,10 @@ const router = createBrowserRouter ([
                 path:"subscribecart",
                 element:<SubscribeCart/>
             },
+            {
+                path:"paymentHistory",
+                element:<PaymentHistory/>
+            },
             // admin routes
             {
                 path:'allusers',
@@ -104,6 +109,10 @@ const router = createBrowserRouter ([
                 path:'manageteammember',
                 element:<AdminRoute><ManageTeamMember/></AdminRoute> 
             },
+            // {
+            //     path:'addservice',
+            //     element:<AdminRoute><AddServiceData/></AdminRoute> 
+            // },
 
         ]
     }
