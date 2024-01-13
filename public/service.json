@@ -12,11 +12,9 @@
         "Collaborative platform for cardiology experts.",
         "Telemedicine features for remote consultations."
       ],
-      "images": [
-        "https://example.com/cardiology_image1.jpg",
-        "https://example.com/cardiology_image2.jpg",
-        "https://example.com/cardiology_image3.jpg"
-      ]
+      "additionalImage1":"image",
+        "additionalImage2":"image",
+        "additionalImage3":"image"
     },
     {
       "title": "Neurology Hub",
@@ -31,11 +29,9 @@
         "Centralized database for neurological research data.",
         "Interactive patient education resources."
       ],
-      "images": [
-        "https://example.com/neurology_image1.jpg",
-        "https://example.com/neurology_image2.jpg",
-        "https://example.com/neurology_image3.jpg"
-      ]
+      "additionalImage1":"image",
+        "additionalImage2":"image",
+        "additionalImage3":"image"
     },
     {
       "title": "Orthopedic Network",
@@ -50,11 +46,9 @@
         "Rehabilitation programs accessible online.",
         "Community forum for orthopedic patients."
       ],
-      "images": [
-        "https://example.com/orthopedic_image1.jpg",
-        "https://example.com/orthopedic_image2.jpg",
-        "https://example.com/orthopedic_image3.jpg"
-      ]
+      "additionalImage1":"image",
+        "additionalImage2":"image",
+        "additionalImage3":"image"
     },
     {
       "title": "Pulmonary Care Cloud",
@@ -69,11 +63,9 @@
         "Data-driven insights for personalized treatment plans.",
         "Integration with wearable devices for continuous tracking."
       ],
-      "images": [
-        "https://example.com/pulmonary_image1.jpg",
-        "https://example.com/pulmonary_image2.jpg",
-        "https://example.com/pulmonary_image3.jpg"
-      ]
+      "additionalImage1":"image",
+        "additionalImage2":"image",
+        "additionalImage3":"image"
     },
     {
       "title": "Maternal Health Hub",
@@ -88,11 +80,9 @@
         "Integration with fertility tracking apps.",
         "Secure storage of maternal and infant health records."
       ],
-      "images": [
-        "https://example.com/maternal_image1.jpg",
-        "https://example.com/maternal_image2.jpg",
-        "https://example.com/maternal_image3.jpg"
-      ]
+      "additionalImage1":"image",
+        "additionalImage2":"image",
+        "additionalImage3":"image"
     },
     {
       "title": "Endocrinology Exchange",
@@ -107,11 +97,9 @@
         "Patient support groups for endocrine disorders.",
         "Integration with wearable devices for hormonal data."
       ],
-      "images": [
-        "https://example.com/endocrinology_image1.jpg",
-        "https://example.com/endocrinology_image2.jpg",
-        "https://example.com/endocrinology_image3.jpg"
-      ]
+      "additionalImage1":"image",
+        "additionalImage2":"image",
+        "additionalImage3":"image"
     },
     {
       "title": "Dermatology Portal",
@@ -126,11 +114,9 @@
         "Online prescription services for dermatological treatments.",
         "Interactive skincare routines and tips."
       ],
-      "images": [
-        "https://example.com/dermatology_image1.jpg",
-        "https://example.com/dermatology_image2.jpg",
-        "https://example.com/dermatology_image3.jpg"
-      ]
+      "additionalImage1":"image",
+      "additionalImage2":"image",
+      "additionalImage3":"image"
     },
     {
       "title": "Additional Medical Server",
@@ -145,11 +131,9 @@
         "Dedicated to advancing medical research in [specific area].",
         "Collaborative platform for healthcare professionals."
       ],
-      "images": [
-        "https://example.com/additional_image1.jpg",
-        "https://example.com/additional_image2.jpg",
-        "https://example.com/additional_image3.jpg"
-      ]
+      "additionalImage1":"image",
+        "additionalImage2":"image",
+        "additionalImage3":"image"
     }
   ]
   

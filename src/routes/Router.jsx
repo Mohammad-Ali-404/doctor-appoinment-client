@@ -21,6 +21,7 @@ import ManageTeamMember from "../Page/Dashboard/AdminDashboard/TeamMember/Manage
 import Payment from "../Page/Dashboard/UserDashboard/Payment/Payment";
 import SubscribeCart from "../Page/Dashboard/UserDashboard/SubscribeCart/SubscribeCart";
 import PaymentHistory from "../Page/Dashboard/UserDashboard/Payment/PaymentHistory";
+import AllPaymentHistory from "../Page/Dashboard/AdminDashboard/PaymentHistory/AllPaymentHistory";
 
 const router = createBrowserRouter ([
     {
@@ -109,6 +110,10 @@ const router = createBrowserRouter ([
                 path:'manageteammember',
                 element:<AdminRoute><ManageTeamMember/></AdminRoute> 
             },
+            {
+                path:"payment-history",
+                element:<AdminRoute><AllPaymentHistory/></AdminRoute>
+            }
             // {
             //     path:'addservice',
             //     element:<AdminRoute><AddServiceData/></AdminRoute> 

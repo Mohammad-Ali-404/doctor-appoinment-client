@@ -67,6 +67,12 @@ const Dashboard = () => {
                                 </Link>
                             </li>
                             <li className="rounded-sm dark:bg-gray-800 dark:text-gray-50">
+                                <Link to="/dashboard/payment-history" href="#" className="flex items-center p-2 space-x-3 rounded-md">
+                                    <FaMoneyBillWave/>
+                                    <span className='sm:py-3 py-3 p px-3'>payment History</span>
+                                </Link>
+                            </li>
+                            <li className="rounded-sm dark:bg-gray-800 dark:text-gray-50">
                                 <Link to="/dashboard/manageteammember" href="#" className="flex items-center p-2 space-x-3 rounded-md">
                                     <FaUserEdit/>
                                     <span className='sm:py-3 py-3 p px-3'>Manage Team</span>

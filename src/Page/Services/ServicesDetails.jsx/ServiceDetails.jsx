@@ -116,9 +116,9 @@ const ServiceDetails = () => {
                                     {/* Display Cardiology Service Images */}
                                     <div>
                                         <div className="grid grid-cols-3 gap-4 py-10">
-                                            {serviceDetails.images.map((image, index) => (
-                                                <img key={index} src={image} alt={`Cardiology Image ${index + 1}`} className="rounded-lg" />
-                                            ))}
+                                                <img src={serviceDetails.additionalImage1} alt="image" className="rounded-lg" />
+                                                <img src={serviceDetails.additionalImage2} alt="image" className="rounded-lg" />
+                                                <img src={serviceDetails.additionalImage3} alt="image" className="rounded-lg" />
                                         </div>
                                     </div>
                                 </div>
