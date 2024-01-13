@@ -5,6 +5,7 @@ import { RiImageEditFill } from "react-icons/ri";
 import { GiNewspaper } from "react-icons/gi";
 import { FaMoneyBillWave } from "react-icons/fa";
 import { MdOutlineMedicalServices } from "react-icons/md";
+import { LuFolderEdit } from "react-icons/lu";
 import { FaUserEdit, FaUsers } from "react-icons/fa";
 import { Link, Outlet } from 'react-router-dom';
 import { useContext } from 'react';
@@ -82,6 +83,12 @@ const Dashboard = () => {
                                 <Link to="/dashboard/addteammember" href="#" className="flex items-center p-2 space-x-3 rounded-md">
                                     <FaUsers/>
                                     <span className='sm:py-3 py-3 p px-3'>Add an Team Member</span>
+                                </Link>
+                            </li>
+                            <li className="rounded-sm dark:bg-gray-800 dark:text-gray-50">
+                                <Link to="/dashboard/manage-blog" href="#" className="flex items-center p-2 space-x-3 rounded-md">
+                                    <LuFolderEdit/>
+                                    <span className='sm:py-3 py-3 p px-3'>Manage Blog</span>
                                 </Link>
                             </li>
                             

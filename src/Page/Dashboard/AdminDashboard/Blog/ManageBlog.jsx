@@ -5,26 +5,27 @@ import { FaRegEdit } from "react-icons/fa";
 import { GoTrash } from "react-icons/go";
 import Swal from 'sweetalert2';
 // import UpdateVolunteerProfile from './UpdateVolunteerProfile/UpdateVolunteerModal';
-import useAxiosSecure from '../../../../Hooks/UserAxiosSecure';
-import UpdateMemberProfile from './UpdateMemberProfile/UpdateMemberProfile';
+// import UpdateMemberProfile from './UpdateMemberProfile/UpdateMemberProfile';
 import ReactPaginate from 'react-paginate';
+import useAxiosSecure from '../../../../Hooks/UserAxiosSecure';
+import UpdateBlog from './UpdateBlog/UpdateBlog';
 
-const ManageTeamMember = () => {
-    const [isUpdateMemberModalOpen, setIsUpdateMemberModalOpen] = useState(false);
-    const [memberId, setMemberId] = useState("")
-    const [singleTeamMemberData, setSingleTeamMemberData] = useState([])
+const ManageBlog = () => {
+    const [isUpdateBlogModalOpen, setIsUpdateBlogModalOpen] = useState(false);
+    const [blogId, setBlogId] = useState("")
+    const [singleBlogData, setSingleBlogData] = useState([])
     const [axiosSecure] = useAxiosSecure()
     const itemsPerPage = 7;
     const [currentPage, setCurrentPage] = useState(0);
-    const { data: allTeamMemberData = [], refetch } = useQuery({
-        queryKey: ["allTeamMemberData"],
+    const { data: allBlogData = [], refetch } = useQuery({
+        queryKey: ["allBlogData"],
         queryFn: async () => {
-          const response = await axiosSecure.get(`/team`);
+          const response = await axiosSecure.get('/blogs');
           return response.data;
         },
       });
-      console.log("allTeamMemberData", allTeamMemberData);
-      const handleDeleteVolunteer = (memberData) => {
+      console.log("allBlogData", allBlogData);
+      const handleDeleteVolunteer = (BlogData) => {
         Swal.fire({
           title: "Are you sure?",
           text: "You won't be able to revert this!",
@@ -36,11 +37,11 @@ const ManageTeamMember = () => {
         }).then((result) => {
           if (result.isConfirmed) {
             axiosSecure
-              .delete(`/team/${memberData._id}`)
+              .delete(`/blogs/${BlogData._id}`)
               .then((res) => {
                 if (res?.data?.acknowledged) {
                   refetch();
-                  Swal.fire("Deleted!", "Doctor has been deleted.", "success");
+                  Swal.fire("Deleted!", "Blog has been deleted.", "success");
                 }
               })
               .catch((error) => {
@@ -53,11 +54,11 @@ const ManageTeamMember = () => {
         setCurrentPage(selected);
     };
     const offset = currentPage * itemsPerPage;
-    const paginatedMember = allTeamMemberData.slice(offset, offset + itemsPerPage);
+    const paginatedblog = allBlogData.slice(offset, offset + itemsPerPage);
     return (
         <div>
              <div>
-             <h1 className='text-xl font-semibold text-center py-5'>Manage All Team Member</h1>
+             <h1 className='text-xl font-semibold text-center py-5'>Manage All blog Data</h1>
 
             <div className='bg-white p-8 rounded-xl mt-10'>
             <div className="bg-white shadow-md p-4 md:p-8 mx-2 md:mx-10 rounded-2xl">
@@ -68,11 +69,8 @@ const ManageTeamMember = () => {
                   <th className="py-3 pl-2 md:py-5 text-left text-base md:text-lg pe-2">
                     Image
                   </th>
-                  <th className="py-3 md:py-5 text-left text-base md:text-lg">
-                    Name
-                  </th>
-                  <th className="py-3 md:py-5 text-left text-base md:text-lg">
-                    Email
+                  <th className="py-3 md:py-5 text-left pl-6 text-base md:text-lg">
+                    Blog Title
                   </th>
                   <th className="py-3 md:py-5 pe-6 text-left text-base md:text-lg">
                     Update
@@ -83,29 +81,25 @@ const ManageTeamMember = () => {
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
-                {paginatedMember.map((teamData) => (
-                  
-                    <tr key={teamData._id}>
+                {paginatedblog.map((BlogData) => (
+                    <tr key={BlogData._id}>
                       <td className="py-2 md:py-4">
                         <img
-                          src={teamData.image}
+                          src={BlogData.image}
                           alt="causes"
                           className="w-12 h-12 md:w-14 md:h-14 rounded-xl mr-3 md:mr-4"
                         />
                       </td>
-                      <td className="py-2 xl:text-lg md:text-sm text-xs md:py-4 w-40 md:w-full">
-                        {teamData.name}
-                      </td>
-                      <td className="py-2 xl:text-lg md:text-sm text-xs md:py-4 w-40 md:w-full">
-                        {teamData.email}
+                      <td className="py-2 xl:text-lg pl-6 md:text-sm text-xs md:py-4 w-40 md:w-full">
+                        {BlogData.title}
                       </td>
                       <td className="py-2 md:py-4">
                         <div className="bg-gray-100 p-1 ms-3 md:p-2 rounded-lg">
                           <FaRegEdit
                             onClick={() => {
-                              setIsUpdateMemberModalOpen(true);
-                              setMemberId(teamData?._id);
-                              setSingleTeamMemberData(teamData);
+                              setIsUpdateBlogModalOpen(true);
+                              setBlogId(BlogData?._id);
+                              setSingleBlogData(BlogData);
                             }}
                             className="w-3 h-3 md:w-4 md:h-4 cursor-pointer text-blue-600"
                           />
@@ -115,14 +109,13 @@ const ManageTeamMember = () => {
                         <div className="bg-gray-100 p-1 ms-3 md:p-2 rounded-lg">
                           <GoTrash
                             onClick={() => {
-                              handleDeleteVolunteer(teamData);
+                              handleDeleteVolunteer(BlogData);
                             }}
                             className="w-3 h-3 md:w-4 md:h-4 cursor-pointer text-red-500"
                           />
                         </div>
                       </td>
                     </tr>
-                  
                 ))}
               </tbody>
             </table>
@@ -133,7 +126,7 @@ const ManageTeamMember = () => {
                                     nextLabel={'Next'}
                                     breakLabel={'...'}
                                     breakClassName={'text-gray-600'}
-                                    pageCount={Math.ceil(allTeamMemberData.length / itemsPerPage)}
+                                    pageCount={Math.ceil(allBlogData.length / itemsPerPage)}
                                     marginPagesDisplayed={2}
                                     pageRangeDisplayed={5}
                                     onPageChange={handlePageClick}
@@ -146,11 +139,11 @@ const ManageTeamMember = () => {
                                 />
                             </div>
         </div>
-                {isUpdateMemberModalOpen && (
-                <UpdateMemberProfile
-                key={memberId._id}
-                singleTeamMemberData={singleTeamMemberData}
-                setIsUpdateMemberModalOpen={setIsUpdateMemberModalOpen}
+                {isUpdateBlogModalOpen && (
+                <UpdateBlog
+                key={blogId._id}
+                singleBlogData={singleBlogData}
+                setIsUpdateBlogModalOpen={setIsUpdateBlogModalOpen}
                 />
             )}
         </div>
@@ -159,4 +152,4 @@ const ManageTeamMember = () => {
     );
 };
 
-export default ManageTeamMember;
+export default ManageBlog;

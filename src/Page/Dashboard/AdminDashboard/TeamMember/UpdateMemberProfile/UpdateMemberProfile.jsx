@@ -7,10 +7,10 @@ import useAxiosSecure from '../../../../../Hooks/UserAxiosSecure';
 const img_hosting_token = import.meta.env.VITE_Image_Upload_Token;
 
 const UpdateMemberProfile = ({singleTeamMemberData, setIsUpdateMemberModalOpen}) => {
-    console.log('volunteerid', singleTeamMemberData)
+    console.log('', singleTeamMemberData)
     const [loading, setLoading] = useState(false);
     const [axiosSecure] = useAxiosSecure()
-    const closeVolunteerUpdateModal = () => {
+    const closeMemberUpdateModal = () => {
         setIsUpdateMemberModalOpen(false);
       };
       const { register, handleSubmit, reset, formState: { errors }, } = useForm();
@@ -143,7 +143,7 @@ const UpdateMemberProfile = ({singleTeamMemberData, setIsUpdateMemberModalOpen})
                         {loading ? "Updating..." : "Update"}
                         </button>
                         <button
-                        onClick={closeVolunteerUpdateModal}
+                        onClick={closeMemberUpdateModal}
                         className="bg-red-500 text-white px-4 py-1 2xl:py-2 rounded-md ml-2 hover:bg-red-700 duration-500"
                         >
                         Cancel

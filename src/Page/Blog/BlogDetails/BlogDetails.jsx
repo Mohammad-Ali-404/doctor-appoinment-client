@@ -11,7 +11,6 @@ import { BiSolidCategoryAlt } from 'react-icons/bi';
 
 const BlogDetails = () => {
     const blogDetails = useLoaderData()
-    console.log(blogDetails);
     return (
         <div>
             <Helmet><title>Blog Details | One Care</title></Helmet>
