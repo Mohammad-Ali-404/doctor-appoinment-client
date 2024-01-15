@@ -24,7 +24,6 @@ const ManageBlog = () => {
           return response.data;
         },
       });
-      console.log("allBlogData", allBlogData);
       const handleDeleteVolunteer = (BlogData) => {
         Swal.fire({
           title: "Are you sure?",

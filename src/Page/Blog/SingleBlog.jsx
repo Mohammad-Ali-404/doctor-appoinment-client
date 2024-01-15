@@ -9,7 +9,7 @@ const SingleBlog = ({blog}) => {
         <div className='py-4'>
             <div className="border rounded-md">
                 <div className="max-w-full sm:px-8 px-4 sm:py-8 py-4 border-gray-50 mx-auto rounded-lg  dark:bg-gray-900">
-                    <img src={image} alt="" className='sm:w-screen rounded w-full pb-4'/>
+                    <img src={image} alt="" className='sm:w-full h-[500px] rounded w-full pb-4'/>
                     <div className="flex items-center justify-between">
                         <div className='flex items-center gap-2'>
                             <FaCalendarCheck className='text-lg'/>

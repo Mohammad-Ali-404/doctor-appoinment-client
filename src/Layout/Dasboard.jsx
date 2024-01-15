@@ -1,7 +1,7 @@
 import React from 'react';
 import { AiOutlineHome, AiOutlineMoneyCollect, AiOutlineUser } from 'react-icons/ai';
 import { HiOutlineMenuAlt3, HiOutlineShare } from "react-icons/hi";
-import { RiImageEditFill } from "react-icons/ri";
+import { GrChapterAdd } from "react-icons/gr";
 import { GiNewspaper } from "react-icons/gi";
 import { FaMoneyBillWave } from "react-icons/fa";
 import { MdOutlineMedicalServices } from "react-icons/md";
@@ -89,6 +89,12 @@ const Dashboard = () => {
                                 <Link to="/dashboard/manage-blog" href="#" className="flex items-center p-2 space-x-3 rounded-md">
                                     <LuFolderEdit/>
                                     <span className='sm:py-3 py-3 p px-3'>Manage Blog</span>
+                                </Link>
+                            </li>
+                            <li className="rounded-sm dark:bg-gray-800 dark:text-gray-50">
+                                <Link to="/dashboard/added-blog" href="#" className="flex items-center p-2 space-x-3 rounded-md">
+                                    <GrChapterAdd/>
+                                    <span className='sm:py-3 py-3 p px-3'>Added Blog</span>
                                 </Link>
                             </li>
                             

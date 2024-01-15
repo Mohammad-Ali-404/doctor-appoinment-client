@@ -23,6 +23,7 @@ import SubscribeCart from "../Page/Dashboard/UserDashboard/SubscribeCart/Subscri
 import PaymentHistory from "../Page/Dashboard/UserDashboard/Payment/PaymentHistory";
 import AllPaymentHistory from "../Page/Dashboard/AdminDashboard/PaymentHistory/AllPaymentHistory";
 import ManageBlog from "../Page/Dashboard/AdminDashboard/Blog/ManageBlog";
+import AddedBlog from "../Page/Dashboard/AdminDashboard/Blog/AddedBlog";
 
 const router = createBrowserRouter ([
     {
@@ -118,6 +119,10 @@ const router = createBrowserRouter ([
             {
                 path:"manage-blog",
                 element:<AdminRoute><ManageBlog/></AdminRoute>
+            },
+            {
+                path:"added-blog",
+                element:<AdminRoute><AddedBlog/></AdminRoute>
             }
             // {
             //     path:'addservice',

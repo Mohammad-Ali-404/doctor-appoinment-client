@@ -17,10 +17,10 @@ const BlogDetails = () => {
             <PageTitle heading='Blog Details' subHeading='Blog Details' />
            <Container>
                     <div className='sm:flex flex-row py-11 gap-10'>
-                        <div className='sm:max-w-screen-2xl border border-gray-200 sm:pl-20 sm:px-0 px-2 sm:py-10 py-2'>
+                        <div className='sm:max-w-screen-2xl border border-gray-200 sm:px-10 px-2 sm:py-10 py-2'>
                                 <div className="">
                                     <div className='space-y-4'>
-                                        <img src={blogDetails.image} alt={blogDetails.title} className="mb-4 sm:w-5/6 rounded-lg" />
+                                        <img src={blogDetails.image} alt={blogDetails.title} className="mb-4 sm:w-[1200px] sm:h-[500px] w-full pb-4 rounded-lg rounded-b-lg" />
                                         <div className="flex items-center gap-10">
                                             <div className="flex items-center gap-10">
                                                 <div className='flex items-center gap-2'>
