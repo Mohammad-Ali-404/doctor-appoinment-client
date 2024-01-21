@@ -56,7 +56,7 @@ const router = createBrowserRouter ([
             },
             {
                 path:"/teamdetails/:id",
-                element: <PrivateRoute><TeamDetails/></PrivateRoute>,
+                element: <TeamDetails/>,
                 loader: ({params}) =>fetch(`http://localhost:5000/team/${params.id}`)
             },
             {
