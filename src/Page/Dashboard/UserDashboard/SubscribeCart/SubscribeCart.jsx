@@ -9,7 +9,6 @@ import UseSubcribeCart from "../../../../Hooks/UseSubcribeCart";
 const SubscribeCart = () => {
     const { user } = useContext(AuthContext);
     const [cart] = UseSubcribeCart();
-    console.log(cart);
     const [axiosSecure] = useAxiosSecure()
     // useQuery hook to fetch cart data
     const handleDeleteCart = (cart) => {

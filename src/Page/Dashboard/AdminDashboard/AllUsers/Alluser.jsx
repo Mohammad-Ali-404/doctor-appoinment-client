@@ -28,7 +28,6 @@ const UserList = () => {
     axiosSecure.patch(`/users/admin/${allUsers._id}`)
         .then(res => res.json())
         .then(data =>{
-            console.log(data);
             if (data.modifiedCount) {
                 refetch()
                 Swal.fire({

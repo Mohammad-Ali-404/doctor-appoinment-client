@@ -4,7 +4,7 @@ const UseServiceHook = () => {
     const [service, setService] = useState([]);
     const [loading, setLoading] = useState(true);
     useEffect(() =>{
-        fetch('http://localhost:5000/service')
+        fetch('https://doctor-appoinment-server-gamma.vercel.app/service')
         .then(res => res.json())
         .then(data => setService(data))
         setLoading(false)

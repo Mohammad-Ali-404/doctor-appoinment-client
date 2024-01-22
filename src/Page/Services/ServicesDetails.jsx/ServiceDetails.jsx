@@ -18,7 +18,7 @@ const ServiceDetails = () => {
         const fetchData = async () => {
           try {
             // Replace the URL with your actual API endpoint
-            const response = await axiosSecure.get('http://localhost:5000/pricing');
+            const response = await axiosSecure.get('https://doctor-appoinment-server-gamma.vercel.app/pricing');
             setPricing(response.data); // Assuming your API returns an array of pricing data
           } catch (error) {
             console.error('Error fetching pricing data:', error);

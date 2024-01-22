@@ -26,7 +26,6 @@ const AddedBlog = () => {
                 const imgUrl = imgRes.data.display_url;
                 const {name, title, details, testimonial, category, posted_by, additional_description, post_date} = data;
                 const addedNewBlog = {name, title, details, testimonial, category, posted_by, additional_description, post_date, capabilities_details: capabilities, image: imgUrl};
-                console.log(addedNewBlog);
                 axiosSecure.post(`/blogs`, addedNewBlog)
                     .then(data => {
                         if (data.data.insertedId) {

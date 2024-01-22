@@ -21,7 +21,6 @@ const AddTeamMember = () => {
                 const imgUrl = imgRes.data.display_url;
                 const {name, specialist, degree, educationalBackground, experienceAndSkills, phone, registrationNumber, email, selfDescription, facebook, instagram, twitter} = data;
                 const newTeamMember = {name, specialist, degree, educationalBackground, experienceAndSkills, phone, registrationNumber, email, selfDescription, facebook, instagram, twitter, image:imgUrl}
-                console.log(newTeamMember);
                 axiosSecure.post(`/team`, newTeamMember)
                 .then(data=>{
                     if (data.data.insertedId) {

@@ -3,7 +3,7 @@ const UseTeamMemberHook = () => {
     const [teamMember, setTeamMember] = useState([]);
     const [loading, setLoading] = useState(true);
     useEffect(() =>{
-        fetch('http://localhost:5000/team')
+        fetch('https://doctor-appoinment-server-gamma.vercel.app/team')
         .then(res => res.json())
         .then(data => setTeamMember(data))
         setLoading(false)

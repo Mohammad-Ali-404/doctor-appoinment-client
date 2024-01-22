@@ -1,10 +1,9 @@
 import React from 'react';
-import { AiOutlineHome, AiOutlineMoneyCollect, AiOutlineUser } from 'react-icons/ai';
+import { AiOutlineHome, AiOutlineUser } from 'react-icons/ai';
 import { HiOutlineMenuAlt3, HiOutlineShare } from "react-icons/hi";
 import { GrChapterAdd } from "react-icons/gr";
-import { GiNewspaper } from "react-icons/gi";
-import { FaMoneyBillWave } from "react-icons/fa";
-import { MdOutlineMedicalServices } from "react-icons/md";
+import { FaMoneyBillWave, FaUser } from "react-icons/fa";
+import { AiFillSchedule } from "react-icons/ai";
 import { LuFolderEdit } from "react-icons/lu";
 import { FaUserEdit, FaUsers } from "react-icons/fa";
 import { Link, Outlet } from 'react-router-dom';
@@ -50,7 +49,7 @@ const Dashboard = () => {
                     {isAdmin ? <>
                         <div>
                             <li className="rounded-sm dark:bg-gray-800 dark:text-gray-50">
-                                <Link to="/dasboard/admin-home" href="#" className="flex items-center p-2 space-x-3 rounded-md">
+                                <Link to="/dashboard/admin-home" href="#" className="flex items-center p-2 space-x-3 rounded-md">
                                     <AiOutlineHome/>
                                     <span className='sm:py-3 py-3 p px-3'>Admin Home</span>
                                 </Link>
@@ -62,7 +61,7 @@ const Dashboard = () => {
                                 </Link>
                             </li>
                             <li className="rounded-sm dark:bg-gray-800 dark:text-gray-50">
-                                <Link to="/dashboard/" href="#" className="flex items-center p-2 space-x-3 rounded-md">
+                                <Link to="/dashboard/alluserAppointment" href="#" className="flex items-center p-2 space-x-3 rounded-md">
                                     <AiOutlineUser/>
                                     <span className='sm:py-3 py-3 p px-3'>Appointment</span>
                                 </Link>
@@ -99,7 +98,7 @@ const Dashboard = () => {
                             </li>
                             
                             <li className="rounded-sm">
-                                <Link to='admin-social-media' href="#" className="flex items-center p-2 space-x-3 rounded-md">
+                                <Link to='/dashboard/admin-social-media' href="#" className="flex items-center p-2 space-x-3 rounded-md">
                                     <HiOutlineShare/>
                                     <span className='sm:py-3 py-3 p px-3'>Social Media</span>
                                 </Link>
@@ -116,6 +115,18 @@ const Dashboard = () => {
                         </div>
                     </> : <>
                         <div>
+                            <li className="rounded-sm">
+                                <Link to='/dashboard/user' href="#" className="flex items-center p-2 space-x-3 rounded-md">
+                                    <FaUser/>
+                                    <span className='sm:py-3 py-3 p px-3'>User Dashbord</span>
+                                </Link>
+                            </li>
+                            <li className="rounded-sm">
+                                <Link to='/dashboard/appointment' href="#" className="flex items-center p-2 space-x-3 rounded-md">
+                                    <AiFillSchedule/>
+                                    <span className='sm:py-3 py-3 p px-3'>My Appointment</span>
+                                </Link>
+                            </li>
                             <li className="rounded-sm">
                                 <Link to='/dashboard/subscribecart' href="#" className="flex items-center p-2 space-x-3 rounded-md">
                                     <BsCartPlusFill/>

@@ -7,7 +7,6 @@ import useAxiosSecure from '../../../../../Hooks/UserAxiosSecure';
 const img_hosting_token = import.meta.env.VITE_Image_Upload_Token;
 
 const UpdateMemberProfile = ({singleBlogData, setIsUpdateBlogModalOpen}) => {
-    console.log('', singleBlogData)
     const [loading, setLoading] = useState(false);
     const [axiosSecure] = useAxiosSecure()
     const closeBlogUpdateModal = () => {

@@ -24,6 +24,11 @@ import PaymentHistory from "../Page/Dashboard/UserDashboard/Payment/PaymentHisto
 import AllPaymentHistory from "../Page/Dashboard/AdminDashboard/PaymentHistory/AllPaymentHistory";
 import ManageBlog from "../Page/Dashboard/AdminDashboard/Blog/ManageBlog";
 import AddedBlog from "../Page/Dashboard/AdminDashboard/Blog/AddedBlog";
+import UserDashbord from "../Page/Dashboard/UserDashboard/UserDashbord/UserDashbord";
+import Appointment from "../Page/Dashboard/UserDashboard/Appointment/Appointment";
+import UserAppointment from "../Page/Dashboard/AdminDashboard/UserAppointment/UserAppointment";
+import SocialMedia from "../Page/Dashboard/AdminDashboard/SocialMedia/SocialMedia";
+import AdminHome from "../Page/Dashboard/AdminDashboard/AdminHome/AdminHome";
 
 const router = createBrowserRouter ([
     {
@@ -57,7 +62,7 @@ const router = createBrowserRouter ([
             {
                 path:"/teamdetails/:id",
                 element: <TeamDetails/>,
-                loader: ({params}) =>fetch(`http://localhost:5000/team/${params.id}`)
+                loader: ({params}) =>fetch(`https://doctor-appoinment-server-gamma.vercel.app/team/${params.id}`)
             },
             {
                 path:"service",
@@ -66,7 +71,7 @@ const router = createBrowserRouter ([
             {
                 path:"/servicedetails/:id",
                 element:<ServiceDetails/>,
-                loader: ({params}) => fetch(`http://localhost:5000/service/${params.id}`)
+                loader: ({params}) => fetch(`https://doctor-appoinment-server-gamma.vercel.app/service/${params.id}`)
             },
             {
                 path:"pricing",
@@ -79,7 +84,7 @@ const router = createBrowserRouter ([
             {
                 path:'/blogdetails/:id',
                 element:<BlogDetails/>,
-                loader: ({params}) => fetch(`http://localhost:5000/blogs/${params.id}`)
+                loader: ({params}) => fetch(`https://doctor-appoinment-server-gamma.vercel.app/blogs/${params.id}`)
             }
         ]
     },
@@ -99,7 +104,19 @@ const router = createBrowserRouter ([
                 path:"paymentHistory",
                 element:<PaymentHistory/>
             },
+            {
+                path:"user",
+                element:<UserDashbord/>
+            },
+            {
+                path:"appointment",
+                element:<Appointment/>
+            },
             // admin routes
+            {
+                path:'admin-home',
+                element:<AdminRoute><AdminHome/></AdminRoute>
+            },
             {
                 path:'allusers',
                 element:<AdminRoute><Alluser/></AdminRoute>
@@ -123,11 +140,15 @@ const router = createBrowserRouter ([
             {
                 path:"added-blog",
                 element:<AdminRoute><AddedBlog/></AdminRoute>
-            }
-            // {
-            //     path:'addservice',
-            //     element:<AdminRoute><AddServiceData/></AdminRoute> 
-            // },
+            },
+            {
+                path:"alluserAppointment",
+                element:<AdminRoute><UserAppointment/></AdminRoute>
+            },
+            {
+                path:'admin-social-media',
+                element:<AdminRoute><SocialMedia/></AdminRoute> 
+            },
 
         ]
     }

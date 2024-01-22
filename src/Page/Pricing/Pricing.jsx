@@ -21,7 +21,7 @@ const Pricing = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axiosSecure.get('http://localhost:5000/pricing');
+                const response = await axiosSecure.get('https://doctor-appoinment-server-gamma.vercel.app/pricing');
                 setPricing(response.data);
             } catch (error) {
                 console.error('Error fetching pricing data:', error);

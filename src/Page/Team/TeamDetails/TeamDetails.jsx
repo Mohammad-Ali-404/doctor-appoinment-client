@@ -45,7 +45,6 @@ const TeamDetails = () => {
             AppointmentDate,
           });
           if (response.status === 200) {
-            console.log('Message sent successfully');
             event.target.reset();
             Swal.fire({
               title: 'Booking successfully',
